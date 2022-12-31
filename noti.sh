@@ -53,7 +53,6 @@ if [[ "$1" == "-w" ]];
 
 elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
     then
-    echo "in elif"
     FIND_NOTES $1
     READ_NOTES $1 $2
 else 
