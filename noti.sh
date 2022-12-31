@@ -36,7 +36,7 @@ READ_NOTES() {
 
 MOD_LAST_FILE() {
 
-    if [[ "${LANGUAGES[*]}" =~ " $2 " ]] && [[ "${NOTES_ARRAY[*]}" =~ " $3 " ]];
+    if [[ "${LANGUAGES[*]}" =~ " $1 " ]] && [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
         
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
@@ -48,13 +48,14 @@ MOD_LAST_FILE() {
 
 if [[ "$1" == "-w" ]];
     then
-    FIND_READ_LANGUAGE_NOTES $1 $2
-    MOD_LAST_FILE $1 $2 $3
+    FIND_NOTES $2
+    MOD_LAST_FILE $2 $3
 
 elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
     then
     echo "in elif"
-    FIND_READ_LANGUAGE_NOTES $1 $2
+    FIND_NOTES $1
+    READ_NOTES $1 $2
 else 
     echo "language not supported"
 fi
