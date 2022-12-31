@@ -8,6 +8,7 @@ LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
 FIND_READ_LANGUAGE_NOTES() {
     
     DIR=~/code/noti/$1
+    echo $DIR
     
     for file in "$DIR"/*
         do
@@ -20,6 +21,9 @@ FIND_READ_LANGUAGE_NOTES() {
                 LANGUAGE_NOTES_ARRAY+=( "$filename" )
            fi
     done
+
+    echo ${LANGUAGE_NOTES_ARRAY[@]}
+    echo $2
 
     if [[ "${LANGUAGE_NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
@@ -51,7 +55,8 @@ if [[ "$1" == "-w" ]];
 
 elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
     then
-    FIND_READ_LANGUAGE_NOTES
+    echo "in elif"
+    FIND_READ_LANGUAGE_NOTES $1 $2
 else 
     echo "language not supported"
 fi
