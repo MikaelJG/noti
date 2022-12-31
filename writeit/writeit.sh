@@ -5,41 +5,53 @@ LANGUAGES=( "js" "js" "react" "rb" "bash" "sh" "html" "rs" "ts" "css" "cs" )
 
 # find the ex file
 
-FIND_LANGUAGE_NOTES() {
+FIND_READ_LANGUAGE_NOTES() {
     
-DIR=~/code/noti/$1
+    DIR=~/code/noti/$1
     
-for file in "$DIR"/*
-    do
-        if [ -f "$file" ];
-            then
-            filename=$(basename -- "$file")
-            extension="${filename##*.}"
-            filename="${filename%.*}"
-            
-            FILES_WITH_NOTES_ARRAY+=( "$filename" )
-       fi
-done
+    for file in "$DIR"/*
+        do
+            if [ -f "$file" ];
+                then
+                filename=$(basename -- "$file")
+                extension="${filename##*.}"
+                filename="${filename%.*}"
+                
+                LANGUAGE_NOTES_ARRAY+=( "$filename" )
+           fi
+    done
+
+    if [[ "${LANGUAGE_NOTES_ARRAY[*]}" =~ " $2 " ]];
+        then
+            echo ""
+            cat ~/code/noti/$1/$2
+            echo ""
+    else
+        echo "File does not exist"
+    fi
 }
 
 MOD_LAST_FILE() {
 
-    if [[ "${FILES_WITH_NOTES_ARRAY[*]}" =~ " $2 " ]];
+    if [[ "${LANGUAGES[*]}" =~ " $2 " ]] && [[ "${FILES_WITH_NOTES_ARRAY[*]}" =~ " $3 " ]];
         then
         
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
 
         cat ~/code/noti/$1/$2.txt >> $LAST_MODIFIED_FILE
-
     else
-        echo "no file with this name"
+        echo "Language or file is not supported"
     fi
 }
 
-if [[ "${LANGUAGES[*]}" =~ " $1 " ]];
+if [[ "$1" == "-w" ]];
     then
-    FIND_LANGUAGE_NOTES
+    FIND_READ_LANGUAGE_NOTES
     MOD_LAST_FILE
+
+elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
+    then
+    FIND_READ_LANGUAGE_NOTES
 else 
     echo "language not supported"
 fi
