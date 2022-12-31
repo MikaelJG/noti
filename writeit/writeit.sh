@@ -29,7 +29,7 @@ MOD_LAST_FILE() {
         
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
 
-        cat ~/code/noti/${MANUAL}/$2.txt >> $LAST_MODIFIED_FILE
+        cat ~/code/noti/$1/$2.txt >> $LAST_MODIFIED_FILE
 
     else
         echo "no file with this name"
