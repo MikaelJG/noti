@@ -1,0 +1,4 @@
+querySelector returns the first element it finds
+
+const countries = document.querySelector("#fifa-wins li");
+// => <li>Brazil (5 wins)</li

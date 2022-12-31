@@ -1,0 +1,3 @@
+// in terminal
+// use Rust compiler
+rustc hello.rs

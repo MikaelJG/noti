@@ -1,0 +1,13 @@
+React
+
+// library, create elements.
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+ReactDOM
+
+// take created element and bring to site
+
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+// for native apps, ReactNative

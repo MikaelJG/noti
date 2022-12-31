@@ -1,0 +1,14 @@
+fn far_dice_roll() -> i32 {
+    match feeling_lucky {
+        true => 6, 
+        false => 4,
+    }
+}
+
+fn print_number(n: Number) {
+    match n.value {
+        1 => println!("one"),
+        2 => println!("two"),
+        _ => println!("{}", n.value),
+    }
+}

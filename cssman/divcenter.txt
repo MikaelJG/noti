@@ -1,0 +1,6 @@
+/* center div */
+
+div {
+    width: 300px; 
+    margin: 0 auto; /* Set automatic margins */
+}

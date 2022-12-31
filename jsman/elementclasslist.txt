@@ -1,0 +1,4 @@
+element.classList.add("red");
+element.classList.remove("red");
+element.classList.toggle("red");
+

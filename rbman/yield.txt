@@ -1,0 +1,22 @@
+def timer
+    start_time = Time.now
+    
+    yield
+
+    end_time = Time.now
+total_time = end_time - start_time
+
+puts "elapsed time {total_time} secondes"
+end
+
+timer() do 
+    puts "task 1"
+    sleep(2)
+    puts "I'm done"
+end
+
+timer() do 
+    puts "task 2"
+    sleep(1...1000).to_a.shuffle
+    puts "I'm done"
+end

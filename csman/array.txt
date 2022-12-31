@@ -1,0 +1,25 @@
+int[] luckyNumbers = { 4, 8, 15, 16, 23, 40 };
+
+luckyNumbers[0] = 90;
+
+Console.WriteLine(LuckyNumbers[0]);
+Console.WriteLine(LuckyNumbers[1]);
+Console.WriteLine(LuckyNumbers.length);
+
+// if you don't know what you are storing
+
+int[] LuckyNumbers = new int[10];
+
+// int[10] will store 10 things in array
+// they will be all 0, until given something
+
+// 2 dimension
+
+int[][] numberGrid = {new int[] {1, 2 }, new int[]{ 3, 4 } };
+
+numberGrid[0][1] = 99;
+
+Console.WriteLine(numberGrid[0][0]);
+Console.WriteLine(numberGrid[0][1]);
+
+/// see arrayList

@@ -1,0 +1,10 @@
+["Sponge Bob", 12, 3.14].class
+
+["Sponge Bob", 12, 3.14].size
+
+%w[Huey Dewey Louie] 
+# creates array
+
+.sort 
+# incrementing
+# alphabeticall

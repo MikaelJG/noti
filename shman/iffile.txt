@@ -1,0 +1,7 @@
+for filename in /home/miikey/*; do 
+    if [ -f "$filename" ];
+        then
+
+        # do stuff
+    fi
+done

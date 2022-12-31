@@ -1,0 +1,7 @@
+let pair = ('a', 17);
+pair.0 // this is 'a'
+pair.1 // this is 17
+
+// explicit
+
+let pair: (char, i32) = {'a', 17};

@@ -1,0 +1,4 @@
+GET: Read
+POST: Create (new user for ex)
+PATCH: Update (change password for ex)
+DELETE: Delete

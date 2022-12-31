@@ -1,0 +1,13 @@
+string greeting = "Hello";
+
+// H is index 0
+
+Console.WriteLine ( greeting.Length );
+Console.WriteLine ( greeting[] );
+Console.WriteLine ( greeting.IndexOf("llo") );
+Console.WriteLine ( greeting.IndexOf("z") );
+
+// prints -1
+
+Console.WriteLine ( greeting.Substring(2) );
+Console.WriteLine ( greeting.Substring(1, 3) ); 

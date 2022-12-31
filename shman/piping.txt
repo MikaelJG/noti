@@ -1,0 +1,5 @@
+# not sure about this |
+echo "this" | echo "piping"
+
+# one after the other
+cd ~/notes && vim file.txt

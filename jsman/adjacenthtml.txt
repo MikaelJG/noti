@@ -1,0 +1,4 @@
+insertAdjacentHTML(position, text)
+
+list.insertAdjacentHTML("beforeend", "<li>Luke</li>");
+list.insertAdjacentHTML("beforeend", "<li>Anakin</li>");

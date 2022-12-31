@@ -1,0 +1,4 @@
+const beatles = [ "paul", "john", "ringo", "george"];
+beatles.forEach((beatle) => {
+    console.log(beatle.toUpperCase());
+});

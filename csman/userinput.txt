@@ -1,0 +1,5 @@
+Console.Write("Enter username: ");
+
+string username = Console.ReadLine();
+
+Console.WriteLIne($"Hello {username}");

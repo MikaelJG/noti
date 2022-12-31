@@ -1,0 +1,28 @@
+struct City {
+    name: &'static str,
+    lat: f32,
+    lon: f32,
+}
+
+fn main() {
+    for city in [
+        City { name: "Dublin", lat: 53.34, lon: -6.25 },
+        City { name: "Oslo", lat: 59.95, lon: 10.75 },
+        City { name: "Vancouver", lat: 49.15, lon: 30.83 },
+
+    ].iter*( {
+        println!("{}", *city);
+    }
+}
+
+// generic struct
+
+struct Pair<T> {
+    a: T,
+    b: T,
+}
+
+let p1 = Pair { a: 3, b: 9 };
+// = Pair<i32>
+let p2 = Pair { a: true, b: false };
+// = Pair<bool>

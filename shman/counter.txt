@@ -1,0 +1,4 @@
+COUNT=0
+
+COUNT=$((COUNT+1))
+

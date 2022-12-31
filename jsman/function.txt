@@ -1,0 +1,17 @@
+function addTwoNum(x,y) {
+    return x + y;
+}
+
+addTwoNum(3,4);
+
+function myFunc(theObject) {
+    theObject.make = 'Toyota';
+}
+
+// will change the object .make
+
+function myFunc(theArr) {
+    theArr[0] = 30;
+}
+
+// will change the array 0 index

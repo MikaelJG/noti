@@ -1,0 +1,23 @@
+// more flexible, can add elements easily 
+// with ArrayList
+
+
+using System;
+using System.Collections;
+
+class App
+{
+    public static void Main(string[] args)
+    {
+        
+        ArrayList friends = new ArrayList();
+        friends.Add("Oscar");
+        friends.Add("Angie");
+        friends.Add("Kevin");
+
+        friends.Remove("Oscar");
+        Console.WriteLine(friends.Contains("Oscar"));
+        Console.WriteLine(friends.Count);
+    }
+
+ArrayList friends = new ArrayList();

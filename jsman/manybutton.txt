@@ -1,0 +1,17 @@
+buttons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        console.log(event.currentTarget);
+    });
+});
+
+// refactor by
+
+const displayClickedElement = (event) => {
+    console.log(event.currentTarget);
+};
+
+const bindButtonToClick = (button) => {
+    button.addEventListener('click', displayClickedElement);
+}
+
+buttons.forEach(bindButtonToClick);

@@ -1,0 +1,11 @@
+body {
+    font-family: Times, serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Courier, monospace;
+}

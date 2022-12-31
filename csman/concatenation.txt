@@ -1,0 +1,5 @@
+name = "john";
+
+console.WriteLine("Your name is " + name);
+console.WriteLine($"Your name is {name}");
+

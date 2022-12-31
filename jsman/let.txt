@@ -1,0 +1,5 @@
+// var to re-assign
+
+let counter = 1;
+
+counter = counter + 1;

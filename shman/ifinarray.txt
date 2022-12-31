@@ -1,0 +1,5 @@
+if [[ "${ARRAY[*]}" =~ " $1 " ]];
+    then
+    
+    # do something
+fi

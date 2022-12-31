@@ -1,0 +1,7 @@
+["Sponge Bob", 12, 3.14].class
+
+["Sponge Bob", 12, 3.14].size
+
+.sort 
+# incrementing
+# alphabeticall

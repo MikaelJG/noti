@@ -1,0 +1,1 @@
+cat ~/miikey/notes.txt

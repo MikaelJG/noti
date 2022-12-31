@@ -1,0 +1,19 @@
+const results = document.getElementById("results");
+const search = document.getElementById("search");
+
+const searchWord = (query) => {
+    fetch(`https://wagon-dictionaru.herokuapp.com/autocomplete/${query}`)
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data)
+        data.words.forEach((result) => {
+            const word = `<li>${result}</li>`;
+            results.insertAdjacentHTML("beforeend", word);
+        });
+    });
+};
+
+search.addEventListener('keyup', (event) => {
+    searchWord(event.target.value);
+    results.innerHTML = '';
+});

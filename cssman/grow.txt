@@ -1,0 +1,8 @@
+.flexbox {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    flex-grow: 1;
+}

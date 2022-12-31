@@ -1,0 +1,16 @@
+$1 # first given
+$2 # second given
+
+$# # number of args given
+
+ if [[ " ${array[*]} " =~ " $1 " ]]; then
+
+ if [ $# -eq 1];
+    then
+
+# all args in array
+myArray=( "$@" )
+
+for arg; do
+    echo "$arg"
+done

@@ -1,0 +1,14 @@
+let xs: [i32; 5] = [1, 2, 3, 4, 5];
+
+println!("first element of the array: {}", xs[0]);
+
+println!("number of elements in array: {}", xs.len());
+
+// or
+
+let nick = "fasterthanlime";
+nick.len(); // 14
+
+// with str
+
+let x = str::len("amos");

@@ -1,0 +1,5 @@
+// select element with id
+
+<ul id="players"></ul>
+
+const list = document.querySelector("#players"); //CSS id selector

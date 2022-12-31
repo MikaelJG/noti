@@ -1,0 +1,10 @@
+int division = 10/Convert.ToInt32(Console.ReadLine());
+
+try {
+    int division = 10 / Convert.ToInt32(Console.ReadLine());
+}catch(DivideByZeroException e){
+    Console.WriteLine(e);
+    // Not best practice to use general Exception
+}
+
+// throw new DIvideByZeroException("can't add numbers");

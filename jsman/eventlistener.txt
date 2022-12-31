@@ -1,0 +1,3 @@
+element.addEventListener(eventType, (event) => {
+    // Do something (callback)
+});

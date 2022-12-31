@@ -1,0 +1,3 @@
+# substitute
+
+sed 's/unix/linux/' file.txt 

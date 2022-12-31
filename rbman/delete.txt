@@ -1,0 +1,12 @@
+fruits = []
+fruits << "Apple" # create
+fruits[0] # Read
+fruits[0] = "Banana" # Update
+fruits.delete_at(0) # Delete
+
+# hash
+
+paris["monument"] = "Eiffel Tower" # create
+paris["country"] # read
+paris["monument"] = "Montmartre" # update
+paris.delete("population") # delete

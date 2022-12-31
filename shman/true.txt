@@ -1,0 +1,12 @@
+isNice() {
+
+if ...; 
+return 0
+# 0 = true
+
+else
+return 1
+# 1 = false
+}
+
+if isNice $1; then echo "is nice"; else echo "not nice"; fi

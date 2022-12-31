@@ -1,0 +1,9 @@
+body {
+    font-weight: 100;
+    // from 100 to 900.
+}
+
+body {
+    font-weight: bold;
+}
+

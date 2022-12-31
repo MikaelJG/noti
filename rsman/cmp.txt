@@ -1,0 +1,5 @@
+std::cmp::min(3,8);
+
+// crate::file::function
+
+// library::module (or source file)::function

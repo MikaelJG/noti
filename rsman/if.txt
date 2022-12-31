@@ -1,0 +1,9 @@
+fn fair_dice_roll() -> i32 {
+    if feeling_lucky {
+        6
+    } else if {
+        4
+    } else {
+        2
+    }
+}

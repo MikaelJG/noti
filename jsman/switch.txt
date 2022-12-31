@@ -1,0 +1,12 @@
+switch (fruitType) {
+    case 'Oranges':
+        console.log('Oranges are...');
+        break;
+
+    case 'Apples':
+        console.log('Apples are sweet');
+        break;
+    
+    default:
+        console.log(`Sorry, we are out of ${fruitType}.`;
+}

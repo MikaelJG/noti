@@ -1,0 +1,13 @@
+case $FRUIT in
+    apple)
+        # do something
+        break;;
+    pear)
+        # do some
+        exit;;
+    *)
+        # elso do this
+        break;;
+esac
+
+        

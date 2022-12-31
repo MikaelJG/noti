@@ -1,0 +1,11 @@
+div {
+    border: 10px solid red;
+}
+
+div {
+    border-top: 1px solid red;
+    border-right: 2px dotted black;
+    border-bottom: 1px dashed green;
+    border-left: 1px dotted black;
+}
+

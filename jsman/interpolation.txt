@@ -1,0 +1,13 @@
+console.log(`Sorry, we are out of ${fruitType}.`);
+
+function add() {
+return `${name} scored ${num1 + num2}`;
+
+const listItem = (content) => {
+    return `<li class="list-group-item">${content}</li>`;
+};
+
+const unorderedList = (items) => {
+    const list = items.map(item => listItem(item)).join("");
+    return `<ul class="list-group">${list}</ul>`;
+};

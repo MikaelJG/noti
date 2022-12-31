@@ -1,0 +1,4 @@
+beatles = ["paul", "john", "ringo", "george"]
+beatles.each do |beatle|
+    puts beatle.upcase
+end

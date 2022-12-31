@@ -1,0 +1,6 @@
+the code inside this main will be executed
+
+public static void Main(string[] args)
+{
+    
+}

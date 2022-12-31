@@ -1,0 +1,12 @@
+// some html
+
+<input name="email" id="email" value="paul@gmail.com" />
+
+const emailInput = document.getElementById("email");
+
+// Read
+console.log(emailInput.value);
+
+// Write
+emailInput.value = "john@gmail.com"; 
+

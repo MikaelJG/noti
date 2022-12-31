@@ -1,0 +1,2 @@
+read -p "Gi'me
+>" input

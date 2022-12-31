@@ -1,0 +1,10 @@
+var superArray = ["coffee", "trump", "ouch"];
+var leftArray = [true, ["blue", 100], false];
+
+const ?
+
+leftArray[0];
+
+var last = leftArray[leftArray.length - 1];
+leftArray[1] = "lol";
+

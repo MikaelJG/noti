@@ -1,0 +1,18 @@
+/* Absolute */
+
+p {
+    width: 50px;
+}
+
+/* Relative to parent */
+
+p {
+    width: 50px;
+}
+
+/* Relative to font size */
+
+p {
+    width: 2em;
+}
+

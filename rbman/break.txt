@@ -1,0 +1,4 @@
+loop do 
+    # do some
+    break if condition
+end

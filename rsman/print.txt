@@ -1,0 +1,8 @@
+fn main() {
+    println!("{} days", 31);
+}
+// 31 days
+
+println!("{0}, this is {1}. {1}, this is {0}", "Alice", "Bob");
+
+

@@ -1,0 +1,5 @@
+raining = true
+
+accessory = (raining ? "umbrella" : "sunglasses")
+
+# "umbrella"

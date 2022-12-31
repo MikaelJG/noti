@@ -1,0 +1,8 @@
+x = f()
+x += f()
+x -= f()
+x *= f()
+x /= f()
+x %= f() // remainder
+x **= f() // exponential
+

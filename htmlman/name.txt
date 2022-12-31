@@ -1,0 +1,8 @@
+Hyper Text Transfer Protocol
+
+A protocol to transfer resources
+
+resources = means file (HTML, CSS, images, JS, ...)
+
+System of request /response (client and server)
+

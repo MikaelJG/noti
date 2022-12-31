@@ -1,0 +1,6 @@
+read -p "Blue?
+>" priority
+
+# if empty, blue is default
+
+defaultPriority=${priority:="blue"}

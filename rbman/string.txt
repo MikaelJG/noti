@@ -1,0 +1,5 @@
+"Sponge Bob".class
+
+"yipi yeah".upcase
+
+"Hello" == 'Hello'

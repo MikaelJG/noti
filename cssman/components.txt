@@ -1,0 +1,21 @@
+// index.html
+
+mkdir css
+
+//// style.css /* goes inside index */
+
+mkdir components
+
+////////// avatar.css /* goes inside style */
+////////// container.css 
+////////// button.css 
+
+/* in style.css */
+
+@import url("components/avatar.css");
+@import url("components/container.css");
+@import url("components/button.css");
+
+/* in index.html */
+
+<link rel="stylesheet" href="css/style.css">

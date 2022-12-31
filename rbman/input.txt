@@ -1,0 +1,2 @@
+puts "What do you want"
+action = gets.chomp

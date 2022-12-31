@@ -1,0 +1,4 @@
+markLoop:
+while (theMark) {
+    doSome();
+}

@@ -1,0 +1,8 @@
+fruits=("orange" "apple" "pear")
+
+fruits=()
+fruits+=("cherry")
+
+# echo array
+
+echo "${fruits[@]}"

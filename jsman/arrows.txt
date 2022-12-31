@@ -1,0 +1,9 @@
+ES6 - arrows now
+
+const square = (x) => {
+    return x * x;
+    // explicit return
+}
+
+const square = x => x * x;
+// implicit return

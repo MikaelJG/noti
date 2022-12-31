@@ -1,0 +1,14 @@
+fruits=("orange" "apple" "pear")
+
+fruits=()
+fruits+=("cherry")
+
+# echo array
+
+echo "${fruits[@]}"
+
+# append to end of file
+echo "this is the text" >> file.txt
+
+# append to beginnning
+echo "the text you want" | cat - ./file.txt > temp && mv temp ./file.txt

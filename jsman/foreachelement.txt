@@ -1,0 +1,5 @@
+t countries = document.querySelectorAll("#fifa-wins li");
+
+countries.forEach((item) => {
+console.log(item.innerText);
+});

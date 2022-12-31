@@ -1,0 +1,4 @@
+querySelectorAll return all element in a list
+
+const countries = document.querySelectorAll("#fifa-wins li");
+// => NodeList(5) [li, li, li, li, li]

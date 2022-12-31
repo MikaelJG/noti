@@ -1,0 +1,13 @@
+npm install prompt
+
+// yarn install ?
+
+// in file 
+
+var prompt = require('prompt');
+
+prompt.start();
+
+let name = promt.get("What's your name");
+
+

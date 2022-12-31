@@ -1,0 +1,5 @@
+// a fn that returns nothing
+
+fn greet() {
+   println!("Hi there!); 
+}

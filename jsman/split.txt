@@ -1,0 +1,7 @@
+const monthString = "Jan,Feb,Mar,Apr,May,Jun";
+
+const months = monthString.split(",");
+// [ 'jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun' ]
+
+months.length;
+// 6

@@ -1,0 +1,22 @@
+GET: Read
+
+POST: Create (new user for ex)
+
+
+Body for a POST request (usually with content from form)
+
+
+URL - http//myapp.com
+
+Headers 
+    - User-Agent
+    - Cookies
+    - Accept-Language
+
+Body
+    - author: 'Boris'
+    - content: 'Hello'
+
+
+PATCH: Update (change password for ex)
+DELETE: Delete

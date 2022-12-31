@@ -1,0 +1,15 @@
+Console.WriteLine( (int)3.14 );
+
+// prints 3 , changed to 3
+
+Console.WriteLine( (double)3 );
+
+// prints 3, changed to double-precision floating point
+
+int intFromString = Convert.ToInt32("50")
+
+// transforms string into integer
+
+double doubleFromString = Convert.ToDouble("50.99");
+
+

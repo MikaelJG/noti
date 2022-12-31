@@ -1,0 +1,4 @@
+<audio src="musique.mp3" constrols></audio>
+
+<video src="sintel.webm" constrols poster="sintel.jpg"></video>
+(taille possible too width="600")

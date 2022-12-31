@@ -1,0 +1,4 @@
+# in terminal
+
+irb
+[1] pry(main)>

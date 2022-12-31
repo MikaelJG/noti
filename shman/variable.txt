@@ -1,0 +1,3 @@
+COUNT=$((COUNT+1))
+
+LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)

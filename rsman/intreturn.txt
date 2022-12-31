@@ -1,0 +1,3 @@
+fn fair_dice_roll() -> i32 {
+    4
+}

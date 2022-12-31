@@ -1,0 +1,6 @@
+
+# append to beginnning
+echo "the text you want" | cat - ./file.txt > temp && mv temp ./file.txt
+
+# append to end of file
+echo "this is the text" >> file.txt

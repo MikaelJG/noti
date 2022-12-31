@@ -1,0 +1,11 @@
+let value = 0;
+class Foo2 {
+    public value = value++;
+}
+
+function reverseAndPrint(foo: Foo2[]) {
+    foo.reverse().forEach((foo) => console.log(foo.value);
+
+let vector = [new Foo2(), new Foo2(), new F002()];
+
+reverseAndPrint(vector);

@@ -1,0 +1,14 @@
+fn main() {
+    let pressed = WebEvent::KeyPress('x');
+    // `to_owned()` creates an owned `String` from a string slice.
+    let pasted = WebEvent::Paster("my text".to_owned());
+    let click = WebEvent::Click { x: 20, y: 80 };
+    let load = WebEvent::PageLoad;
+    let unload = WebEvent::PageUnload;
+
+    inspect(pressed);
+    inspect(paster);
+    inspect(click);
+    inspect(load);
+    inspect(unload);
+}

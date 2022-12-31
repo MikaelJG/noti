@@ -1,0 +1,6 @@
+// in terminal
+// compiled binary hello.rs
+
+./hello
+
+

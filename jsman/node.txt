@@ -1,0 +1,5 @@
+// in terminal 
+node
+>
+
+node file.js

@@ -1,0 +1,5 @@
+# in file 
+puts "Hello"
+
+# in terminal
+ruby file.rb

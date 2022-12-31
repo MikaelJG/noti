@@ -1,0 +1,3 @@
+const raining = true;
+const accessory = (raining ? "umbrella" : "sunglasses");
+// "umbrella"

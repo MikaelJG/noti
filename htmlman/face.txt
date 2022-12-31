@@ -1,0 +1,6 @@
+<head>
+    <meta property="og:title" content="Le Wagon - The French innovative coding school">
+    <meta property="og:image" content="facebook-card.jpg">
+    <meta property="og:description" content="Le Wagon is the best . You will be impressed.">
+    <meta property="og:site_name" content="Le Wagon"/>
+</head>

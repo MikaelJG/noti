@@ -1,0 +1,5 @@
+def say_hi(name)
+    return "Hi #{name}"
+end
+
+puts say_hi("Alex")

@@ -1,0 +1,25 @@
+// html
+
+<form id="search-form" class="row">
+    <div class="col-10">
+        <input id="search-input" type="text" class="form-control" placeholder="Find movies">
+    </div>
+    <div class="col-2">
+        <input type="submit" class="btn btn-primary" value="Search">
+    </div>
+</form>
+
+// js
+
+const searchMovies = (query) => {
+    fetch(`http://www.omdbapi.com/?s=${query}&apikey=adf1f2d7`)
+        .then(response => response.json())
+        .then((data) => {
+            data.Search.forEach((result) => {
+                const movie = `<li class="list-inline-item">
+                    <img src=${result.Poster}" alt="">
+                    <p>${result.Title}</p>
+                results.insertAdjacentHTML("beforeend", movie)
+            });
+        });
+};

@@ -1,0 +1,10 @@
+// inspect // In Network // in Headers // Request Headers
+
+URL - https//myapp.com
+
+Headers
+    - User-Agent
+    - Cookied
+    - Accept-Language
+
+

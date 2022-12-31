@@ -1,0 +1,5 @@
+typeof("Boris");
+// 'string'
+
+typeof(42);
+// 'number'

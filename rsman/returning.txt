@@ -1,0 +1,15 @@
+let x = {
+    let y = 1; // first statement
+    let z = 2; // second statement
+    y + z // the tail
+};
+
+fn far_dice_roll() -> i32 {
+    return 4;
+}
+
+// is equivalent to 
+
+fn fair_dice_roll() -> i32 {
+    4
+}

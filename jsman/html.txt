@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <!-- Your content -->
+    <!-- Your script tags here -->
+    <!-- <script src="first_file.js"></script> -->
+    <!-- <script src="other_file.js"></script> -->
+    </body>
+</html>
+

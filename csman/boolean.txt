@@ -1,0 +1,3 @@
+bool isTall; // 1 bit -> true/false
+isTall = true;
+

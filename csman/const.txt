@@ -1,0 +1,6 @@
+// caps
+
+const bool IS_TALL;
+IS_TALL = true;
+
+

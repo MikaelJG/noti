@@ -1,0 +1,3 @@
+const list = document.getElementById("players");
+
+//see selector

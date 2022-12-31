@@ -1,0 +1,13 @@
+Stimulus
+
+a modest JavaScript framework for your HTML
+
+organize in controller.js 
+
+don't write querySelector or eventListener again
+
+Bind JavaScript behavior to HTML elements using data-attributes
+
+- Data controllers
+- Data actions
+- Data targets

@@ -1,0 +1,7 @@
+// advanced css selector
+
+ul .active /* Descending combinator */
+
+ul > .active /* Child combinator *
+
+document.querySelector('ul#players > .active a.btn);

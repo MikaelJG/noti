@@ -1,0 +1,9 @@
+DIR=/tmp/dir
+FILE=/tmp/tamere.txt
+
+if [ -d "$DIR" ] || [ -f "$FILE" ];
+    then
+        echo "$DIR exists"
+else;
+    echo "$DIR doesn't exist"
+fi

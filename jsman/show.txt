@@ -1,0 +1,8 @@
+const element - document.querySelector(CSS_SELECTOR);
+
+// Hide
+element.style.display = "none";
+
+// Show
+element.style.display = "";
+

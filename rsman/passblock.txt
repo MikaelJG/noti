@@ -1,0 +1,7 @@
+let x = "out";
+{
+    // different x
+    let x = "in"
+    println!("{}", x);
+}
+println{"{}", x);

@@ -1,0 +1,8 @@
+DIR=$(pwd)
+
+if [[ $DIR = "~/code/note/lrn_bash" ]];
+    then
+        echo "its same"
+else
+    echo "its different"
+fi

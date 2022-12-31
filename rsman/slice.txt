@@ -1,0 +1,5 @@
+let (l, r ) = slice.split_at(middle);
+
+// destructuring
+
+let (_, right) = slice.splits_at(middle);

@@ -1,0 +1,13 @@
+// html
+
+<img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" id="romain" height="200" alt="Romain Paillard" />
+<img src="https://hitt.lewagon.com/placeholder/users/Papillard" id="boris" height="200> alt="Boris Paillard" />
+
+//js
+
+document.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("click", (event) => {
+        event.currentTarget.classList.toggle(img-circle");
+
+    });
+});

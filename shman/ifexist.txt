@@ -1,0 +1,8 @@
+DIR=/tmp/dir
+
+if [ -d "$DIR" ];
+    then
+        echo "$DIR exists"
+else;
+    echo "$DIR doesn't exist"
+fi

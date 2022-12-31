@@ -1,0 +1,13 @@
+// var binding
+
+let x; 
+x= 42;
+
+// same
+let x = 42;
+
+let x: i32;
+x = 42;
+
+// same
+let x: i32 = 42;

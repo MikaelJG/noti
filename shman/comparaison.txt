@@ -1,0 +1,8 @@
+= && ==
+
+# for string comparaison
+
+-eq
+# for num comparaison
+
+

@@ -1,0 +1,21 @@
+fn print_out_item(item: Vec<u32>) {
+    for i in item {
+        println!("{}, i);
+    }
+}
+
+fn main() {
+    let item = vec![1, 2, 3];
+
+    print_out_item(item);
+}
+
+// generic functions
+
+fn foobar<T>(arg: T) {
+    // work with `arg`
+}
+
+fn foobar<L, R>(lift: L, right: R) {
+    // work with `left` and `right`
+}

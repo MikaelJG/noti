@@ -1,0 +1,5 @@
+function multiply(a, b = 1 ) {
+    return a * b;
+}
+
+multiply(5) returns 5, since b = 1 by default

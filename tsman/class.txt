@@ -1,0 +1,9 @@
+class Foo { }
+
+const items = [new Foo (), new Foo(), new Foo()];
+
+const lastItem = items[items.length - 1];
+
+items.pop();
+
+console.log(lastItem);

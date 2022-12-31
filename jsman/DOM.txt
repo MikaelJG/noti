@@ -1,0 +1,7 @@
+// Document Object Model
+
+// Chrome Inspector / Elements tab
+
+document.querySelector(CSS_SELECTOR);
+
+console.dir(element)

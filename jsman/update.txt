@@ -1,0 +1,5 @@
+const fruits = [];
+fruits.push("Apple"); // create
+fruits[0]; // read 
+fruits[0] = "Banana"; // update 
+fruits.slice(0, 1); // Delete 1 item at index 0) 

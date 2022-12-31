@@ -1,0 +1,11 @@
+// html
+
+<div id="user" data-uid="2471555" data-github-nickname="Papillard">
+Boris Paillard
+</div>
+
+//js
+
+const boris = document.getElementById('user');
+console.log(boris.dataset.uid);
+console.log(boris.dataset.githubNickname);

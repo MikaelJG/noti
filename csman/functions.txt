@@ -1,0 +1,4 @@
+private void SayHello() {
+    string hello = "Hi mom!";
+    Console.WriteLIne(hello);
+}

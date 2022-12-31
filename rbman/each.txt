@@ -1,0 +1,10 @@
+beatles = ["paul", "john", "ringo", "george"]
+beatles.each do |beatle|
+    puts beatle.upcase
+end
+
+beatles.each_with_index do |beatle, index|
+    puts "{index + 1} - #{beatle}"
+end
+
+

@@ -1,0 +1,11 @@
+// a fn that returns nothing
+
+fn greet() {
+   println!("Hi there!); 
+}
+
+// a fn that returns an integer
+
+fn fair_dice_roll() -> i32 {
+    4
+}

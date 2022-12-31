@@ -1,0 +1,19 @@
+.underline-link {
+	...
+}
+
+.underline-link::after {
+	content: "";
+	position: absolute
+	bottom: 4px
+	left: 0px
+	width: 0%
+	background-color: yellow
+	height: 16px
+	transition: .3s ease width
+	z-index: -2
+}
+
+.underline-link:hover::after {
+	width: 100%
+}

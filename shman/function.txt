@@ -1,0 +1,5 @@
+write() {
+    echo "first given: $1"
+}
+
+write

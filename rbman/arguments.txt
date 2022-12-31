@@ -1,0 +1,11 @@
+for arg in ARGV
+    puts arg
+end
+
+for i in 0 ... ARGV.length
+    puts "#{i} #{ARGV[i]}"
+end
+
+# number of args
+
+ARGV.length

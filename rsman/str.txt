@@ -1,0 +1,2 @@
+let x = "amos".len(); // 4
+let x = str::len("amos"); // 4 too

@@ -1,0 +1,4 @@
+date = Date.today
+tomorrow = Date.today + 1
+
+return tomorrow.strftime("%B %d")

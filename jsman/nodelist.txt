@@ -1,0 +1,3 @@
+const countries = document.querySelectorAll("#fifa-wins li");
+
+// countries is a nodelist variable

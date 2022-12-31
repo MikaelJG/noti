@@ -1,0 +1,13 @@
+<a href="/delete/2" class="confirmable">Delete</a>
+
+const bindConfirm = (element) => {
+    element.addEventListener("click", (event) => {
+        if (!confirm("Are you sure you want to delete?")) {
+            event.prentDefault();
+        }
+    });
+};
+
+document.querySelectorAll(".confirmable").forEach(bindConfirm);
+
+

@@ -1,0 +1,19 @@
+# text file
+
+1) Amit Physics 80
+2) Rahul Maths 90
+3) Shyam Biology 87
+
+# in terminal
+
+awk '{print $3 "\t" $4}' marks.txt
+
+# Output
+
+Physics 80
+Maths 90
+Biology 87
+
+# awk '/a/' marks.txt
+
+# awk '{print $3 "\t" $4}' marks.txt

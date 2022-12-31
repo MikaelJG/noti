@@ -1,0 +1,5 @@
+do |num|
+    num * 2
+end
+
+{ |num| num * 2 } 

@@ -1,0 +1,5 @@
+// GET request
+
+fetch(url).then((response) => {
+        // Do some once HTTP response is received
+});

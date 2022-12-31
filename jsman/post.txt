@@ -1,0 +1,27 @@
+// html
+
+<!-- index.html -->
+
+<form action="" id="form">
+    <input type="email" id="email">
+    <input type="password" id="password">
+    <input type="submit">
+</form>
+
+const signUp = (event) => {
+    event.preventDefault()
+    const emailValue = document.getElementById("email").value
+    const passwordValue = document.getElementById("password").value
+    fetch("https://reqres.in/api/register", {
+        method: "POST",
+        headers {"Content-Type": "application/json"},
+        body: JSON.stringify({"email": emailValue, "password": passwordValue})
+            .then(response => response.json())
+            .then((data => {
+                console.log(data)
+            });
+    });
+};
+
+const form = document.querySelector("#form")
+form.addEventListener("submit", signUp)

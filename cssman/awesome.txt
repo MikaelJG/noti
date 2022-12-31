@@ -1,0 +1,2 @@
+<!-- cdn link to paste in your <head> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">

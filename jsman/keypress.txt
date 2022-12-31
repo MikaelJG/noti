@@ -1,0 +1,5 @@
+window.addEventListener{"keudown", function (event) {
+    if (event.key) {
+        alert("the user has pressed the key " event.key);
+    }
+})

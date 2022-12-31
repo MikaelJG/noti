@@ -1,0 +1,9 @@
+if (10 > 5) {
+    var outcome = "if block";
+} else if (true) {
+    var outcome = "else if block";
+} else { 
+    var outcome = "else block";
+}
+outcome;
+

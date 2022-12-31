@@ -1,0 +1,9 @@
+if [false];
+    then 
+        # do some
+elif [false];
+    then
+        # so some too
+else
+
+fi

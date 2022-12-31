@@ -1,0 +1,6 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.squares.classList.add('squareActive')j
+    }
+    , 3000);
+});

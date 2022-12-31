@@ -1,0 +1,9 @@
+
+for(int i = 0; i < 5; i++;){
+    Console.WriteLine(i);
+}
+
+int[] LuckyNums = {4, 8, 15, 16, 23, 42};
+foreach(int LuckyNum in LuckyNums){
+    Console.WriteLine(LuckyNum);
+}

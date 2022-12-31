@@ -1,0 +1,14 @@
+let pair = ('a', 17);
+pair.0 // this is 'a'
+pair.1 // this is 17
+
+// explicit
+
+let pair: (char, i32) = {'a', 17};
+
+// destructured
+
+let (some_char, some_int) = ('a', 17);
+
+assert!(some_char, 'a');
+assert!(some_int, 17);

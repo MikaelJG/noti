@@ -1,0 +1,7 @@
+var breakfast = 10 
+
+let i = 1;
+
+const taMere = 4
+
+var breakfast = ["coffee", "croissant"];

@@ -1,0 +1,6 @@
+<head>
+    <!-- Google result text-->
+    <title>Coding Bootcamp Le Wagon | Europe's Best Coding Bootcamp</title>
+    <!-- Google result description-->
+    <meta name="description" content="Le Wagon is Europe’s best bootcamp.">
+</head>

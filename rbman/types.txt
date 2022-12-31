@@ -1,0 +1,9 @@
+"Sponge Bob".class              #=> String
+12.class                        #=> Integer
+3.14.class                      #=> Float
+["Sponge Bob", 12, 3.14].class  #=> Array
+true.class                      #=> TrueClass
+false.class                     #=> FalseClass
+(1..100).class                  #=> Range
+{ key: "value" }                #=> Hash
+:symbol                         #=> Symbol

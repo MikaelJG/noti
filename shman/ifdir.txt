@@ -1,0 +1,7 @@
+for dirname in /home/miikey/*; do 
+    if [ -d "$dirname: ];
+        then
+
+        # do stuff
+    fi
+done

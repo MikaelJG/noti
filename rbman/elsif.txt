@@ -1,0 +1,7 @@
+if hour > 6
+    puts "good morning"
+elsif hour > 12 && hour < 18
+    puts "good afternoon"
+else
+    puts "good night"
+end

@@ -1,0 +1,6 @@
+const square = function (num) {
+    return number * number;
+} 
+const x = square(4);
+
+// x = 16

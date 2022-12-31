@@ -1,0 +1,4 @@
+To see the while client / server communication
+
+curl -i http://perdu.com
+curl -i -v http://perdu.com

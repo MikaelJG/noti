@@ -1,0 +1,4 @@
+$(date +"%m-%d-%Y")
+$(date +"%m-%d")
+
+timestamp=$(date +"%m-%d-%Y")

@@ -1,0 +1,10 @@
+ass="red">A red paragraph</p>
+<ul id="players">
+    <li class="green">Luke</li>
+    <li class="red">Anakin</li>
+</ul>
+
+const list = document.querySelector("#players");
+const element = list.querySelector(".red");
+console.log(element.innerText);
+// => Anakin 

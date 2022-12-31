@@ -1,0 +1,10 @@
+def timer
+    start_time = Time.now
+    sleep(1)
+    end_time = Time.now
+total_time = end_time - start_time
+
+puts "elapsed time {total_time} secondes"
+end
+
+timer()

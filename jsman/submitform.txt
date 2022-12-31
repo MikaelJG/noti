@@ -1,0 +1,9 @@
+const form = document.querySelector("#search-form")
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault() // prevent form native behavior
+    const input = event.currentTarget.querySelector(".form=control")
+    results.innerHTMl = ""
+    searchMovies(input.value)
+
+})

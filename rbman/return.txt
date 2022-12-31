@@ -1,0 +1,9 @@
+def add(x, y)
+  return x + y
+end
+
+# is the same as
+
+def add(x, y)
+  x + y
+end

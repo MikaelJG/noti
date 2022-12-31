@@ -1,0 +1,8 @@
+<a href="https://www.lewagon.com" id="home">Le Wagon <em>rocks</em></a>
+
+const home = document.getElementById("home");
+console.log(home,innerText);
+console.log(home.innerHTML);
+console.log(home.attributes.href.value);
+
+home.innerHTML = "Le Wagon <string>rocks</strong>"; //Update HTML

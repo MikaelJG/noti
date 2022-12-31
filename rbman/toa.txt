@@ -1,0 +1,5 @@
+(1..10).to_a 
+# includes 10
+
+(1...10).to_a
+# excludes 10

@@ -1,0 +1,4 @@
+unless age < 18
+    puts "You can vote"
+end
+puts "You can vote" unless age < 18

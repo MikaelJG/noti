@@ -1,0 +1,4 @@
+# upcase one letter
+
+foo=bar
+echo "${foo^}"

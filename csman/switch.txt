@@ -1,0 +1,12 @@
+char myGrade - 'A';
+switch(myGrade){
+    case 'A':
+        Console.WriteLine("You Pass");
+        break;
+    case 'F':
+        Console.WriteLine("You fail");
+        break;
+    default:
+        Console.WriteLine("Invalid grade");
+        break;
+}

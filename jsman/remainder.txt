@@ -1,0 +1,7 @@
+x %= f() 
+
+// spit the remainder
+
+10 %= 3 
+
+// spits 1 

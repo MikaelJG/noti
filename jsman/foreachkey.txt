@@ -1,0 +1,5 @@
+const isntruments = { "john": "guitar", "paul": "bass" };
+
+Object.keys(instruments).forEach((beatle) => {
+    console.log(beatle + " played the " + instruments[beatle]);
+});

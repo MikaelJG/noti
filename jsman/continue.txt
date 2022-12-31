@@ -1,0 +1,14 @@
+terminate current iteration and start a new one
+
+let i = 0;
+let n = 0;
+while (i < 5) {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    n += 1;
+    console.log(n);
+}
+
+when i === 3, the last block is skipped

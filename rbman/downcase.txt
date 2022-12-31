@@ -1,0 +1,10 @@
+text = 'Hello'
+
+text.downcase
+#=> "HELLO"
+
+text
+#=> "Hello"
+
+text.downcase!
+#=> "HELLO"

@@ -1,0 +1,4 @@
+let (some_char, some_int) = ('a', 17);
+
+assert!(some_char, 'a');
+assert!(some_int, 17);

@@ -1,0 +1,3 @@
+Math.Pow(2, 3); // power
+Math.Sqrt(144); 
+Math.Round(2.7);

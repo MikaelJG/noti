@@ -1,0 +1,9 @@
+// mut makes var binding mutable
+
+fn main() {
+    let mut n = Number {
+        odd: true,
+        value: 17,
+    }
+    n.value = 19; // all good
+}

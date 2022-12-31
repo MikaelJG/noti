@@ -1,0 +1,23 @@
+YARN - https://yarnpkg.com/
+
+// yarn add sortablejs
+
+// create a file
+// mkdir src/plugins
+// touch src/plugins/init_sortable.js
+
+// in init.sortable
+import Sortable from "sortablejs"
+
+const list = document.querySelector("#results")
+
+const initSortable = () => {
+    Sortable.create(list)
+}
+
+export { initSortable }
+
+// in index.js
+
+import { initSortable } from "./plugins/init_sortable"
+initSortable()

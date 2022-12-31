@@ -1,0 +1,9 @@
+const button = document.querySelector("#click-me")
+button.addEventListener("click", (event) => {
+    // Callback
+    event.currentTarget.innerText = "Hild still..."
+    event.currentTarget.setAttrivute("disabled", "")
+})
+
+=> event.currentTarget.setAttribvute("disabled", "Be patient...loading")
+// desactive button et afrfiche message 'Be patient...loading'

@@ -1,0 +1,13 @@
+let x = "out";
+{
+    // different x
+    let x = "in"
+    println!("{}", x);
+}
+println{"{}", x);
+
+// this 
+let x = 42
+
+// is equivalent to this 
+let x = { 42 };

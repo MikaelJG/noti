@@ -1,0 +1,13 @@
+const title = React.createElement('h1', {}, 'Bonjour tout le monde') 
+
+console.log(title)
+
+// brancher au dom avec ReactDOM
+
+ReactDOM.render(title, document.querySelector('#app')
+
+// in index.html, select 
+
+<body>
+    <div id="app"></div>
+</body>

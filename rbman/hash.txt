@@ -1,0 +1,15 @@
+{ name: "bob", age: 42 }
+# symbol as key
+
+{ "name" => "bob", "age" => 42 }
+# string as keys
+
+paris = {
+    "country" => "France", 
+    "population" => 2211000, 
+    "people" => ["Pierre", "Marie"], 
+    "street" => {
+        route_one: "adresse"
+        route_two: "adresse_two"
+    }
+}

@@ -1,0 +1,7 @@
+// Line comment, my friend
+
+// Block comments
+let x = 5 + /* 90 + */ 5;
+
+
+

@@ -1,0 +1,6 @@
+const firstName = "John";
+firstName[0];
+// "J"
+
+firstName.substring(1);
+// Print all characters starting at index 1
