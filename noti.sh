@@ -50,7 +50,9 @@ if [[ "$1" == "-w" ]];
     then
     FIND_NOTES $2
     MOD_LAST_FILE $2 $3
-
+elif [[ "$1" == "-l" ]];
+    then
+    echo "${LANGUAGES[@]}"
 elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
     then
     FIND_NOTES $1
