@@ -1,0 +1,4 @@
+# set your default text editor
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
