@@ -27,7 +27,7 @@ READ_NOTES() {
     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
             echo ""
-            cat ~/code/noti/$1/$2.txt
+            cat ~/code/noti/languages/$1/$2.txt
             echo ""
     else
         echo "File does not exist"
@@ -40,7 +40,7 @@ MOD_LAST_FILE() {
         then
         
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
-        cat ~/code/noti/$1/$2.txt >> $LAST_MODIFIED_FILE
+        cat ~/code/noti/languages/$1/$2.txt >> $LAST_MODIFIED_FILE
     else
         echo "Language or file is not supported"
     fi
