@@ -21,7 +21,7 @@ In .bashrc, write an alias for Noti.
   # example
   alias noti="~/code/noti/noti.sh"
 ```
-Install Noti
+Install Noti.
 ```bash
  git clone https://github.com/MikaelJG/Noti  
 ```
