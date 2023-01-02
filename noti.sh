@@ -7,7 +7,7 @@ LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
 
 FIND_NOTES() {
     
-    DIR=~/code/noti/$1
+    DIR=~/code/noti/languages/$1
     
     for file in "$DIR"/*
         do
