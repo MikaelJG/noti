@@ -43,4 +43,5 @@ $ noti rs iif
 
 Insert gif or link to demo
 
-![Logo](https://github.com/MikaelJG/noti/blob/master/assets/noti_demo.mkv)
+https://user-images.githubusercontent.com/101736882/210192432-31ba8f17-b649-4c04-ac35-8f6cfb68c026.mp4
+
