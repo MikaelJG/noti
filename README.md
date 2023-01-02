@@ -1,5 +1,5 @@
 
-![Logo]()
+![Logo](https://github.com/MikaelJG/noti/blob/master/assets/noti_small.png)
 
 
 # Noti
