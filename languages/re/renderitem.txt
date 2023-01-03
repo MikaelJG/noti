@@ -1,3 +1,6 @@
+// every change state, render is called
+
+
 class TodoList extends React.Component {
     editItem (name) {
         cont todos = [...this.state.todos, name]
