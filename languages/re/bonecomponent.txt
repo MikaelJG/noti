@@ -1,0 +1,16 @@
+// index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale>
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js" defer></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+</body>
+</html>
