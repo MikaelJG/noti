@@ -1,0 +1,18 @@
+
+// all different options
+
+toggle () {
+    return this.state.timer ? this.pause() : this.play()
+}
+
+label () {
+    return this.state.timer ? 'Pause' : 'Read'
+}
+
+render () {
+    return <div>
+        Valeur : {this.state.n}
+        {this.state.timer ? 
+            <button onClick={this.toggle.bind(this)}>{this.label()}</button>
+    </div>
+}
