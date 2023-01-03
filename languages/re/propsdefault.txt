@@ -1,0 +1,7 @@
+class CustomButton extends React.Component {
+    // 
+}
+
+CustonButton.defaultProps = {
+    color: "blue"
+};
