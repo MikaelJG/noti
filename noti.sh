@@ -51,6 +51,8 @@ MOD_LAST_FILE() {
 # if it doesn't exist already
 # cp last_file last_file + s
 
+# echo "New file ${last_file + s} created
+
 # if two words (ouch to code)
 # reverse them 
 # classlist.txt listclass.txt
