@@ -1,0 +1,5 @@
+//  a function that can operate on strings or numbers:
+
+function printId(id: number | string) {
+  console.log("Your ID is: " + id);
+}
