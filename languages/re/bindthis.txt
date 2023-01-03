@@ -7,21 +7,14 @@ class Clock extends React.Component {
         super(props)
         this.state = {date: new Date()}
         this.timer = null
+        this.toggle = this.toggle.bind(this)
+        this.reset = this.reset.bind(this)
     }
 
-    // when component is created
-    componentDidMount () {
-        this.timer = window.setInterval(this.tick.bind(this) => {
-        }, 1000)
+    toggle () {
+        // some
     }
 
-    // when component is deleted 
-    componentWillount () {
-        window.clearInterval(this.timer)
-    }
-
-    tick () {
-        this.setState({date: new Date()}) 
-
-        }
+    reset () {
+        // some
     }
