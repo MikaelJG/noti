@@ -7,7 +7,6 @@ LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
 # find the ex file
 
 FIND_NOTES() {
-    
     DIR=~/code/noti/languages/$1
     
     for file in "$DIR"/*
@@ -34,14 +33,12 @@ FIND_LANGUAGES() {
                 
                 LANGUAGE_ARRAY+=( "$filename" )
     done
-
     echo "Supported languages: "
     echo "> ${LANGUAGE_ARRAY[@]}"
 }
 
 
 READ_NOTES() {
-    
     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
             echo ""
@@ -53,27 +50,14 @@ READ_NOTES() {
 }
 
 MOD_LAST_FILE() {
-
     if [[ "${LANGUAGES[*]}" =~ " $1 " ]] && [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
-        
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
         cat ~/code/noti/languages/$1/$2.txt >> $LAST_MODIFIED_FILE
     else
         echo "Language or file is not supported"
     fi
 }
-
-# create all variants of a note with -s
-# if -s 
-# if it doesn't exist already
-# cp last_file last_file + s
-
-# echo "New file ${last_file + s} created
-
-# if two words (ouch to code)
-# reverse them 
-# classlist.txt listclass.txt
 
 if [[ "$1" == "-w" ]];
     then
