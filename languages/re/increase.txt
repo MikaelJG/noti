@@ -1,0 +1,3 @@
+increment () {
+    this.setState((state, props) => ({n: state.n + props.step}))
+}
