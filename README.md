@@ -43,7 +43,7 @@ $ noti rs iif
 
 https://user-images.githubusercontent.com/101736882/210192432-31ba8f17-b649-4c04-ac35-8f6cfb68c026.mp4
 
-## A summary
+## Summary
 
 Notis is a note-taking and note-showing application. It either finds your notes and read them, or finds your notes and writes them in a file of your choice. 
 
