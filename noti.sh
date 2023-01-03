@@ -1,6 +1,7 @@
 # append this example to my file. 
 
 NOTES_ARRAY=()
+LANGUAGE_ARRAY=()
 LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
 
 # find the ex file
@@ -21,6 +22,23 @@ FIND_NOTES() {
            fi
     done
 }
+
+FIND_LANGUAGES() {
+    DIR=~/code/noti/languages
+    
+    for file in "$DIR"/*
+        do
+                filename=$(basename -- "$file")
+                extension="${filename##*.}"
+                filename="${filename%.*}"
+                
+                LANGUAGE_ARRAY+=( "$filename" )
+    done
+
+    echo "Supported languages"
+    echo ${LANGUAGE_ARRAY[@]}
+}
+
 
 READ_NOTES() {
     
@@ -63,7 +81,7 @@ if [[ "$1" == "-w" ]];
     MOD_LAST_FILE $2 $3
 elif [[ "$1" == "-l" ]];
     then
-    echo "${LANGUAGES[@]}"
+    FIND_LANGUAGES
 elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
     then
     FIND_NOTES $1
