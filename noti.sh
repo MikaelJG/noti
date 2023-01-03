@@ -46,6 +46,15 @@ MOD_LAST_FILE() {
     fi
 }
 
+# create all variants of a note with -s
+# if -s 
+# if it doesn't exist already
+# cp last_file last_file + s
+
+# if two words (ouch to code)
+# reverse them 
+# classlist.txt listclass.txt
+
 if [[ "$1" == "-w" ]];
     then
     FIND_NOTES $2
