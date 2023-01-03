@@ -35,8 +35,8 @@ FIND_LANGUAGES() {
                 LANGUAGE_ARRAY+=( "$filename" )
     done
 
-    echo "Supported languages"
-    echo ${LANGUAGE_ARRAY[@]}
+    echo "Supported languages: "
+    echo "> ${LANGUAGE_ARRAY[@]}"
 }
 
 
