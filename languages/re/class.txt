@@ -1,3 +1,6 @@
+// see classmore
+// classwelcome
+
 // propre a jsx
 // babel convert jsx to js
 
