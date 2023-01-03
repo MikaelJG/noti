@@ -1,0 +1,7 @@
+Noti is note-taking and note-showing application.
+It either finds your notes and reads them, or finds you notes and writes them in a file of your choice. 
+
+It's a bash script, with many text files.
+Noti is like the librarian of hundreds of text files. In a way, it is a simpler and faster version of notion, which I'm not a fan of.
+
+It's a great tool for the command line. You get to see your notes faster and it reduces mental overhead. 
