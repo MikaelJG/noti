@@ -1,16 +1,8 @@
 declare -A LANGUAGES
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
-LANGUAGES=( ["javascript"]="js" ["javascript"]="js" ["react"]="re" ["html"]="ht" ["ruby"]="rb" ["bash"]="sh" ["rust"]="rs" ["typescript"]="ts" ["css"]="css" ["csharp"]="cs" )
-
-echo "${LANGUAGES[@]}"
-echo "${!LANGUAGES[@]}"
-echo "${LANGUAGES["js"]}"
-
-for i in "${!LANGUAGES[@]}";
-    do
-        echo "$i - ${LANGUAGES[$i]}";
-done
+# LANGUAGES=( ["javascript"]="js" ["javascript"]="js" ["react"]="re" ["html"]="ht" ["ruby"]="rb" ["bash"]="sh" ["rust"]="rs" ["typescript"]="ts" ["css"]="css" ["csharp"]="cs" )
+LANGUAGES=( ["js"]="javascript" ["js"]="javascript" ["re"]="react" ["ht"]="html" ["rb"]="ruby" ["sh"]="bash" ["rs"]="rust" ["ts"]="typescript" ["css"]="css" ["cs"]="csharp" ["go"]="golang" ["ph"]="php" ["py"]="python" ["ra"]="rails" ["th"]="three.js" )
 
 # find the ex file
 
@@ -41,8 +33,13 @@ FIND_LANGUAGES() {
                 
                 LANGUAGE_ARRAY+=( "$filename" )
     done
-    echo "Supported languages: "
-    echo "> ${LANGUAGE_ARRAY[@]}"
+
+    for i in "${LANGUAGE_ARRAY[@]}";
+    do
+        echo "$i - ${LANGUAGES[$i]}";
+    done
+    # echo "Supported languages: "
+    # echo "> ${LANGUAGE_ARRAY[@]}"
 }
 
 
