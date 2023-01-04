@@ -33,15 +33,10 @@ FIND_LANGUAGES() {
 }
 
 FIND_IN_ALL() {
-    DIR=~/code/noti/languages
-    for file in "$DIR"/*
+    for i in "${LANGUAGE_ARRAY[@]}" 
         do
-            if [ -d "$file" ];
-                then
-                FIND_NOTES $2
-                READ_NOTES $1 $2 
-                echo $file
-           fi
+        FIND_NOTES $i
+        READ_NOTES $i $2
     done
 }
 
@@ -51,6 +46,7 @@ READ_NOTES() {
             echo ""
             cat ~/code/noti/languages/$1/$2.txt
             echo ""
+            exit
     else
         echo "File does not exist"
     fi
