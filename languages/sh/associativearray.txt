@@ -1,5 +1,3 @@
-# see associative array
-
 # declare it first
 declare -A animal
 

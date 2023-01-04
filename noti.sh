@@ -2,8 +2,12 @@
 
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
-LANGUAGES=( ["javascript"]="js" ["javascript"]="js" ["react"]="re" ["html"]="ht" ["ruby"]="rb" ["bash"]="sh" ["rust"]="rs" ["typescript"]="ts" ["css"]="css" ["c#"]="cs" )
-LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
+LANGUAGES=( ["javascript"]="js" ["javascript"]="js" ["react"]="re" ["html"]="ht" ["ruby"]="rb" ["bash"]="sh" ["rust"]="rs" ["typescript"]="ts" ["css"]="css" ["csharp"]="cs" )
+# LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
+
+echo "${LANGUAGES[@]}"
+echo "${!LANGUAGES[@]}"
+echo "${LANGUAGES[js]}"
 
 # find the ex file
 
