@@ -1,0 +1,7 @@
+# know your version
+
+bash --version
+
+# see your command, verbose
+
+bash -v

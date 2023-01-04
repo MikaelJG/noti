@@ -3,6 +3,7 @@
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
 LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
+LANGUAGES=( "js" "js" "re" "ht" "rb" "sh" "rs" "ts" "css" "cs" )
 
 # find the ex file
 

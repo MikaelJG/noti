@@ -1,3 +1,5 @@
+# see hash for more
+
 fruits=("orange" "apple" "pear")
 
 fruits=()
