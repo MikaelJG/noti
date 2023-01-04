@@ -38,11 +38,8 @@ FIND_IN_ALL() {
         do
             if [ -d "$file" ];
                 then
-                # filename=$(basename -- "$file")
-                # extension="${filename##*.}"
-                # filename="${filename%.*}"
-                # 
-                # NOTES_ARRAY+=( "$filename" )
+                FIND_NOTES $2
+                READ_NOTES $1 $2 
                 echo $file
            fi
     done
@@ -70,7 +67,6 @@ MOD_LAST_FILE() {
 }
 
 FIND_LANGUAGES
-FIND_IN_ALL
 
 if [[ "$1" == "-w" ]];
     then
@@ -85,6 +81,10 @@ elif [[ "$1" == "-l" ]];
     do
         echo "$i - ${LANGUAGES[$i]}";
     done
+elif [[ "$1" == "-a" ]];
+    then
+    FIND_IN_ALL $1 $2
+
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]];
     then
     FIND_NOTES $1
