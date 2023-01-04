@@ -1,5 +1,4 @@
-# append this example to my file. 
-
+declare -A LANGUAGES
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
 LANGUAGES=( ["javascript"]="js" ["javascript"]="js" ["react"]="re" ["html"]="ht" ["ruby"]="rb" ["bash"]="sh" ["rust"]="rs" ["typescript"]="ts" ["css"]="css" ["csharp"]="cs" )
