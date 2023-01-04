@@ -1,0 +1,9 @@
+# how can I have notes on OOP, MVC, ...
+# how can I filter notes on broad programming concepts?
+
+# mkdir programming?
+
+# array_general_prog=()
+
+# noti -p oop
+# noti -p mvc
