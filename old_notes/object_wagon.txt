@@ -1,0 +1,43 @@
+JSON, which stands for JavaScript Object Notation!
+
+Reminder: we used to JSON.parse(serialized_json) in ruby as a hash / array.
+
+ JavaScript object’s keys
+ JavaScript object, keys are strings:
+
+{ "name": "bob", "age": 42 } // An object
+{ name: "bob", age: 42 }     // The same object
+
+const student = {
+    firstName: "Boris",
+    lastName: "Paillar",
+    };
+
+console.log(typeof student) // see notes
+
+JavaScript Object:
+
+const bob = {};
+typeof(bob);
+// => "object"
+
+bob['name'] = 'bob';
+bob['name'];
+// => "bob"
+
+bob.age = 42;
+bob.age;
+// => 42
+
+
+//Re-assign is possible in const HASH
+
+
+reading/setting a property
+
+console.log(student['firstName']);
+// "Boris"
+
+student.firstName = "Romain";
+console.log(student.firstName);
+// "Romain"
