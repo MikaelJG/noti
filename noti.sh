@@ -5,7 +5,7 @@ LANGUAGES=( ["js"]="javascript" ["js"]="javascript" ["re"]="react" ["ht"]="html"
 
 FIND_NOTES() {
     DIR=~/code/noti/languages/$1
-    
+
     for file in "$DIR"/*
         do
             if [ -f "$file" ];
@@ -30,11 +30,19 @@ FIND_LANGUAGES() {
                 
                 LANGUAGE_ARRAY+=( "$filename" )
     done
+}
 
-    echo "Supported languages: "
-    for i in "${LANGUAGE_ARRAY[@]}";
-    do
-        echo "$i - ${LANGUAGES[$i]}";
+FIND_IN_ALL() {
+    for file in "$DIR"/*
+        do
+            if [ -f "$file" ];
+                then
+                filename=$(basename -- "$file")
+                extension="${filename##*.}"
+                filename="${filename%.*}"
+                
+                NOTES_ARRAY+=( "$filename" )
+           fi
     done
 }
 
@@ -59,6 +67,8 @@ MOD_LAST_FILE() {
     fi
 }
 
+FIND_LANGUAGES
+
 if [[ "$1" == "-w" ]];
     then
     FIND_NOTES $2
@@ -66,7 +76,13 @@ if [[ "$1" == "-w" ]];
 elif [[ "$1" == "-l" ]];
     then
     FIND_LANGUAGES
-elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
+    
+    echo "Supported languages: "
+    for i in "${LANGUAGE_ARRAY[@]}";
+    do
+        echo "$i - ${LANGUAGES[$i]}";
+    done
+elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]];
     then
     FIND_NOTES $1
     READ_NOTES $1 $2
