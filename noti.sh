@@ -46,9 +46,10 @@ READ_NOTES() {
             echo ""
             cat ~/code/noti/languages/$1/$2.txt
             echo ""
+            echo "Found in $1 folder"
             exit
     else
-        echo "File does not exist"
+        echo "File does not exist in $1 folder"
     fi
 }
 
