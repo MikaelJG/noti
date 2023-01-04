@@ -1,10 +1,7 @@
 declare -A LANGUAGES
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
-# LANGUAGES=( ["javascript"]="js" ["javascript"]="js" ["react"]="re" ["html"]="ht" ["ruby"]="rb" ["bash"]="sh" ["rust"]="rs" ["typescript"]="ts" ["css"]="css" ["csharp"]="cs" )
 LANGUAGES=( ["js"]="javascript" ["js"]="javascript" ["re"]="react" ["ht"]="html" ["rb"]="ruby" ["sh"]="bash" ["rs"]="rust" ["ts"]="typescript" ["css"]="css" ["cs"]="csharp" ["go"]="golang" ["ph"]="php" ["py"]="python" ["ra"]="rails" ["th"]="three.js" )
-
-# find the ex file
 
 FIND_NOTES() {
     DIR=~/code/noti/languages/$1
@@ -34,14 +31,12 @@ FIND_LANGUAGES() {
                 LANGUAGE_ARRAY+=( "$filename" )
     done
 
+    echo "Supported languages: "
     for i in "${LANGUAGE_ARRAY[@]}";
     do
         echo "$i - ${LANGUAGES[$i]}";
     done
-    # echo "Supported languages: "
-    # echo "> ${LANGUAGE_ARRAY[@]}"
 }
-
 
 READ_NOTES() {
     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
@@ -78,7 +73,4 @@ elif [[ "${LANGUAGES[*]}" =~ " $1 " ]];
 else 
     echo "language not supported"
 fi
-
-
-
 
