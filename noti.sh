@@ -33,15 +33,17 @@ FIND_LANGUAGES() {
 }
 
 FIND_IN_ALL() {
+    DIR=~/code/noti/languages
     for file in "$DIR"/*
         do
-            if [ -f "$file" ];
+            if [ -d "$file" ];
                 then
-                filename=$(basename -- "$file")
-                extension="${filename##*.}"
-                filename="${filename%.*}"
-                
-                NOTES_ARRAY+=( "$filename" )
+                # filename=$(basename -- "$file")
+                # extension="${filename##*.}"
+                # filename="${filename%.*}"
+                # 
+                # NOTES_ARRAY+=( "$filename" )
+                echo $file
            fi
     done
 }
@@ -68,6 +70,7 @@ MOD_LAST_FILE() {
 }
 
 FIND_LANGUAGES
+FIND_IN_ALL
 
 if [[ "$1" == "-w" ]];
     then
