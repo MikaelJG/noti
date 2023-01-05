@@ -1,0 +1,3 @@
+/word-to-search
+
+Press N to find next word
