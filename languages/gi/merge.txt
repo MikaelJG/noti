@@ -1,0 +1,19 @@
+Merge takes all the changes in one branch and merges them into another branch in one commit.
+
+Rebase says I want the point at which I branched to move to a new starting point
+
+Merge
+
+you have created a feature branch. When you want to bring those changes back to master, you probably want merge.
+
+$ git checkout master
+$ git merge cool-feature
+
+Rebase
+
+you developed when another developer made an unrelated change. You probably want to pull and then rebase to base your changes from the current version of repo.
+
+avoid spaghetti-history you can rebase:
+
+git checkout master
+git merge cool-feature
