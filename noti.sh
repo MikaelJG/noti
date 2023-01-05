@@ -41,15 +41,13 @@ READ_NOTES() {
             echo ""
             cat ~/code/noti/languages/$1/$2.txt
             echo ""
-            echo "Found in $1 folder"
-            exit
     else
-        echo "File does not exist in $1 folder"
+        echo "File does not exist"
     fi
 }
 
 MOD_LAST_FILE() {
-    if [[ "${LANGUAGES[*]}" =~ " $1 " ]] && [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
+    if [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
         cat ~/code/noti/languages/$1/$2.txt >> $LAST_MODIFIED_FILE
