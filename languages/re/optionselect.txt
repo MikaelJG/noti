@@ -1,0 +1,30 @@
+// see select
+
+class Home extends React.Component {
+
+    constructor (props) {
+        super(props)
+        this.state = {
+            nom: ["demo", "demo1]
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange (e) {
+        this.setState({
+            nom: Array.from(e.target.selectedOptions).map(o => o.value)
+        })
+    }
+    
+    render () {
+        return <div>
+            <JSON.stringify(this.state.nom)}
+            <label htmlFor="nom">Mon nom</label>
+            <select value={this.state.nom} onChange={this.handleChange multiple>
+                <option value="demo1">Demo 1</option>
+                <option value="demo2">Demo 2</option>
+                <option value="demo3">Demo 3</option>
+            </select>
+            </div>
+    }
+}
