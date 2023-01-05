@@ -32,14 +32,6 @@ FIND_LANGUAGES() {
     done
 }
 
-FIND_IN_ALL() {
-    for i in "${LANGUAGE_ARRAY[@]}" 
-        do
-        FIND_NOTES $i
-        READ_NOTES $i $2
-    done
-}
-
 READ_NOTES() {
     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
@@ -78,10 +70,6 @@ elif [[ "$1" == "-l" ]];
     do
         echo "$i - ${LANGUAGES[$i]}";
     done
-elif [[ "$1" == "-a" ]];
-    then
-    FIND_IN_ALL $1 $2
-
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]];
     then
     FIND_NOTES $1
