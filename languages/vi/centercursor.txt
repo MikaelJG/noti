@@ -1,0 +1,8 @@
+# center your cursor
+
+zz
+
+# great remap trick, .vimrc
+
+# nnoremap <C-u> <C-u>zz
+# nnoremap <C-d> <C-d>zz

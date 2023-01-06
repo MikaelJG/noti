@@ -1,0 +1,5 @@
+# move a half page
+
+Ctrl+d # jump halfpage down
+
+Ctrl+u # jump halfpage up
