@@ -2,6 +2,21 @@
 
 node has many built-in modules. like fs and events
 
+// use modules
+
+// two files : index.js my-module.js
+
+// in index.js
+
+const myModule = require('./my-module');
+
+// in my-module.js
+
+module.exports = {
+    // anything here will be available in index.js (or other files?
+}
+
+
 
 
 
