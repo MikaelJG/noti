@@ -1,0 +1,7 @@
+# vim accepts a count a motion
+
+5j
+
+10k
+
+
