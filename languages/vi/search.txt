@@ -4,4 +4,6 @@ Press n to next word downwards
 
 Shift-n to next word upwards
 
+* searches for word you are on now
+
 
