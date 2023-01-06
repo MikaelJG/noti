@@ -1,0 +1,3 @@
+capital G for last line
+
+Shift-g

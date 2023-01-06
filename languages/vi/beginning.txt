@@ -1,0 +1,3 @@
+gg 
+
+# brings you to the first line
