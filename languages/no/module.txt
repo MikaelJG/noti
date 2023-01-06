@@ -1,0 +1,7 @@
+// a module is a javascript file that exports its code. 
+
+node has many built-in modules. like fs and events
+
+
+
+

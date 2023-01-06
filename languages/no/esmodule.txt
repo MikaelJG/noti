@@ -1,0 +1,3 @@
+es modules uses synthax import/export
+
+// for node.js not common javascript

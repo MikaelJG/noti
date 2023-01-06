@@ -1,0 +1,12 @@
+// async and not blocking solution to read a file
+
+const { readFIle } = require('fs').promises;
+
+// this gives us a function that returns a promise when called.
+
+// to resolve the promis
+
+async function hello() {
+    const file = await readFile('./hello.txt', 'utf8');
+}
+
