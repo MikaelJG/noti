@@ -1,0 +1,15 @@
+
+# only one data structuring level
+# a table
+
+# it can represent arrays, dictionaries, graphs and trees.
+
+hello = "Hi Mom"
+
+# global by default
+
+local hello = "Hi Mom"
+
+# is now local
+
+
