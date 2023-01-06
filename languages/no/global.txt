@@ -1,0 +1,11 @@
+// see process
+
+console.log(global.luckyNum);
+// undefined
+
+global.luckyNum = '23';
+
+console.log(global.luckyNum);
+// now available anywhere in the code
+
+// like window of the browser

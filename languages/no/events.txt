@@ -1,0 +1,11 @@
+// see eventemitter
+
+process.on('exit', function() {
+    // this is callback
+    // call this function on exit
+
+}
+
+// the function will be run when the event 'exit' will happen. 
+
+Process.on listens to an event to run the function

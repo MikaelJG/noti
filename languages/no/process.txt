@@ -1,0 +1,10 @@
+// gives access to current running time process
+
+console.log(process.platform);
+// linux
+
+console.log(process.env.USER);
+// grab value from server
+// jeffd23 
+
+
