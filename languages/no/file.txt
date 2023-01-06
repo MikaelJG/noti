@@ -1,0 +1,5 @@
+# FS is build in file module for node.js
+
+// with a hello.txt file (giberish text in it)
+
+
