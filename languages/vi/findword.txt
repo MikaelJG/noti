@@ -1,3 +1,7 @@
 /word-to-search
 
-Press N to find next word
+Press n to next word downwards
+
+Shift-n to next word upwards
+
+
