@@ -8,40 +8,27 @@ end
 
 -- languages on computer
 
-local languages = {
+local languages = {"js"="javascript"}
     -- value = key
-    "js" = "javascript"
-    "sh" = "bash"
-    "css" = "css"
-    "rx" = "regex"
-    "sql" = "sql"
-    "rs" = "rust"
-    "ts" = "typescript"
-    "cs" = "csharp"
-    "go" = "golang"
-    "ph" = "php"
-    "ra" = "rails"
-    "th" = "three.js"
-    "vi" = "vim"
-    "gi" = "git"
-    "lu" = "lua"
-    "no" = "node.js"
-    "py" = "python"
-    "ht" = "html"
-    "rb" = "ruby"
-    "re" = "react"
-}
-
-local function has_value (tab, val)
-    for index, value in ipairs(tab) do
-            -- We grab the first index of our sub-table instead
-                    if value[1] == val then
-                                return true
-                                        end
-                                            end
-
-                                                return false
-                                                end
+    "sh" = "bash",
+    "css" = "css",
+    "rx" = "regex",
+    "sql" = "sql",
+    "rs" = "rust",
+    "ts" = "typescript",
+    "cs" = "csharp",
+    "go" = "golang",
+    "ph" = "php",
+    "ra" = "rails",
+    "th" = "three.js",
+    "vi" = "vim",
+    "gi" = "git",
+    "lu" = "lua",
+    "no" = "node.js",
+    "py" = "python",
+    "ht" = "html",
+    "rb" = "ruby",
+    "re" = "react",
 
 local function has_value (tab, val)
     for index, value in ipairs(tab) do
