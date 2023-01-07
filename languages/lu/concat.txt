@@ -1,0 +1,2 @@
+
+print("Hello " .. name .. ", the value of key " .. k .. " is " .. v .. "!")

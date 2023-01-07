@@ -1,0 +1,2 @@
+
+print(string.format("Hello %s, the value of key %s is %s", name, k, v))

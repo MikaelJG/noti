@@ -1,34 +1,41 @@
 -- args saved in table arg
 
 print(table.concat(arg,", "))
+-- languages on computer
+
+local languages = {
+    -- value = key
+    ["js"] = "javascript",
+    ["sh"] = "bash",
+    ["css"] = "css",
+    ["rx"] = "regex",
+    ["sql"] = "sql",
+    ["rs"] = "rust",
+    ["ts"] = "typescript",
+    ["cs"] = "csharp",
+    ["go"] = "golang",
+    ["ph"] = "php",
+    ["ra"] = "rails",
+    ["th"] = "three.js",
+    ["vi"] = "vim",
+    ["gi"] = "git",
+    ["lu"] = "lua",
+    ["no"] = "node.js",
+    ["py"] = "python",
+    ["ht"] = "html",
+    ["rb"] = "ruby",
+    ["re"] = "react",
+}
 
 for i, v in ipairs(arg) do
     print(v)
 end
 
--- languages on computer
+for i, v in pairs(languages) do
+    -- print(.. v .. " - " .. i ..)
+    print(string.format("The value of key %s is %s", k, v))
+end
 
-local languages = {"js"="javascript"}
-    -- value = key
-    "sh" = "bash",
-    "css" = "css",
-    "rx" = "regex",
-    "sql" = "sql",
-    "rs" = "rust",
-    "ts" = "typescript",
-    "cs" = "csharp",
-    "go" = "golang",
-    "ph" = "php",
-    "ra" = "rails",
-    "th" = "three.js",
-    "vi" = "vim",
-    "gi" = "git",
-    "lu" = "lua",
-    "no" = "node.js",
-    "py" = "python",
-    "ht" = "html",
-    "rb" = "ruby",
-    "re" = "react",
 
 local function has_value (tab, val)
     for index, value in ipairs(tab) do
@@ -38,9 +45,7 @@ local function has_value (tab, val)
     end
 
     return false
-if 
-
-has_value (languages, arg[1])
+end
 
 -- command should be noti -n re name-of-file  
 
