@@ -1,0 +1,17 @@
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
