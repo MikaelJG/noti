@@ -32,6 +32,29 @@ local languages = {
     "re" = "react"
 }
 
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+            -- We grab the first index of our sub-table instead
+                    if value[1] == val then
+                                return true
+                                        end
+                                            end
+
+                                                return false
+                                                end
+
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+        if value[1] == val then
+            return true
+        end
+    end
+
+    return false
+if 
+
+has_value (languages, arg[1])
+
 -- command should be noti -n re name-of-file  
 
 -- move to directory of folder
