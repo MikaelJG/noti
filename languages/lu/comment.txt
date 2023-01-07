@@ -1,0 +1,3 @@
+comments in lua
+
+-- this is a comment
