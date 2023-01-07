@@ -40,17 +40,22 @@ one = arg[1]
 print(one)
 print(string.format("This is the first arg : %s", one))
 
---local function has_value (tab, val)
---    -- for index, value
---    for i, v in pairs(languages) do
---        if v[1] ==  then
---            return true
---        end
---    end
---
---    return false
---end
+local function has_value (tab, val)
+    -- for index, value
+    for i, v in pairs(languages) do
+        if i == val then
+            return true
+        end
+    end
 
+    return false
+end
+
+if has_value(languages, one) then
+    print("its in")
+else
+    print("not in")
+end
 -- command should be noti -n re name-of-file  
 
 -- move to directory of folder
