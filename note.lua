@@ -33,7 +33,7 @@ end
 
 for i, v in pairs(languages) do
     -- print(.. v .. " - " .. i ..)
-    print(string.format("The value of key %s is %s", k, v))
+    print(string.format("The value of key %s is %s", i, v))
 end
 
 
