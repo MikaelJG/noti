@@ -27,25 +27,29 @@ local languages = {
     ["re"] = "react",
 }
 
-for i, v in ipairs(arg) do
-    print(v)
-end
+--for i, v in ipairs(arg) do
+--    print(v)
+--end
+--
+--for i, v in pairs(languages) do
+--    -- print(.. v .. " - " .. i ..)
+--    print(string.format("The value of key %s is %s", i, v))
+--end
 
-for i, v in pairs(languages) do
-    -- print(.. v .. " - " .. i ..)
-    print(string.format("The value of key %s is %s", i, v))
-end
+one = arg[1]
+print(one)
+print(string.format("This is the first arg : %s", one))
 
-
-local function has_value (tab, val)
-    for index, value in ipairs(tab) do
-        if value[1] == val then
-            return true
-        end
-    end
-
-    return false
-end
+--local function has_value (tab, val)
+--    -- for index, value
+--    for i, v in pairs(languages) do
+--        if v[1] ==  then
+--            return true
+--        end
+--    end
+--
+--    return false
+--end
 
 -- command should be noti -n re name-of-file  
 
