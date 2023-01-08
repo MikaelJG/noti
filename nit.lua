@@ -40,20 +40,20 @@ local function has_value (tab, val)
     return false
 end
 
-if has_value(languages, first_arg)  then
+if has_value(languages, first_arg) and second_arg ~= nil then
     -- language = first_arg
     -- vim ~/code/noti/first_arg/name-of-file
-    print("its in")
+    print("both in languages and second exists")
 else
-    print("not in")
+    print("either not in lang or second is nil")
 end
 
 
-if second_arg == nil then
-    print("its nil")
-else
-    print("not nil")
-end
+--if second_arg == nil then
+--    print("its nil")
+--else
+--    print("not nil")
+--end
 -- its name of file
 
 
