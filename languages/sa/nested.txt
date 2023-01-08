@@ -1,0 +1,9 @@
+// nesting
+
+header {
+    background: blue;
+
+    button {
+        background: red; // targetting button in a header. Same as 'header button'
+    }
+}

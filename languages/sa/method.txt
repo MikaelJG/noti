@@ -1,0 +1,13 @@
+@mixin AnyNameYouWant($variable) { // creating a var (mixin) with a name, then callable anywhere in CSS
+    display: flex;
+    justify-content: center;
+    flex-direction: $variable; // passed when calling function
+}
+
+.header {
+    @include AnyNameYouWant(column); // calling it here andd passing column as an arg
+
+    &_img { // appending _img to .header, don't have to write header again
+        height:1 100vh;
+    }
+}
