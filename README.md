@@ -39,6 +39,14 @@ $ noti rs iif
 # note doesn't exist
 ```
 
+## Options
+
+Find the supported languages
+```bash
+noti -l # supported languages: ...
+noti -w rs if # write note in most recent file.
+```
+
 ## Demo
 
 https://user-images.githubusercontent.com/101736882/210192432-31ba8f17-b649-4c04-ac35-8f6cfb68c026.mp4
