@@ -1,0 +1,5 @@
+yank 
+
+Open your second file from within vi 
+
+(:e /path/to/other/file) and paste it
