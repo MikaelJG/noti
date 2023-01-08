@@ -11,8 +11,8 @@ Written in Bash, Noti finds, prints or copies .txt note files. Copy your notes t
 
 In your home directory, create or update your .bashrc file.
 ```bash
-  cd # move to home
-  vim .bashrc # edit your .bashrc file
+$ cd # move to home
+$ vim .bashrc # edit your .bashrc file
 ```
 In .bashrc, write an alias for Noti and Nit.
 ```bash
@@ -25,33 +25,32 @@ In .bashrc, write an alias for Noti and Nit.
 ```
 Install Noti.
 ```bash
- git clone https://github.com/MikaelJG/Noti  
+$ git clone https://github.com/MikaelJG/Noti  
 ```
 Install Lua for Nit.
 ```bash
-sudo apt install lua5.3
+$ sudo apt install lua5.3
 ```
 ## Examples
 
 Specify a language and a note to read.
 ```bash
-# print a rust if statement
-$ noti rs if
-
-$ noti sr if
-# language not supported
-
-$ noti rs iif
-# note doesn't exist
+$ noti rs if # print a rust if statement
+$ noti sr if # language not supported
+$ noti rs iif # note doesn't exist
 ```
-
+From any directory, create a note.
+```bash
+$ nit rs iif # creates iff.txt with vim
+$ noti rs iif # print my new iif note
+```
 ## Options
 
 Find the supported languages.
 ```bash
-noti -l # supported languages: ...
-noti -w rs if # write note in most recent file.
-nit rs new-note # create new note for rs.
+$ noti -l # supported languages: ...
+$ noti -w rs if # write note in most recent file.
+$ nit rs new-note # create new note for rs.
 ```
 
 ## Demo

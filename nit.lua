@@ -39,7 +39,7 @@ end
 
 if has_value(languages, first_arg) and second_arg ~= nil then
     dir = string.format("~/code/noti/languages/%s/%s", first_arg, second_arg) 
-    command = string.format("vim %s", dir)
+    command = string.format("vim %s.txt", dir)
     os.execute(command)
 else
     print("either not in lang or second is nil")
