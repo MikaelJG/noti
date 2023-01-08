@@ -4,7 +4,6 @@ node has many built-in modules. like fs and events
 
 // use modules
 
-// two files : index.js my-module.js
 
 // in index.js
 

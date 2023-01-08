@@ -1,0 +1,9 @@
+export var by referencing other scripts
+
+# a.sh
+num=42
+
+# b.sh
+. ./a.sh
+echo $num
+

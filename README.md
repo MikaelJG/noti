@@ -1,7 +1,7 @@
 
 ![Logo](https://github.com/MikaelJG/noti/blob/master/assets/noti_logo2.png)
 
-Written in Bash, Noti finds, prints or copies .txt note files. Copy your notes to any other file.
+Written in Bash and Lua, Noti finds, prints or copies .txt note files. Copy your notes to any other file.
 ## Installation
 
 In your home directory, create or update your .bashrc file.

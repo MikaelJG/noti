@@ -1,0 +1,9 @@
+reference another script in a script to access other its variables
+
+.sh
+num=42
+
+# b.sh
+. ./a.sh
+echo $num
+
