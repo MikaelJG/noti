@@ -14,16 +14,22 @@ In your home directory, create or update your .bashrc file.
   cd # move to home
   vim .bashrc # edit your .bashrc file
 ```
-In .bashrc, write an alias for Noti.
+In .bashrc, write an alias for Noti and Nit.
 ```bash
   alias noti="~/path/to/file.sh"
+  alias nit="lua ~/path/to/file.lua"
 
   # example
   alias noti="~/code/noti/noti.sh"
+  alias nit="lua ~/code/noti/nit.lua"
 ```
 Install Noti.
 ```bash
  git clone https://github.com/MikaelJG/Noti  
+```
+Install Lua for Nit.
+```bash
+sudo apt install lua5.3
 ```
 ## Examples
 
@@ -41,10 +47,11 @@ $ noti rs iif
 
 ## Options
 
-Find the supported languages
+Find the supported languages.
 ```bash
 noti -l # supported languages: ...
 noti -w rs if # write note in most recent file.
+nit rs new-note # create new note for rs.
 ```
 
 ## Demo

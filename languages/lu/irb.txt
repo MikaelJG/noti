@@ -1,0 +1,4 @@
+write lua to test
+
+lua 
+-- equivalent of irb and node
