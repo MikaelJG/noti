@@ -1,0 +1,11 @@
+arg == nil
+
+1 == val
+
+-- is not equal 
+second_arg ~= nil
+
+-- and 
+and
+-- or
+or
