@@ -21,6 +21,7 @@ local languages = {
     ["ht"] = "html",
     ["rb"] = "ruby",
     ["re"] = "react",
+    ["sa"] = "sass",
 }
 
 first_arg = arg[1]
