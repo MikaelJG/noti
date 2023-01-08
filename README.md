@@ -1,18 +1,6 @@
 
 ![Logo](https://github.com/MikaelJG/noti/blob/master/assets/noti_logo2.png)
 
-### With notes on
-![Logo](https://github.com/MikaelJG/assets/blob/master/bash_logo.png")
-![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/vim/vim-original.svg")
-![Logo](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg")
-![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg)
-![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg)
-![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg)
-
-# Noti
-
-Noti is a command line note-taking and note-writing application. It eases both the browsing and the redaction of notes.
-
 Written in Bash, Noti finds, prints or copies .txt note files. Copy your notes to any other file.
 ## Installation
 

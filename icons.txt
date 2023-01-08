@@ -1,0 +1,13 @@
+## need to rescale the logos, but that's it
+
+### With notes on
+![Logo](https://github.com/MikaelJG/assets/blob/master/bash_logo.png")
+![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/vim/vim-original.svg")
+![Logo](https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg")
+![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg)
+![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg)
+![Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg)
+
+# Noti
+
+Noti is a command line note-taking and note-writing application. It eases both the browsing and the redaction of notes.

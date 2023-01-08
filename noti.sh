@@ -57,9 +57,6 @@ MOD_LAST_FILE() {
 }
 
 FIND_LANGUAGES
-
-echo ${LANGUAGE_ARRAY[@]}
-
 if [[ "$1" == "-w" ]];
     then
     FIND_NOTES $2
