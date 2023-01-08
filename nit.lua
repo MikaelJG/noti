@@ -1,8 +1,4 @@
--- args saved in table arg
-
-print(table.concat(arg,", "))
 -- languages on computer
-
 local languages = {
     -- value = key
     ["js"] = "javascript",
@@ -27,18 +23,11 @@ local languages = {
     ["re"] = "react",
 }
 
---for i, v in ipairs(arg) do
---    print(v)
---end
---
---for i, v in pairs(languages) do
---    -- print(.. v .. " - " .. i ..)
---    print(string.format("The value of key %s is %s", i, v))
---end
-
-one = arg[1]
-print(one)
-print(string.format("This is the first arg : %s", one))
+first_arg = arg[1]
+second_arg = arg[2]
+print(first_arg)
+print(second_arg)
+print(string.format("This is the first arg : %s", first_arg))
 
 local function has_value (tab, val)
     -- for index, value
@@ -51,12 +40,24 @@ local function has_value (tab, val)
     return false
 end
 
-if has_value(languages, one) then
+if has_value(languages, first_arg)  then
+    -- language = first_arg
+    -- vim ~/code/noti/first_arg/name-of-file
     print("its in")
 else
     print("not in")
 end
--- command should be noti -n re name-of-file  
+
+
+if second_arg == nil then
+    print("its nil")
+else
+    print("not nil")
+end
+-- its name of file
+
+
+-- command should be nit re name-of-file  
 
 -- move to directory of folder
 -- open vim name-of-file  
