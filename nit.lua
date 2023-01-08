@@ -37,8 +37,6 @@ local function has_value (tab, val)
     return false
 end
 
-os.execute("echo 'test'")
-
 if has_value(languages, first_arg) and second_arg ~= nil then
     dir = string.format("~/code/noti/languages/%s/%s", first_arg, second_arg) 
     command = string.format("vim %s", dir)
@@ -46,9 +44,3 @@ if has_value(languages, first_arg) and second_arg ~= nil then
 else
     print("either not in lang or second is nil")
 end
-
--- command should be nit re name-of-file  
-
--- move to directory of folder
--- open vim name-of-file  
--- when vim done, exit
