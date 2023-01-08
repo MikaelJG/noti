@@ -1,0 +1,5 @@
+get the function from another script with source
+
+source path/to/script.sh
+
+# imported function defined in script.sh
