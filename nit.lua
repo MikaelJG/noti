@@ -22,6 +22,7 @@ local languages = {
     ["rb"] = "ruby",
     ["re"] = "react",
     ["sa"] = "sass",
+    ["mo"] = "mongodb",
 }
 
 first_arg = arg[1]
