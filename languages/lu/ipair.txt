@@ -1,5 +1,7 @@
 // for array-like tables
 
+squares = {1, 4, 9, 16, 25, 36, 49, 64, 81}
+
 for i, v in ipairs(arg) do
     print(v)
 end
