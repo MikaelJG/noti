@@ -1,0 +1,7 @@
+updateone()
+
+updatemany()
+
+deleteone()
+
+deletemany()
