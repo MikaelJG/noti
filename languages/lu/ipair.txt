@@ -6,6 +6,15 @@ for i, v in ipairs(arg) do
     print(v)
 end
 
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+            if value == val then
+                return true
+            end
+    end
+    return false
+end
+
 // for hash-like tables
 // not array-like tables
 
