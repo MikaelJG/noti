@@ -1,3 +1,5 @@
+# see cd
+
 get the function from another script with source
 
 source path/to/script.sh

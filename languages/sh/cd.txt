@@ -1,0 +1,8 @@
+source file.sh to cd for real
+
+alias in="source move.sh"
+
+# in move.sh
+cd ~/code/$1
+
+# will change directory for real
