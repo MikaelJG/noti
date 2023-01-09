@@ -1,0 +1,8 @@
+to access the mongodb database
+
+// you need to use the mongodb shell
+// use command
+
+mongo
+
+// than insert commands for mongodb
