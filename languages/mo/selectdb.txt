@@ -1,0 +1,4 @@
+// see collection
+use db-name // to select a db
+
+show collection // show collection of selected db
