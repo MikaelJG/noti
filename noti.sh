@@ -1,11 +1,14 @@
-#!/bin/sh
+#!/bin/bash
+
+# CHANGE SH IF YOUR SHELL IS ZSH
 declare -A LANGUAGES
+NOTI_DIRECTORY=~/code/noti # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
 LANGUAGES=( ["js"]="javascript" ["tm"]="tmux" ["rx"]="regex" ["sql"]="sql" ["js"]="javascript" ["re"]="react" ["ht"]="html" ["rb"]="ruby" ["sh"]="bash" ["rs"]="rust" ["ts"]="typescript" ["css"]="css" ["cs"]="csharp" ["go"]="golang" ["ph"]="php" ["py"]="python" ["ra"]="rails" ["th"]="three.js" ["vi"]="vim" ["gi"]="git" ["lu"]="lua" ["no"]="node.js" ["sa"]="sass" ["mo"]="mongodb" )
 
 FIND_NOTES() {
-    DIR=~/code/noti/languages/$1
+    DIR="${NOTI_DIRECTORY}/languages/$1"
 
     for file in "$DIR"/*
         do
@@ -21,7 +24,7 @@ FIND_NOTES() {
 }
 
 FIND_LANGUAGES() {
-    DIR=~/code/noti/languages
+    DIR="${NOTI_DIRECTORY}/languages"
 
     for file in "$DIR"/*
         do
@@ -39,8 +42,9 @@ FIND_LANGUAGES() {
 READ_NOTES() {
     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
+            DIR="${NOTI_DIRECTORY}/languages"
             echo ""
-            cat ~/code/noti/languages/$1/$2.txt
+            cat ${DIR}/$1/$2.txt
             echo ""
     else
         echo "File does not exist"
@@ -50,8 +54,9 @@ READ_NOTES() {
 MOD_LAST_FILE() {
     if [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
         then
+        DIR="${NOTI_DIRECTORY}/languages"
         LAST_MODIFIED_FILE=$(ls -Art | tail -n 1)
-        cat ~/code/noti/languages/$1/$2.txt >> $LAST_MODIFIED_FILE
+        cat ${DIR}/$1/$2.txt >> $LAST_MODIFIED_FILE
     else
         echo "Language or file is not supported"
     fi
