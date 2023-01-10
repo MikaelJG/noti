@@ -1,11 +1,9 @@
-arg == nil
 
-1 == val
+not false
+-- returns true
 
--- is not equal 
-second_arg ~= nil
+not (false or true)
+-- returns false
 
--- and 
-and
--- or
-or
+not (true and true)
+-- returns false
