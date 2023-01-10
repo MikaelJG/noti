@@ -21,8 +21,8 @@ In .bashrc, write an alias for Noti and Nit.
   alias nit="lua ~/code/noti/nit.lua"
 ```
 Install Noti.
-```bash
-$ git clone https://github.com/MikaelJG/Noti  
+```bashs
+$ git clone git@github.com:MikaelJG/noti.git
 ```
 Install Lua for Nit.
 ```bash
