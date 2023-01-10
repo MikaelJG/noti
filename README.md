@@ -28,6 +28,11 @@ Install Lua for Nit.
 ```bash
 $ sudo apt install lua5.3
 ```
+Define Noti's directory.
+```bash
+# line 5 of noti.sh
+NOTI_DIRECTORY=~/code/noti # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti
+```
 ## Examples
 
 Specify a language and a note to read.
