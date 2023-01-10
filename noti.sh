@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 declare -A LANGUAGES
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
