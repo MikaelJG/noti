@@ -1,9 +1,7 @@
 
 ![Logo](https://github.com/MikaelJG/noti/blob/master/assets/noti_logo2.png)
 
-Written in Bash and Lua, Noti finds, prints or copies .txt note files in the command line. Consult notes faster, and copy them to any other file.
-
-Nit supports Noti. With it, write a note in Noti from any computer directory. 
+Written in Bash and Lua, Noti finds, prints or copies .txt note files in the command line. Plus, Nit supports Noti. With it, write a note in Noti from any directory. 
 
 Note from anywhere, consult faster, and copy to any other file.
 ## Installation
