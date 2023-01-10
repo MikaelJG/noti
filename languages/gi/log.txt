@@ -1,0 +1,21 @@
+git log # find the id of the commit you want to revert to
+
+git checkout -b old-state 0d1d7fc32 # full id
+
+# now on branch old-state
+
+# understand the diff between master and this new branch
+# git log --graph --decorate --pretty=oneline --abbrev-commit master origin/master temp
+# git diff master temp
+# git diff origin/master temp
+
+git branch -f master temp # now, master is reverted
+git checkout master # change branch
+
+git branch -d old-state # delete old-state
+
+git push origin master --force # force revert to master
+
+
+
+
