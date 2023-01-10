@@ -1,3 +1,4 @@
+#!/bin/zsh
 declare -A LANGUAGES
 NOTES_ARRAY=()
 LANGUAGE_ARRAY=()
@@ -13,7 +14,7 @@ FIND_NOTES() {
                 filename=$(basename -- "$file")
                 extension="${filename##*.}"
                 filename="${filename%.*}"
-                
+
                 NOTES_ARRAY+=( "$filename" )
            fi
     done
@@ -21,7 +22,7 @@ FIND_NOTES() {
 
 FIND_LANGUAGES() {
     DIR=~/code/noti/languages
-    
+
     for file in "$DIR"/*
         do
             if [ -d "$file" ];
@@ -72,7 +73,6 @@ elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]];
     then
     FIND_NOTES $1
     READ_NOTES $1 $2
-else 
+else
     echo "language not supported"
 fi
-
