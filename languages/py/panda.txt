@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.DataFrame({“AAA”: [4, 5, 6, 7], “BBB”: ["apple", "pineapple", "apple", "raspberry"], “CCC”: [True, False, False, None]})
+
+# Remove empty fields and duplicates
+df = df.dropna()
+df = df.drop_duplicates()
+
+# Rename columns
+df = df.rename(columns={"AAA": "numbers", "BBB": "fruit", "CCC": "condition"})
+
+# Filter rows base on condition
+df.loc[(df.fruit == "apple") & (df.condition == False)]
