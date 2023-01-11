@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# CHANGE SH IF YOUR SHELL IS ZSH
+# CHANGE SH IF YOUR SHELL IS ZSH!
+
 declare -A LANGUAGES
 NOTI_DIRECTORY=~/code/noti # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti
 NOTES_ARRAY=()
