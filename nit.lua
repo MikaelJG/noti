@@ -1,3 +1,7 @@
+-- SPECIFY THE DIRECTORY TO NOTI
+-- ex: local dir = "~/path/to/noti/folder"
+local noti_dir = "~/code/noti" 
+
 -- languages on computer
 local languages = {
     -- value = key
@@ -23,6 +27,7 @@ local languages = {
     ["re"] = "react",
     ["sa"] = "sass",
     ["mo"] = "mongodb",
+    ["tm"] = "tmux",
 }
 
 first_arg = arg[1]
@@ -40,7 +45,7 @@ local function has_value (tab, val)
 end
 
 if has_value(languages, first_arg) and second_arg ~= nil then
-    dir = string.format("~/code/noti/languages/%s/%s", first_arg, second_arg) 
+    dir = string.format("%s/languages/%s/%s", noti_dir, first_arg, second_arg) 
     command = string.format("vim %s.txt", dir)
     os.execute(command)
 else
