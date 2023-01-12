@@ -9,6 +9,7 @@ local languages = {
     ["sh"] = "bash",
     ["css"] = "css",
     ["rx"] = "regex",
+    ["r"] = "r",
     ["sql"] = "sql",
     ["rs"] = "rust",
     ["ts"] = "typescript",
