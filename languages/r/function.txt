@@ -1,0 +1,25 @@
+#Creating a function
+
+my_function <- function() { # create a function with the name my_function
+  print("Hello World!")
+}
+
+#Calling a function
+my_function() # call the function named my_function
+
+#Arguments
+my_function <- function(fname) {
+  paste(fname, "Griffin")
+}
+
+my_function("Peter")
+my_function("Lois")
+my_function("Stewie")
+
+#2 arguments
+my_function <- function(fname, lname) {
+  paste(fname, lname)
+}
+
+my_function("Peter", "Griffin") #This function expects 2 arguments, and gets 2 arguments
+my_function("Peter")		#This function will get an error because only one argument was given

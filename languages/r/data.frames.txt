@@ -1,0 +1,62 @@
+## Create a data frame
+Data_Frame <- data.frame (
+  Training = c("Strength", "Stamina", "Other"),
+  Pulse = c(100, 150, 120),
+  Duration = c(60, 30, 45)
+)
+
+# Print the data frame
+Data_Frame
+
+## Summarize the data
+summary(Data_Frame)
+
+## Access items
+Data_Frame[1]
+Data_Frame[["Training"]]
+Data_Frame$Training
+
+## Add rows
+New_row_DF <- rbind(Data_Frame, c("Strength", 110, 110))
+
+# Print the new row
+New_row_DF
+
+## Add columns
+# Add a new column
+New_col_DF <- cbind(Data_Frame, Steps = c(1000, 6000, 2000))
+
+# Print the new column
+New_col_DF
+
+## Remove rows and columns
+# Remove the first row and column
+Data_Frame_New <- Data_Frame[-c(1), -c(1)]
+
+# Print the new data frame
+Data_Frame_New
+
+## Number of rows and columns
+dim(Data_Frame)		# number of columns and rows
+ncol(Data_Frame)	# number of columns
+nrow(Data_Frame)	# number of rows
+length(Data_Frame)	# number of columns
+
+## Combining data frames
+Data_Frame1 <- data.frame (
+  Training = c("Strength", "Stamina", "Other"),
+  Pulse = c(100, 150, 120),
+  Duration = c(60, 30, 45)
+)
+Data_Frame2 <- data.frame (
+  Training = c("Stamina", "Stamina", "Strength"),
+  Pulse = c(140, 150, 160),
+  Duration = c(30, 30, 20)
+)
+New_Data_Frame <- rbind(Data_Frame1, Data_Frame2)
+New_Data_Frame
+
+##
+
+
+
