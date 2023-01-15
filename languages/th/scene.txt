@@ -1,0 +1,14 @@
+
+// Scene
+const scene = new THREE.Scene()
+
+// Object
+...
+
+scene.add(mesh)
+
+
+// Renderer
+...
+
+renderer.render(scene, camera)
