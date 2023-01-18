@@ -13,6 +13,3 @@ FIND_NOTES() {
            fi
     done
 }
-echo "hello from find_notes.sh"
-echo "first arg is $1"
-# FIND_NOTES

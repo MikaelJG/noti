@@ -13,7 +13,3 @@ READ_NOTES() {
         echo "File does not exist"
     fi
 }
-
-echo "hello from read_notes.sh"
-echo "first arg is: $1"
-echo "second arg is: $2"

@@ -13,4 +13,3 @@ FIND_LANGUAGES() {
             fi
     done
 }
-echo "hello from find_languages"
