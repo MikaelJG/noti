@@ -9,7 +9,9 @@ if [[ "$1" == "-w" ]];
     then
     FIND_NOTES $2
     MOD_LAST_FILE $2 $3
-elif [[ "$1" == "option" ]] | 
+elif [[ "$1" == "option" ]] || [[ "$1" == "options" ]] || [[ "$1" == "command" ]] || [[ "$1" == "command" ]];
+    then
+    echo "in options"
 elif [[ "$1" == "-l" ]];
     then
         echo "Supported languages: "
