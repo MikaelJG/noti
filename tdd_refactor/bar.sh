@@ -1,5 +1,8 @@
-source foo.sh
 source find_notes.sh
+source find_languages.sh
 
-echo "${foo[@]}"
+FIND_NOTES
+FIND_LANGUAGES
+
 echo "${NOTES_ARRAY[@]}"
+echo "${LANGUAGE_ARRAY[@]}"

@@ -1,16 +1,16 @@
 source variables.sh
-NOTES_ARRAY=()
-FIND_NOTES() {
-    DIR="${NOTI_DIRECTORY}/languages/lu"
+LANGUAGE_ARRAY=()
+FIND_LANGUAGES() {
+    DIR="${NOTI_DIRECTORY}/languages"
     for file in "$DIR"/*
         do
-            if [ -f "$file" ];
+            if [ -d "$file" ];
                 then
                 filename=$(basename -- "$file")
                 extension="${filename##*.}"
                 filename="${filename%.*}"
-                NOTES_ARRAY+=( "$filename" )
-           fi
+                LANGUAGE_ARRAY+=( "$filename" )
+            fi
     done
 }
-FIND_NOTES
+FIND_LANGUAGES
