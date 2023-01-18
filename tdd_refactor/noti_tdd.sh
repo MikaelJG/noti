@@ -4,13 +4,12 @@ source variables.sh
 . ./find_notes.sh
 . ./find_languages.sh
 
-
-
 FIND_LANGUAGES
 if [[ "$1" == "-w" ]];
     then
     FIND_NOTES $2
     MOD_LAST_FILE $2 $3
+elif [[ "$1" == "option" ]] | 
 elif [[ "$1" == "-l" ]];
     then
         echo "Supported languages: "

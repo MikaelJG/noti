@@ -1,0 +1,5 @@
+# or
+if [ "$fname" = "a.txt" ] || [ "$fname" = "c.txt" ]
+
+# and
+if [ "$fname" = "a.txt" ] && [ "$fname" = "c.txt" ]
