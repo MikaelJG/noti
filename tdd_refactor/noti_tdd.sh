@@ -3,11 +3,14 @@
 source variables.sh
 . ./find_notes.sh
 . ./find_languages.sh
+. ./read_notes.sh
+. ./mod_last_file.sh
 
+FIND_LANGUAGES
+FIND_NOTES
 # echo "${NOTES_ARRAY[@]}"
 # echo "${LANGUAGE_ARRAY[@]}"
 
-# FIND_LANGUAGES
 # if [[ "$1" == "-w" ]];
 #     then
 #     FIND_NOTES $2
@@ -26,9 +29,7 @@ source variables.sh
 if [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]];
      then
      FIND_NOTES $1
+     READ_NOTES $1 $2
+ else
+     echo "language not supported"
 fi
-#     FIND_NOTES $1
-#     READ_NOTES $1 $2
-# else
-#     echo "language not supported"
-# fi

@@ -15,4 +15,4 @@ FIND_NOTES() {
 }
 echo "hello from find_notes.sh"
 echo "first arg is $1"
-FIND_NOTES
+# FIND_NOTES
