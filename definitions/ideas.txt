@@ -1,0 +1,66 @@
+OOP
+
+buddy
+class
+object
+highlevel
+lowlevel
+compile
+MVC
+model
+view
+controller
+macros
+script
+logiciels d’affaires 
+ERP
+CRM
+CMS
+PSA
+b2b
+b2c
+HRM
+ITSM
+NetSuite
+
+Static
+
+Type
+
+React
+Angular
+MongoDB
+Atlas
+Express
+Vue
+Node
+Tailwind
+Web Assembly
+Assembly
+
+gui
+gnu
+bash
+zsh
+
+async
+sync
+server
+client
+https
+api
+rest
+dynamic typing
+functional
+imperative
+regex
+dom
+posix
+
+
+
+noti buddy
+
+# all lowercase
+# prints def of buddy
+# print how to install?
