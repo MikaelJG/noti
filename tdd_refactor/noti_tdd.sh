@@ -15,9 +15,15 @@ FIND_NOTES $1
 if [[ "$1" == "option" ]] || [[ "$1" == "options" ]] || [[ "$1" == "command" ]] || [[ "$1" == "command" ]];
      then
      echo "
-     noti -l : list all supported languages
-     noti rs ls : list all notes in rust
-     noti rs ls : list all notes in rust
+        #####################
+        ### Noti Commands ###
+        #####################
+
+noti -l : list all supported languages
+
+noti rs ls : list all notes in rust
+
+noti rs ls : list all notes in rust
      "
 elif [[ "$1" == "-l" ]];
      then
