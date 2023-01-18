@@ -12,4 +12,7 @@ local hello = "Hi Mom"
 
 # is now local
 
+x, y = 300, 400
 
+print("x is: " ..x)
+print("y is: " ..y)
