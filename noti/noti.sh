@@ -12,7 +12,6 @@ source ~/code/noti/noti/variables.sh
 FIND_DEFINITIONS
 FIND_LANGUAGES
 FIND_NOTES $1
-echo "${DEFINITIONS_ARRAY[@]}"
 
 # if [[ "$1" == "-w" ]];
 #     then
@@ -48,7 +47,6 @@ elif [[ "$1" == "-l" ]];
          done
 elif [[ "${DEFINITIONS_ARRAY[*]}" =~ " $1 " ]];
     then
-    echo "in definition_array if"
     READ_DEFINITIONS $1
     exit
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "$2" != "ls" ]];
