@@ -13,10 +13,19 @@ source ~/code/noti/noti/variables.sh
 
 FIND_LANGUAGES
 FIND_DEFINITIONS
+if [[ "${DEFINITIONS_ARRAY[*]}" =~ "$1" ]];
+    then
+         echo "Dictionary includes: "
+         for i in "${DEFINITIONS_ARRAY[@]}";
+         do
+             echo "$i";
+         done
+         exit
+else
+    FIND_NOTES $1
+fi
 
-echo "${DEFINITIONS_ARRAY[@]}"
-
-FIND_NOTES $1
+# FIND_NOTES $1
 # if [[ "$1" == "-w" ]];
 #     then
 #     FIND_NOTES $2
@@ -35,6 +44,13 @@ if [[ "${COMMANDS[*]}" =~ " $1 " ]];
 
 ---------------------------------------------
      "
+# elif [[ "${DEFINITIONS_ARRAY[*]}" =~ " $1 " ]];
+#     then
+#          echo "Dictionary includes: "
+#          for i in "${DEFINITIONS_ARRAY[@]}";
+#          do
+#              echo "$i\n";
+#          done
 elif [[ "$1" == "-l" ]];
      then
          echo "Supported languages: "
