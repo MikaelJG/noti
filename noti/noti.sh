@@ -4,10 +4,18 @@
 source ~/code/noti/noti/variables.sh
 . ~/code/noti/noti/find_notes.sh
 . ~/code/noti/noti/find_languages.sh
+. ~/code/noti/noti/find_definitions.sh
 . ~/code/noti/noti/read_notes.sh
 . ~/code/noti/noti/mod_last_file.sh
 
+# I want find_definition method to
+# create an array with all .txt in noti/definitions
+
 FIND_LANGUAGES
+FIND_DEFINITIONS
+
+echo "${DEFINITIONS_ARRAY[@]}"
+
 FIND_NOTES $1
 # if [[ "$1" == "-w" ]];
 #     then
