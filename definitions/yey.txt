@@ -1,0 +1,6 @@
+Yey 
+A user-friendly CLI fostering collaboration within and across dev/devops teams by allowing them to easily share and launch various docker container configurations.
+
+repo https://github.com/silphid/yey
+
+

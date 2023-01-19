@@ -1,0 +1,9 @@
+# based on F.L's presentation
+
+to release: argo, yey, google cloud
+to configure: kubernetes, pulumi, crossplane
+to monitor: pagerduty, datadog
+to plan: jira
+to create: typescript, go, github, react
+to verigy: docker composer, google cloud build, codefresh,
+to package: docker
