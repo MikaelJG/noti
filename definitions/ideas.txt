@@ -23,6 +23,11 @@ HRM
 ITSM
 craftcms
 NetSuite
+mysql
+postgresql
+sqlite
+kubernetes
+
 
 Static
 
@@ -44,7 +49,11 @@ scrum
 kanban
 agile
 waterfall
-
+twig
+sass
+craftcms
+wordpress
+unixsockets
 
 gui
 gnu
@@ -63,10 +72,18 @@ functional
 imperative
 regex
 dom
+docker
+cluster
+colima # docker.sock, 
+databasedump
+TCPsocket
+Docker daemon
+
 posix
 
 inheritance
 
+########################
 
 noti buddy
 
