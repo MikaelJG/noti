@@ -10,13 +10,9 @@ source ~/code/noti/noti/variables.sh
 . ~/code/noti/noti/mod_last_file.sh
 
 FIND_DEFINITIONS
-if [[ "${DEFINITIONS_ARRAY[*]}" =~ "$1" ]];
-    then
-    READ_DEFINITIONS $1
-else
-    FIND_LANGUAGES
-    FIND_NOTES $1
-fi
+FIND_LANGUAGES
+FIND_NOTES $1
+echo "${DEFINITIONS_ARRAY[@]}"
 
 # if [[ "$1" == "-w" ]];
 #     then
@@ -50,6 +46,11 @@ elif [[ "$1" == "-l" ]];
          do
              echo "$i - ${LANGUAGES[$i]}";
          done
+elif [[ "${DEFINITIONS_ARRAY[*]}" =~ " $1 " ]];
+    then
+    echo "in definition_array if"
+    READ_DEFINITIONS $1
+    exit
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "$2" != "ls" ]];
      then
      FIND_NOTES $1
