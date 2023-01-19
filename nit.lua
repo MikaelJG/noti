@@ -31,6 +31,94 @@ local languages = {
     ["tm"] = "tmux",
 }
 
+local definitions = {
+    "aa",
+    "agile",
+    "angular",
+    "api",
+    "assembly",
+    "async",
+    "b2b",
+    "b2c",
+    "bash",
+    "buddy",
+    "class",
+    "client",
+    "cluster",
+    "cms",
+    "colima",
+    "compile",
+    "container",
+    "controller",
+    "craftcms",
+    "craft",
+    "crm",
+    "daemon",
+    "databasedump",
+    "debug",
+    "docker",
+    "dom",
+    "dump",
+    "dynamic",
+    "elasticsearch",
+    "erp",
+    "express",
+    "fish",
+    "functional",
+    "gnu ",
+    "gui ",
+    "highlevel ",
+    "hrm",
+    "https ",
+    "ideas",
+    "ignore ",
+    "imperative ",
+    "inheritance ",
+    "itsm ",
+    "kanban ",
+    "kibana ",
+    "kubernetes ",
+    "lowlever ",
+    "macros ",
+    "model ",
+    "mongodb ",
+    "mvc ",
+    "mysql ",
+    "netsuite",
+    "node",
+    "object",
+    "posix",
+    "postgresql",
+    "psa",
+    "react ",
+    "regex ",
+    "rest ",
+    "sass",
+    "script ",
+    "scrum ",
+    "server",
+    "sockets",
+    "sqlite",
+    "static",
+    "svelte",
+    "sync",
+    "tailwind",
+    "tcpsocket ",
+    "tcp ",
+    "tdd ",
+    "twig",
+    "type",
+    "unixsockets",
+    "unix",
+    "view ",
+    "virtualbox ",
+    "vue ",
+    "waterfall",
+    "webassembly ",
+    "wordpress ",
+    "zsh ",
+    "zz"
+}
 -- consider definitions as default with
 -- nit buddy
 -- create definition, in noti/definition/$1.txt
@@ -38,7 +126,7 @@ local languages = {
 first_arg = arg[1]
 second_arg = arg[2]
 
-local function has_value (tab, val)
+local function hash_has_value (tab, val)
     -- for index, value
     for i, v in pairs(languages) do
         if i == val then
@@ -48,11 +136,25 @@ local function has_value (tab, val)
 
     return false
 end
+local function array_has_value (tab, val)
+    -- for index, value
+    for i, v in ipairs(definitions) do
+        if v == val then
+            return true
+        end
+    end
 
-if has_value(languages, first_arg) and second_arg ~= nil then
+    return false
+end
+
+if hash_has_value(languages, first_arg) and second_arg ~= nil then
     dir = string.format("%s/languages/%s/%s", noti_dir, first_arg, second_arg) 
     command = string.format("vim %s.txt", dir)
     os.execute(command)
+elseif array_has_value(definitions, first_arg) then
+    dir = string.format("%s/definitions/%s", noti_dir, first_arg) 
+    command = string.format("vim %s.txt", dir)
+    os.execute(command)
 else
-    print("either not in lang or second is nil")
+    print("either not in lang, not in def or second is nil")
 end
