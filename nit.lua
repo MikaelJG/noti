@@ -136,25 +136,38 @@ local function hash_has_value (tab, val)
 
     return false
 end
-local function array_has_value (tab, val)
+local function hash_hasnot_value (tab, val)
     -- for index, value
-    for i, v in ipairs(definitions) do
-        if v == val then
-            return true
+    for i, v in pairs(languages) do
+        if i == val then
+            return false 
         end
     end
 
-    return false
+    return true 
 end
+--local function array_has_value (tab, val)
+--    -- for index, value
+--    for i, v in ipairs(definitions) do
+--        if v == val then
+--            return true
+--        end
+--    end
+--
+--    return false
+--end
 
 if hash_has_value(languages, first_arg) and second_arg ~= nil then
     dir = string.format("%s/languages/%s/%s", noti_dir, first_arg, second_arg) 
     command = string.format("vim %s.txt", dir)
     os.execute(command)
-elseif array_has_value(definitions, first_arg) then
+elseif hash_has_value(languages, first_arg) and second_arg == nil then
+    print("second arg is nil")
+elseif hash_hasnot_value(languages, first_arg) and second_arg == nil then
     dir = string.format("%s/definitions/%s", noti_dir, first_arg) 
     command = string.format("vim %s.txt", dir)
+    print(command)
     os.execute(command)
 else
-    print("either not in lang, not in def or second is nil")
+    print("something went wrong")
 end
