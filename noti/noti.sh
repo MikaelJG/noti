@@ -13,7 +13,7 @@ FIND_NOTES $1
 #     then
 #     FIND_NOTES $2
 #     MOD_LAST_FILE $2 $3
-if [[ "$1" == "option" ]] || [[ "$1" == "options" ]] || [[ "$1" == "command" ]] || [[ "$1" == "command" ]];
+if [[ "${COMMANDS[*]}" =~ " $1 " ]];
      then
      echo "
         #####################
@@ -21,9 +21,9 @@ if [[ "$1" == "option" ]] || [[ "$1" == "options" ]] || [[ "$1" == "command" ]] 
         #####################
 ---------------------------------------------
 
-noti -l : list all supported languages
-     -w : write note in last modified file 
-  rs ls : list all notes in rust
+  noti -l : list all supported languages
+       -w : write note in last modified file 
+    rs ls : list all notes in rust
 
 ---------------------------------------------
      "

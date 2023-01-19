@@ -21,6 +21,7 @@ b2b
 b2c
 HRM
 ITSM
+craftcms
 NetSuite
 
 Static
@@ -37,6 +38,13 @@ Node
 Tailwind
 Web Assembly
 Assembly
+elasticsearch
+kibana
+scrum
+kanban
+agile
+waterfall
+
 
 gui
 gnu
@@ -57,6 +65,7 @@ regex
 dom
 posix
 
+inheritance
 
 
 noti buddy
