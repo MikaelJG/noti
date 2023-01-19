@@ -1,0 +1,3 @@
+Scaffolding:
+In the software development sense, is the technique of generating a generic application with features common to most modern applications already built-in
+
