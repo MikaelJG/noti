@@ -12,7 +12,7 @@ source ~/code/noti/noti/variables.sh
 FIND_DEFINITIONS
 if [[ "${DEFINITIONS_ARRAY[*]}" =~ "$1" ]];
     then
-    cat 
+    READ_DEFINITIONS $1
 else
     FIND_LANGUAGES
     FIND_NOTES $1
