@@ -31,6 +31,10 @@ local languages = {
     ["tm"] = "tmux",
 }
 
+-- consider definitions as default with
+-- nit buddy
+-- create definition, in noti/definition/$1.txt
+
 first_arg = arg[1]
 second_arg = arg[2]
 
