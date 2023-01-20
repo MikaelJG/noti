@@ -1,0 +1,4 @@
+tealdeer
+A replacement for tldr.
+Display simplified examples based on community man pages.
+
