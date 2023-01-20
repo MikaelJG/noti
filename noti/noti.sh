@@ -5,12 +5,15 @@ source ~/code/noti/noti/variables.sh
 . ~/code/noti/noti/find_notes.sh
 . ~/code/noti/noti/find_languages.sh
 . ~/code/noti/noti/find_definitions.sh
+. ~/code/noti/noti/find_cli.sh
 . ~/code/noti/noti/read_notes.sh
 . ~/code/noti/noti/read_definitions.sh
+. ~/code/noti/noti/read_cli.sh
 . ~/code/noti/noti/mod_last_file.sh
 
 FIND_DEFINITIONS
 FIND_LANGUAGES
+FIND_CLI
 FIND_NOTES $1
 
 # if [[ "$1" == "-w" ]];
@@ -48,6 +51,10 @@ elif [[ "$1" == "-l" ]];
 elif [[ "${DEFINITIONS_ARRAY[*]}" =~ " $1 " ]];
     then
     READ_DEFINITIONS $1
+    exit
+elif [[ "${CLI_ARRAY[*]}" =~ " $1 " ]];
+    then
+    READ_CLI $1
     exit
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "$2" != "ls" ]];
      then
