@@ -1,0 +1,6 @@
+Progress Chef (formerly Chef)
+A configuration management tool written in Ruby and Erlang. 
+It uses a pure-Ruby, domain-specific language (DSL) for writing system configuration "recipes". 
+
+Chef is used to streamline the task of configuring and maintaining a company's servers, and can integrate with cloud-based platforms such as Amazon EC2, Google Cloud Platform, Oracle Cloud, OpenStack, IBM Cloud, Microsoft Azure, and Rackspace to automatically provision and configure new machines. 
+

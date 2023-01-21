@@ -1,0 +1,3 @@
+OpenShift
+A family of containerization software products developed by Red Hat.
+Its flagship product is the OpenShift Container Platform — a hybrid cloud platform as a service built around Linux containers orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux. 

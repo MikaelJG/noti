@@ -1,0 +1,5 @@
+Puppet
+A software configuration management tool like process Chef.
+It includes its own declarative language to describe system configuration. It is a model-driven solution that requires limited programming knowledge to use.
+
+

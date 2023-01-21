@@ -1,0 +1,4 @@
+Travis CI 
+A hosted continuous integration service used to build and test software projects hosted on GitHub, Bitbucket, GitLab, Perforce, Apache Subversion and Assembla.
+
+Travis CI was the first CI service that provided services to open-source projects for free. 
