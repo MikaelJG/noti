@@ -4,6 +4,10 @@ local noti_dir = "~/code/noti"
 local languages = require 'languages' 
 local definitions = require 'definitions'
 
+-- something about package.path = package.path .. ";./languages.lua"
+-- making the search for require impossible
+-- to verify
+
 first_arg = arg[1]
 second_arg = arg[2]
 

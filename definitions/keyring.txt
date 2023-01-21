@@ -1,0 +1,8 @@
+Keyring
+A "stored database" -- I'm using this term lightly -- of your login information stored on your local PC.
+It's encrypted by a schema (PKCS#11 - used for secure storage on removable media).
+Thus it's relatively secure from prying eyes.
+
+It provides a common backend for (a framework like gnome for an exe) to CRUD (create, read, update, delete) your login info
+It keeps a consistent interface for programmers utilizing that particular framework.
+KDE provides its own keyring, Gnome has another implementation of it. 
