@@ -1,0 +1,8 @@
+Enterprise resource planning (ERP) examples:
+
+Oracle Netsuite
+Acumatica
+Syspro
+SAP
+Microsoft Dynamics 365
+

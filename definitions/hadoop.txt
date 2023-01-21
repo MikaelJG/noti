@@ -1,0 +1,3 @@
+Apache Hadoop
+A collection of open-source software utilities that facilitates using a network of many computers.
+Mostly, it solves problems involving massive amounts of data and computation.
