@@ -1,0 +1,17 @@
+declare -a pages
+
+pages[0]='domain.de;de;https'
+pages[1]='domain.fr;fr;http'
+
+for page in "${pages[@]}"
+do
+    # turn e.g. 'domain.de;de;https' into
+    # array ['domain.de', 'de', 'https']
+        IFS=";" read -r -a arr <<< "${page}"
+            site="${arr[0]}"
+            lang="${arr[1]}"
+            prot="${arr[2]}"
+            echo "site : ${site}"
+            echo "lang : ${lang}"
+            echo "prot : ${prot}"
+done
