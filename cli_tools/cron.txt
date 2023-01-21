@@ -1,0 +1,4 @@
+Cron
+A command-line job scheduler on Unix-like operating systems.
+Users who set up and maintain software environments use cron to schedule jobs (commands or shell scripts),
+also known as cron jobs, to run periodically at fixed times, dates, or intervals.

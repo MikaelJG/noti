@@ -1,0 +1,14 @@
+# great to see sh commands divided like this:
+
+general purpose commands:
+    id, date, uname, ps, top, echo, man;
+directory management commands:
+    pwd, cd, mkdir, rmdir, find, df; 
+file management commands:
+    cat, wget, more, head, tail, cp, mv, touch, tar, zip, unzip;
+access control command:
+    chmod;
+text processing commands:
+    wc, grep, tr;
+Networking commands:
+    hostname, ping, ifconfig and curl. 
