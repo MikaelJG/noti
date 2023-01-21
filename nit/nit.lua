@@ -166,12 +166,18 @@ elseif hash_has_value(languages, first_arg) and second_arg == nil then
 elseif first_arg == "cli" and second_arg ~= nil then
     dir = string.format("%s/cli_tools/%s", noti_dir, second_arg) 
     command = string.format("vim %s.txt", dir)
-    print(command)
+    os.execute(command)
+elseif first_arg == "lib" or first_arg == "libraries" then
+    dir = string.format("%s/libraries/%s", noti_dir, second_arg) 
+    command = string.format("vim %s.txt", dir)
+    os.execute(command)
+elseif first_arg == "frame" and second_arg ~= nil then
+    dir = string.format("%s/frameworks/%s", noti_dir, second_arg) 
+    command = string.format("vim %s.txt", dir)
     os.execute(command)
 elseif hash_hasnot_value(languages, first_arg) and second_arg == nil then
     dir = string.format("%s/definitions/%s", noti_dir, first_arg) 
     command = string.format("vim %s.txt", dir)
-    print(command)
     os.execute(command)
 else
     print("something went wrong")
