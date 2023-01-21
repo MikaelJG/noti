@@ -13,31 +13,37 @@ $ vim .bashrc # edit your .bashrc file
 ```
 In .bashrc, write an alias for Noti and Nit.
 ```bash
-  alias noti="~/path/to/file.sh"
-  alias nit="lua ~/path/to/file.lua"
+  alias noti="~/path/to/noti.sh"
+  alias nit="lua ~/path/to/nit.lua"
 
   # example
-  alias noti="~/code/noti/noti.sh"
-  alias nit="lua ~/code/noti/nit.lua"
+  alias noti="~/code/noti/noti/noti.sh"
+  alias nit="lua ~/code/noti/nit/nit.lua"
 ```
 Install Noti.
-```bashs
+```bash
 $ git clone git@github.com:MikaelJG/noti.git
 ```
 Install Lua for Nit.
 ```bash
 $ sudo apt install lua5.3
 ```
-Define Noti's directory in noti.sh.
+Using zsh? Change it in variables.sh.
 ```bash
-# line 5 of noti.sh
-NOTI_DIRECTORY=~/code/noti # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti/file
+# for line of variables.sh
+#!/bin/zsh
 ```
-Define Nit's directory in nit.lua.
+Define Noti's root directory in variables.sh, noti's folder, not noti.sh.
 ```bash
-# line 2 of nit.lua
-local noti_dir = "~/code/noti" # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti/file
+# line 4 of noti.sh
+NOTI_DIRECTORY=~/code/noti # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti/root
 ```
+Define Noti's directory in nit.lua, noti's folder, not noti.sh
+```bash
+# line 3 of nit.lua
+local noti_dir = "~/code/noti" # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti/root
+```
+
 ## Examples
 
 Specify a language and a note to read.

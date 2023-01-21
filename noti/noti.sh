@@ -1,15 +1,20 @@
 #!/bin/bash 
 # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
+# All find methods, in seperate files
 source ~/code/noti/noti/variables.sh
 . ~/code/noti/noti/find_notes.sh
 . ~/code/noti/noti/find_languages.sh
 . ~/code/noti/noti/find_definitions.sh
 . ~/code/noti/noti/find_cli.sh
+# All read methods, in seperate files
 . ~/code/noti/noti/read_notes.sh
 . ~/code/noti/noti/read_definitions.sh
 . ~/code/noti/noti/read_cli.sh
-. ~/code/noti/noti/mod_last_file.sh
+# . ~/code/noti/noti/read_frameworks.sh
+# . ~/code/noti/noti/read_libraries.sh
+# The modify last file methods, in a seperate file
+#. ~/code/noti/noti/mod_last_file.sh
 
 FIND_DEFINITIONS
 FIND_LANGUAGES
