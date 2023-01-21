@@ -1,0 +1,6 @@
+Podman
+A daemonless container engine for developing, managing, and running OCI Containers on your Linux System.
+
+The Open Container Initiative (OCI) is a Linux Foundation project, started in June 2015 by Docker, to design open standard for operating-system-level virtualization (software containers), most importantly Linux containers.
+
+Containers can either be run as root or in rootless mode. 

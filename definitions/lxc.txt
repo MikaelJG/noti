@@ -1,0 +1,4 @@
+Linux Containers (LXC) 
+An operating-system-level virtualization method for running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.
+Early versions of Docker used LXC as the container execution driver, though LXC was made optional in v0.9 and support was dropped in Docker v1.10.
+References to Linux containers commonly refer to Docker containers running on Linux. 
