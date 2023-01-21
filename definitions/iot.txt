@@ -1,0 +1,5 @@
+Internet of Things (IoT)
+
+Describes physical objects with sensors, processing ability, software and other technologies that connect and exchange data over the Internet.
+
+Examples include intelligent fridge, television, cameras,...
