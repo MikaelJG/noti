@@ -1,0 +1,4 @@
+SaaS
+In cloud computing, for cloud applications, Software as a Service (Saas). 
+Example include: CRM (customer relationship management), ERP (Enterprise resource planning), web conferencing, group chat, email, analytics,vitual desktops, games...
+

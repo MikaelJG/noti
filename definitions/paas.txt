@@ -1,0 +1,5 @@
+PaaS
+In cloud computing, cloud platform, Platform as a Service.
+Resources are more abstracted (ex. serverless)
+
+Examples include: application runtime, database, web server, developer services, data lake...

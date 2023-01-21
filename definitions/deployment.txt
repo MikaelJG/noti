@@ -1,0 +1,3 @@
+Deployment models
+In cloud computing, types of deployment.
+Examples include: public cloud, hybrid cloud, multicloud, private cloud.

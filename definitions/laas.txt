@@ -1,0 +1,6 @@
+IaaS
+In cloud computing, in cloud infrastructure, Infrastructure as a Service.
+Resources are less abstracted.
+Examples include virtual machines, bare metal servers, storage, load balancers, networking...
+
+
