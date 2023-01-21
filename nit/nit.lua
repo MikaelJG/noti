@@ -1,10 +1,8 @@
 -- SPECIFY THE DIRECTORY TO NOTI
 -- ex: local dir = "~/path/to/noti/folder"
 local noti_dir = "~/code/noti" 
-
--- consider definitions as default with
--- nit buddy
--- create definition, in noti/definition/$1.txt
+local languages = require 'languages' 
+local definitions = require 'definitions'
 
 first_arg = arg[1]
 second_arg = arg[2]
@@ -16,7 +14,6 @@ local function hash_has_value (tab, val)
             return true
         end
     end
-
     return false
 end
 local function hash_hasnot_value (tab, val)
@@ -26,7 +23,6 @@ local function hash_hasnot_value (tab, val)
             return false 
         end
     end
-
     return true 
 end
 --local function array_has_value (tab, val)
