@@ -1,0 +1,4 @@
+Stylus
+A dynamic stylesheet preprocessor language that is compiled into Cascading Style Sheets. 
+Its design is influenced by Sass and LESS. 
+It is regarded as the fourth most used CSS preprocessor syntax

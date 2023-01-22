@@ -3,6 +3,7 @@ local languages = {
     -- value = key
     ["js"] = "javascript",
     ["le"] = "less",
+    ["st"] = "stylus",
     ["sh"] = "bash",
     ["css"] = "css",
     ["sa"] = "sass",
