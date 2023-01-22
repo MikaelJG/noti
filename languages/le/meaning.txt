@@ -1,0 +1,5 @@
+Less 
+Leaner Style Sheets; LESS is a dynamic preprocessor style sheet language.
+It can be compiled into Cascading Style Sheets (CSS) and run on the client side or server side.
+Less is influenced by Sass and has influenced the newer "SCSS" syntax of Sass, which adapted its CSS-like block formatting syntax.
+

@@ -2,8 +2,10 @@
 local languages = {
     -- value = key
     ["js"] = "javascript",
+    ["le"] = "less",
     ["sh"] = "bash",
     ["css"] = "css",
+    ["sa"] = "sass",
     ["rx"] = "regex",
     ["r"] = "r",
     ["sql"] = "sql",
