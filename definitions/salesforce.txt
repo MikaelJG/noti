@@ -1,0 +1,3 @@
+Salesforce
+An American cloud-based software company.
+It provides customer relationship management (CRM) software and applications focused on sales, customer service, marketing automation, analytics, and application development.
