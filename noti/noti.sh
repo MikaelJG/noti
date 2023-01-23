@@ -16,6 +16,8 @@ source ~/code/noti/noti/variables.sh
 # The modify last file methods, in a seperate file
 #. ~/code/noti/noti/mod_last_file.sh
 
+LOVE=( "aa" "animation" "background" "basics" "character" "conversation" "coordinates" "engine" "map" "object" "sign" "sprite" "zz")
+
 FIND_DEFINITIONS
 FIND_LANGUAGES
 FIND_CLI
@@ -61,6 +63,10 @@ elif [[ "${CLI_ARRAY[*]}" =~ " $1 " ]];
     then
     READ_CLI $1
     exit
+elif [[ "${LOVE[*]}" =~ " $2 " ]] && [[ "$1" == "love" ]];
+    then
+    cat ~/code/noti/gamedev/love2d/$2.txt
+    
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "$2" != "ls" ]];
      then
      FIND_NOTES $1
