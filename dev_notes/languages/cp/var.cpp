@@ -22,6 +22,8 @@ int main() / code inside will be executed
     bool isTall; // 1 bit -> true/false
     isTall = true;
 
+    int const BIRTH_YEAR = 1945; // CONST, all CAPS
+
     return 0;
 }
 
