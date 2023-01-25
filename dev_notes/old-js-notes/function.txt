@@ -72,8 +72,3 @@ Number.parseInt()
 
 const input = "42";
 const number = Number.parseInt(input, 10);
-
-
-use libraries create by students of the wagon!
-
-Jad and Nicole!
