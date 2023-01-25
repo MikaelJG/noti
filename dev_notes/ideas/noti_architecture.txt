@@ -1,0 +1,23 @@
+for noti
+
+Languages
+
+11 files max (with basics)
+
+- Synthax
+- Variables (Declare)
+- Conditionals
+- Function & Returns
+- For loops (iterators)
+- Switch / case
+- Debug (Error, panic, recover)
+- Data types
+- Packages (lurocks, gems)
+- Cli Utilities (arguments, file system)
+- More (more than basics)
+
+-- call 
+
+noti -s js / have js' synthax (basics)
+noti -c rs / have rs' conditionals (basics)
+

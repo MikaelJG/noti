@@ -1,4 +1,4 @@
-# great to see sh commands divided like this:
+ great to see sh commands divided like this:
 
 general purpose commands:
     id, date, uname, ps, top, echo, man;
