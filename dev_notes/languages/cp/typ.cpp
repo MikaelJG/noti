@@ -12,5 +12,8 @@ int *pNum = &num; // store a pointer inside a variable, if int pointer, than spe
 count << pNum << endl; // prints memory address
 count << *pNum << endl; // deference pointer, prints 10
 
+cout << 2 * 3 << endl;
+num += 100;
+num++;
 
 
