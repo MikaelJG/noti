@@ -1,92 +1,19 @@
-OOP
-
-buddy
-class
-object
-highlevel
-lowlevel
-compile
-MVC
-model
-view
-controller
-macros
-script
-logiciels d’affaires 
-ERP
-CRM
-CMS
-PSA
-b2b
-b2c
-HRM
-ITSM
-craftcms
-NetSuite
-mysql
-postgresql
-sqlite
-kubernetes
+bat # for cat
+exa # for ls
+fd # for find
+procs # for ps, get information about processes
+sd # for sed
+dust # for du, display disk usage statistics
+starship ?
+ripgrep # for grep
+tokei # displays statistics about your code, number of files, total lines within those files..
+hyperfine # statistics on benchmarking
+ytop # for top, display information about processes
+tealdeer # for tldr, display simplified examples based on community man pages.
+bandwhich # display network, IP, statistics.
+grex # regex generator
+zoxide # for cd
+delta # for git diff
 
 
-Static
 
-Type
-
-React
-Angular
-MongoDB
-Atlas
-Express
-Vue
-Node
-Tailwind
-Web Assembly
-Assembly
-elasticsearch
-kibana
-scrum
-kanban
-agile
-waterfall
-twig
-sass
-craftcms
-wordpress
-unixsockets
-
-gui
-gnu
-bash
-zsh
-
-async
-sync
-server
-client
-https
-api
-rest
-dynamic typing
-functional
-imperative
-regex
-dom
-docker
-cluster
-colima # docker.sock, 
-databasedump
-TCPsocket
-Docker daemon
-
-posix
-
-inheritance
-
-########################
-
-noti buddy
-
-# all lowercase
-# prints def of buddy
-# print how to install?

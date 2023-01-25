@@ -6,3 +6,11 @@ Syspro
 SAP
 Microsoft Dynamics 365
 
+Client Relationship Management (CRM)
+
+Salesforce Sales Cloud Lightning Professional
+Zoho CRM
+Hubspot CRM
+Freshsales CRM
+Zendesk Sell
+Apptivo CRM

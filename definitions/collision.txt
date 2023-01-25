@@ -1,0 +1,15 @@
+Collision
+In games, have physics to represent objects touching. 
+
+3 ways to achieve a collision system: 
+- Manually calculate collisions
+- Install collision library
+
+In love, using box2d and windfield (physics module for love, open-source library)
+
+in windfield, every physics object in world is a collider
+
+
+
+
+
