@@ -10,6 +10,9 @@ int main() / code inside will be executed
     cout << "World";
     cout << "!" << endl; // endl, print new line
 
+    // interpolation
+    cout << "Your name is " << name << endl;
+
     return 0;
 }
 
