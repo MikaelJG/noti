@@ -79,7 +79,7 @@ else
 fi
 
 # new architecture for Noti
-# 11 files system
+# 12 files system
 
 # syn
 # var
@@ -92,4 +92,4 @@ fi
 # pac
 # cli
 # mor
-
+# set - for set-up or install requirements
