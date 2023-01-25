@@ -1,0 +1,15 @@
+base note architecture on gamedev roadmap. 
+
+languages:
+- assembly
+- c, c++
+- c#
+- Python
+- Lua
+
+With all basics (11 file system)
+
+Math (dir)
+Graphics (dir)
+Game Engine (dir)
+...
