@@ -77,3 +77,19 @@ elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "$2" == "ls" ]];
 else
      echo "language not supported"
 fi
+
+# new architecture for Noti
+# 11 files system
+
+# syn
+# var
+# con
+# fun
+# loo
+# cas
+# bug
+# typ
+# pac
+# cli
+# mor
+
