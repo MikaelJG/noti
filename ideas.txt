@@ -1,5 +1,0 @@
-java
-groovy
-scala
-closure
-kotlin
