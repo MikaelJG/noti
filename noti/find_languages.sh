@@ -1,7 +1,7 @@
 source ~/code/noti/noti/variables.sh
 LANGUAGE_ARRAY=()
 FIND_LANGUAGES() {
-    DIR="${NOTI_DIRECTORY}/languages"
+    DIR="${NOTI_DIRECTORY}/dev_notes/languages"
     for file in "$DIR"/*
         do
             if [ -d "$file" ];

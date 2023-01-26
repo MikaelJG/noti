@@ -1,7 +1,7 @@
 source ~/code/noti/noti/variables.sh
 NOTES_ARRAY=()
 FIND_NOTES() {
-    DIR="${NOTI_DIRECTORY}/languages/$1"
+    DIR="${NOTI_DIRECTORY}/dev_notes/languages/$1"
     for file in "$DIR"/*
         do
             if [ -f "$file" ];
