@@ -1,8 +1,0 @@
-
-function greet(person, date) {
-  console.log(`Hello ${person}, today is ${date}!`);
-}
-   
-greet("Brendan");
-
-// expected 2 arg error
