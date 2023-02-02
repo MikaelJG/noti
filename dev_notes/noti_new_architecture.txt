@@ -2,7 +2,7 @@ for noti
 
 Languages
 
-11 files max (with basics)
+12 files max (with basics)
 
 - Synthax
 - Variables (Declare)
@@ -15,6 +15,7 @@ Languages
 - Packages (lurocks, gems)
 - Cli Utilities (arguments, file system)
 - More (more than basics)
+- Set-up (SEE NOTI)
 
 -- call 
 
