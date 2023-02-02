@@ -1,5 +1,4 @@
-#!/bin/bash 
-# CHANGE THIS FIRST LINE IF YOU USE ZSH
+#!/bin/bash # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
 # All find methods, in seperate files
 source ~/code/noti/noti/variables.sh
@@ -93,3 +92,8 @@ fi
 # cli
 # mor
 # set - for set-up or install requirements
+
+# personalize it with your favorite lang
+# then implement the 12 files
+
+
