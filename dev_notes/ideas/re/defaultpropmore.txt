@@ -1,0 +1,27 @@
+class Incrementer extends React.Component {
+    
+    constructor (props) {
+
+    componentDidMount () {
+    componentWillUnmount () {
+
+    increment () {
+        //this.setState({n: this.state.n + props.step})
+        // is not ideal
+
+        this.setState(function (state, props) {
+            return {n: state.n + 1}
+        }
+    }
+
+    render () {
+        // I'm guessing I have an n = 0 up there
+        return <div>Valeur : {this.state.n}</div>
+        
+    }
+}
+
+Incrementor.defaultProps = {
+    start: 0,
+    step: 1,
+}

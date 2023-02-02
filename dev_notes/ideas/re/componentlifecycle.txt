@@ -1,0 +1,35 @@
+class Clock extends React.Component {
+
+    constructor (props) {
+        super(props)
+        this.state = {date: new Date()}
+        this.timer = null
+    }
+
+    // when component is created
+    componentDidMount () {
+        this.timer = dindow.setINterval(() => {
+
+        }, 1000)
+
+    }
+
+    // when component is deleted 
+    componentWillount () {
+        window.clearInterval(this.timer)
+        
+    }
+
+    render () {
+        const date = new Date()
+        return <div>
+            Il est {this.state.date.toLocalDateString()}
+            Il est {this.state.date.toLocalTimeString()}
+        </div>
+    }
+}
+
+function Home () {
+    return <div>
+        <Clock/>
+}

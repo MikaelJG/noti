@@ -1,0 +1,40 @@
+class Clock extends React.Component {
+
+    constructor (props) {
+        super(props)
+        this.state = {n: props.start, time: null}
+        this.timer = null
+    }
+    componentDidMount () {
+        this.timer = dindow.setINterval(() => {
+        }, 1000)
+    }
+    componentWillount () {
+        window.clearInterval(this.timer)
+    }
+
+    pause () {
+        window.clearInterval(this.state.timer)
+        this.setState({
+            timer:null
+        })
+    }
+
+    play () {
+        this.setState({
+            timer:window.setInterval(this.increment.bind(this), 1000)
+        }
+    }
+
+    render () {
+        return <div>
+            valeur : {this.state.n}
+            <button onClick={this.pause.bind(this)}>Pause</button>
+        </div>
+    }
+}
+
+function Home () {
+    return <div>
+        <Clock/>
+}

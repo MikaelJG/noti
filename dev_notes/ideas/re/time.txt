@@ -1,0 +1,14 @@
+class Clock extends React.Component {
+    render () {
+        const date = new Date()
+        return <div>
+            Il est {date.toLocalDateString()}
+            Il est {date.toLocalTimeString()}
+        </div>
+    }
+}
+
+function Home () {
+    return <div>
+        <Clock/>
+}

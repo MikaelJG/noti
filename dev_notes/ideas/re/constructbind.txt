@@ -1,0 +1,20 @@
+// see tick for more
+// see timermore
+
+class Clock extends React.Component {
+
+    constructor (props) {
+        super(props)
+        this.state = {date: new Date()}
+        this.timer = null
+        this.toggle = this.toggle.bind(this)
+        this.reset = this.reset.bind(this)
+    }
+
+    toggle () {
+        // some
+    }
+
+    reset () {
+        // some
+    }

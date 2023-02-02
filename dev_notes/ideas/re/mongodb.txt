@@ -1,0 +1,7 @@
+mongoDB and mongoose
+
+# connect them
+
+# create model in react
+
+

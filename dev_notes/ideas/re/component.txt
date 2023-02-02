@@ -1,0 +1,16 @@
+// see welcome for more
+
+function welcome (properties) {
+    console.log(properties.name) // logs Jean
+    return <h1>Bonjour</h1>
+}
+
+ReactDOM.render(<welcome name="Jean"/>, document.querySelector('#app'))
+
+// in index.html
+
+<body>
+    <div id="app"></div>
+</body>
+
+

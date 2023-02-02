@@ -1,0 +1,29 @@
+class CustomButton extends React.Component {
+    // 
+}
+
+CustonButton.defaultProps = {
+    color: "blue"
+};
+
+class Incrementer extends React.Component {
+    
+    constructor (props) {
+
+    componentDidMount () {
+    componentWillUnmount () {
+
+    increment () {
+        //this.setState({n: this.state.n + props.step})
+        // is not ideal
+
+        this.setState(function (state, props) {
+            return {n: state.n + 1}
+        }
+    }
+}
+
+Incrementor.defaultProps = {
+    start: 0,
+    step: 1,
+}

@@ -1,0 +1,10 @@
+
+operator lt // less than
+operator lte // less or equal to
+
+operator gte // greater or equal to 
+operator gt // greater than 
+
+db.utilisateurs.find({ age: { $gte: 30 } });
+
+db.utilisateurs.updateOne({ age: 30 }, { $set: { nom: 'Alice' } });

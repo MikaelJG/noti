@@ -1,0 +1,5 @@
+https://www.mongodb.com/docs/compass/current/import-export/#import-and-export-data-from-the-command-line
+
+Database tools including: 
+
+mongoimport mongoexport

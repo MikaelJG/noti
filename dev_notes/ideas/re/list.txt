@@ -1,0 +1,28 @@
+// see classlist for more
+
+// propre a jsx
+// babel convert jsx to js
+
+let n = 0
+
+function numberFormat(n) {
+    return n.toString().padStart(2, '0')
+}
+
+function render() {
+    const items = [ 
+        'Tache 1',
+        'Tache 2',
+        'Tache 3'
+    ] 
+
+    const title = <div><h1 className="title" id="title">
+        Bonjour <span>{numberFormat(n)}</span>
+        </h1>
+        <ul>
+        </div>
+    ) 
+
+    // brancher au dom avec ReactDOM
+    ReactDOM.render(title, document.querySelector('#app')
+}

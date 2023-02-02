@@ -1,0 +1,5 @@
+rails new \
+  -d postgresql \
+  -j webpack \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  NAME_OF_APP

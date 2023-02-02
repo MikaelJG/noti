@@ -1,0 +1,12 @@
+in a db
+
+there are collections
+
+in collections
+
+there are documents
+
+// in collection animaux
+// a doc is a animal
+
+doc is instance of animal
