@@ -78,3 +78,9 @@ It's a bash script, with many text files.
 Noti is like the livrarian of hundreds of text files. In a way, it is a simpler and faster version of notion, which I'm not a fan of. 
 
 It's a great tool for the command line. You can see your notes faster and reduce your mental overhead.
+
+## Inspired by
+
+tldr
+teeldear?
+More on them soon enough
