@@ -1,4 +1,0 @@
-install node with nvm // node version manager
-
-nvm install 12.16.3
-nvm use 12.16.3

@@ -1,9 +1,0 @@
-// define a port
-
-app.listen(process.env.PORT || 3000, () => console.log(`App availale on https:localhost:3000`))
-
-// with promises, best way
-
-app.get'/', async (request, response) => {
-    response.send( await readFile('.home.html', 'utf8');
-});

@@ -1,7 +1,0 @@
-mongoexport --help
-
-// see all options
-
-mongoexport --db=gamejamsdb --collection=animaux --type=json --fieldFile=config.json
-
-// mongo import uses option --file config.json

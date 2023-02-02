@@ -1,8 +1,0 @@
-mongosh is mongodb's shell
-
-use command mongosh (when everything mongodb installed and account created)
-to access atlas shell
-
-in atlas shell, interact with db
-
-set up your atlas account! and use atlas CLI

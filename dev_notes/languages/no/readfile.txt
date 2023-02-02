@@ -1,9 +1,0 @@
-const { readFile, readFileSync } = require('fs');
-
-// sync means blocking
-// finishes the work before executing more code
-
-// with hello.txt file (hello written)
-
-const txt = readFileSync('.hello.txt', 'utf8');
-console.log(txt)

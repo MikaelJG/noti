@@ -1,5 +1,0 @@
-// see collection
-use db-name // to select a db
-
-show dbs // print list of all dbs
-show collection // show collection of selected db

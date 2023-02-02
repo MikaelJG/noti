@@ -1,9 +1,0 @@
-const { EventEmitter } = require('events');
-const eventEmitter = new EventEmitter();
-
-// creating event lunch
-eventEmitter.on('lunch', () => [
-    console.log('yum')
-})
-
-eventEmitter.emit('lunch');

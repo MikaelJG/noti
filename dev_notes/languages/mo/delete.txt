@@ -1,5 +1,0 @@
-see deleteone
-
-see deletemany
-
-

@@ -1,5 +1,0 @@
-Node's irb equivalent is repl mode
-
-$ node
-
-

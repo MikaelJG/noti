@@ -1,9 +1,0 @@
-start the MongoDB server with
-
-mongod
-
-start client with
-
-mongo // now connected to default database
-
-

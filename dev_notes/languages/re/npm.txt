@@ -1,5 +1,0 @@
-npm run-script start
-
-npm run start
-
-npm start
