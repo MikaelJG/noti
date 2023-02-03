@@ -1,0 +1,296 @@
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+
+print(arg[1])
+
+print(...)
+
+print(table.concat(arg,", "))
+print(arg)
+
+for i, v in ipairs(arg) do
+    print(v) 
+end
+
+print(arg[1])
+
+print(...)
+
+print(table.concat(arg,", "))
+print(arg)
+
+for i, v in ipairs(arg) do
+    print(v) 
+end
+
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+
+
+local function has_value (tab, val)
+    -- for index, value
+    for i, v in pairs(languages) do
+        if i == val then
+            return true
+        end
+    end
+
+    return false
+end
+
+local function has_value (tab, val)
+    -- for index, value
+    for i, v in pairs(languages) do
+        if i == val then
+            return true
+        end
+    end
+
+    return false
+end
+local function has_value (tab,val)
+    -- for index, value
+    -- hash
+    for i, v in pairs(languages) do
+        if i == val then
+            return true
+        end
+    end
+
+    return false
+end
+
+if has_value(languages, first_arg) then
+    print("its in")
+elseif
+    -- will never be printed
+else
+    print("not in")
+end
+
+local function has_value (tab,val)
+    -- for index, value
+    -- hash
+    for i, v in pairs(languages) do
+        if i == val then
+            return true
+        end
+    end
+
+    return false
+end
+
+if has_value(languages, first_arg) then
+    print("its in")
+elseif
+    -- will never be printed
+else
+    print("not in")
+end
+
+
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+// for array-like tables
+
+squares = {1, 4, 9, 16, 25, 36, 49, 64, 81}
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+local function has_value (tab, val)
+    for index, value in ipairs(tab) do
+            if value == val then
+                return true
+            end
+    end
+    return false
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+
+print(arg[1])
+
+print(...)
+
+print(table.concat(arg,", "))
+print(arg)
+
+for i, v in ipairs(arg) do
+    print(v) 
+end
+
+print(arg[1])
+
+print(...)
+
+print(table.concat(arg,", "))
+print(arg)
+
+for i, v in ipairs(arg) do
+    print(v) 
+end
+
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+

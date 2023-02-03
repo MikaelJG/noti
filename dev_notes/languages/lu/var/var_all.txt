@@ -1,0 +1,155 @@
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+squares = {1, 4, 9, 16, 25, 36, 49, 64, 81}
+
+local armies = {
+    [1] = "ARMY_1",
+    [2] = "ARMY_3",
+    [3] = "ARMY_6",
+    [4] = "ARMY_7",
+}
+
+-- loop through an array
+
+for _, armyName in ipairs(armies) do
+    doStuffWithArmyName(armyName)
+end
+
+-- or create your own iterator
+
+function values(t)
+  local i = 0
+  return function() i = i + 1; return t[i] end
+end
+
+for v in values(armies) do
+  print(v)
+end
+
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+// for array-like tables
+
+for i, v in ipairs(arg) do
+    print(v)
+end
+
+// for hash-like tables
+// not array-like tables
+
+local languages = {
+    ["js"] = "javascript",
+    ["ts"] = "typescript",
+}
+
+for i, v in pairs(languages) do 
+    print(v)
+end
+
+# only one data structuring level
+# a table
+
+# it can represent arrays, dictionaries, graphs and trees.
+
+hello = "Hi Mom"
+
+# global by default
+
+local hello = "Hi Mom"
+
+# is now local
+
+# only one data structuring level
+# a table
+
+# it can represent arrays, dictionaries, graphs and trees.
+
+hello = "Hi Mom"
+
+# global by default
+
+local hello = "Hi Mom"
+
+# is now local
+
+# only one data structuring level
+# a table
+
+# it can represent arrays, dictionaries, graphs and trees.
+
+hello = "Hi Mom"
+
+# global by default
+
+local hello = "Hi Mom"
+
+# is now local
+
+x, y = 300, 400
+
+print("x is: " ..x)
+print("y is: " ..y)
