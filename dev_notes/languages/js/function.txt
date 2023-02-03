@@ -1,17 +1,74 @@
-function addTwoNum(x,y) {
-    return x + y;
+defining
+
+//old way
+
+function square(x) {
+    return x * y; // you always always need the return! Explicit return
+}   
+
+square(10);
+
+//ES6
+
+Arrow functions
+
+const square = (x) => {
+    return x * x;
+};
+
+//shorter with implicit return.
+
+const square = x => x * y;
+// one line will not accept anything complex like one line
+
+capitalize.js
+
+const capitalize = (word) => {
+    const firstLatter = word[0].toUpperCase();
+    const restOfTheWord = word.substring(1).toLowerCase();
+    const fullWord = `${firstLetter}${restOfTheWord}`;
+    return fullWord;
 }
 
-addTwoNum(3,4);
+console.log(capitalize("mIdO"));
 
-function myFunc(theObject) {
-    theObject.make = 'Toyota';
+//mIdO => Mido
+
+Ternary Operator
+
+const raining = true
+
+const getAccessory = raining => raining ? "umbrella" : "sunglasses";
+
+//Only only for simple functions!!
+
+console.log(getAccessory(raining));
+
+//the code is a Pac-Man, it starts at the top and goes down. 
+
+String.length
+
+const name = "Boris";
+console.log(name.length);
+// => 5
+
+const count = 20;
+
+if (count === 0) {
+  console.log('There are no students');
+} else if (count === 1) {
+  console.log('There is only one student');
+} else {
+  console.log(`There are ${count} students`);
 }
 
-// will change the object .make
+Number.toString()
 
-function myFunc(theArr) {
-    theArr[0] = 30;
-}
+const number = 42;
+console.log(number.toString());
+// => "42"
 
-// will change the array 0 index
+Number.parseInt()
+
+const input = "42";
+const number = Number.parseInt(input, 10);
