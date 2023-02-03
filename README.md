@@ -81,6 +81,12 @@ It's a great tool for the command line. You can see your notes faster and reduce
 
 ## Inspired by
 
-tldr
-teeldear?
-More on them soon enough
+tldr:
+
+The tldr-pages project is a collection of community-maintained help pages for command-line tools, that aims to be a simpler, more approachable complement to traditional man pages.
+
+Maybe you're new to the command-line world? Perhaps you're just a little rusty or can't always recall the arguments for commands like lsof, or tar?
+
+tealdeer
+
+A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages.
