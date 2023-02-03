@@ -1,7 +1,0 @@
-
-# array
-
-array=()
-array+=("go") # update
-
-array[0]=("go") # update
