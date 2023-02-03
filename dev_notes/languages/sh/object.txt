@@ -1,3 +1,0 @@
-# this is a normal array
-
-animals=( ["moo"]="cow" ["woof"]="dog")
