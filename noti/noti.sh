@@ -45,10 +45,6 @@ elif [[ "${CLI_ARRAY[*]}" =~ " $1 " ]];
     then
     READ_CLI $1
     exit
-elif [[ "${LOVE[*]}" =~ " $2 " ]] && [[ "$1" == "love" ]];
-    then
-    cat ~/code/noti/gamedev/love2d/$2.txt
-    
 elif [[ "${LANGUAGE_ARRAY[*]}" =~ " $1 " ]] && [[ "$2" != "ls" ]];
      then
      FIND_NOTES $1
@@ -60,14 +56,10 @@ else
      echo "language not supported"
 fi
 
-# if $1 is a supported languages,
-# in order, find the .txt files in these 12 folders
-# append the names of the .txt files in an array
-
-# if you find a .txt file with the name $2,
-# cat the file
-# else, print "no such file"
-
 TWELVE_FILES=("aa" "syn" "var" "con" "fun" "loo" "cas" "bug" "typ" "pac" "cli" "mor" "zz")
 
+# if $1 is in supported languages
+# and $2 is in twelve_files,
+# cat or more $1.txt file in the right language folder.
 
+# else, print "no such file"
