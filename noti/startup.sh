@@ -15,8 +15,4 @@ DEFINITIONS=( "aa" "def" "definition" "dictionnary" "dic" "definitions" "zz")
 . ~/code/noti/noti/read_notes.sh
 . ~/code/noti/noti/read_definitions.sh
 . ~/code/noti/noti/read_cli.sh
-# . ~/code/noti/noti/read_frameworks.sh
-# . ~/code/noti/noti/read_libraries.sh
-# The modify last file methods, in a seperate file
-#. ~/code/noti/noti/mod_last_file.sh
 

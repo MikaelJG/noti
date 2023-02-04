@@ -1,4 +1,4 @@
-source ~/code/noti/noti/variables.sh
+source ~/code/noti/noti/startup.sh
 NOTES_ARRAY=()
 FIND_NOTES() {
     DIR="${NOTI_DIRECTORY}/dev_notes/languages/$1"

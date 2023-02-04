@@ -9,10 +9,6 @@ FIND_LANGUAGES
 FIND_CLI
 FIND_NOTES $1
 
-# if [[ "$1" == "-w" ]];
-#     then
-#     FIND_NOTES $2
-#     MOD_LAST_FILE $2 $3
 if [[ "${COMMANDS[*]}" =~ " $1 " ]];
      then
      echo "
@@ -64,23 +60,14 @@ else
      echo "language not supported"
 fi
 
-# new architecture for Noti
-# 12 files system
+# if $1 is a supported languages,
+# in order, find the .txt files in these 12 folders
+# append the names of the .txt files in an array
 
-# syn
-# var
-# con
-# fun
-# loo
-# cas
-# bug
-# typ
-# pac
-# cli
-# mor
-# set - for set-up or install requirements
+# if you find a .txt file with the name $2,
+# cat the file
+# else, print "no such file"
 
-# personalize it with your favorite lang
-# then implement the 12 files
+TWELVE_FILES=("aa" "syn" "var" "con" "fun" "loo" "cas" "bug" "typ" "pac" "cli" "mor" "zz")
 
 
