@@ -1,3 +1,0 @@
-ruby hello.rb
-
-ruby path/to/file.rb
