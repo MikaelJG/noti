@@ -1,7 +1,7 @@
-source ~/code/noti/noti/variables.sh
+source ~/code/noti/noti/startup.sh
 DEFINITIONS_ARRAY=()
 FIND_DEFINITIONS() {
-    DIR="${NOTI_DIRECTORY}/definitions"
+    DIR="${NOTI_DIRECTORY}/dictionary"
     for file in "$DIR"/*
         do
             if [ -f "$file" ];

@@ -1,4 +1,4 @@
-source ~/code/noti/noti/variables.sh
+source ~/code/noti/noti/startup.sh
 LANGUAGE_ARRAY=()
 FIND_LANGUAGES() {
     DIR="${NOTI_DIRECTORY}/dev_notes/languages"

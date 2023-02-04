@@ -1,4 +1,4 @@
-source ~/code/noti/noti/variables.sh
+source ~/code/noti/noti/startup.sh
 CLI_ARRAY=()
 FIND_CLI() {
     DIR="${NOTI_DIRECTORY}/cli_tools"
