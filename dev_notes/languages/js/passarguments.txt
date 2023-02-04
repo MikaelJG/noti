@@ -1,5 +1,0 @@
-function() {
-    # do some
-}
-
-function "$arg1" "$arg2"
