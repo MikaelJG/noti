@@ -1,14 +1,14 @@
-#!/bin/bash 
-# CHANGE THIS FIRST LINE IF YOU USE ZSH
-
-# All find methods, in seperate files
-source ~/code/noti/noti/startup.sh
-
-FIND_DEFINITIONS
-FIND_LANGUAGES
-FIND_CLI
-FIND_NOTES $1
-
+# #!/bin/bash 
+# # CHANGE THIS FIRST LINE IF YOU USE ZSH
+# 
+# # All find methods, in seperate files
+# source ~/code/noti/noti/startup.sh
+# 
+# FIND_DEFINITIONS
+# FIND_LANGUAGES
+# FIND_CLI
+# FIND_NOTES $1
+# 
 # if [[ "${COMMANDS[*]}" =~ " $1 " ]];
 #      then
 #      echo "
@@ -57,12 +57,14 @@ FIND_NOTES $1
 # fi
 
 TWELVE_FILES=("aa" "syn" "var" "con" "fun" "loo" "cas" "bug" "typ" "pac" "cli" "mor" "zz")
+LANGUAGE_ARRAY=("aa" "sh" "cs" "rb" "rs" "js" "ts" "lu" "zz")
 
 # if $1 is in supported languages
 
 if [[ "${LANGUAGE_ARRAY[*]}" =~  " $1 " ]] && [[ "${TWELVE_FILES[*]}" =~ " $2 " ]];
     then
-    cat ~/code/noti/dev_notes/languages/$1/$2
+    echo "im in"
+    # cat ~/code/noti/dev_notes/languages/$1/$2
 else
     echo "something went wrong"
 fi
