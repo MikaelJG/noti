@@ -16,19 +16,30 @@ declare -A DEFINITION_R
 DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS_T")
 declare -A NOTES_R 
 NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES_T")
-READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
 
-if command cat ${CLI_R["FILE"]};
+if command cat ${DEFINITION_R["FILE"]};
+    then 
+        echo "found in definitions"
+elif command cat ${NOTES_R["FILE"]};
     then
-        echo "it worked"
+        echo "found in notes"
+elif command cat ${CLI_R["FILE"]};
+    then
+        clear
+        echo "found in cli"
+        sleep  
+        cat ${CLI_R["FILE"]}
+        exit
 else
-    echo "it didnt work"
+    echo "Couln't find the file"
 fi
 
 
-echo "This is CLI_R's file ${CLI_R["FILE"]}"
-echo "This is DEF_R's file ${DEFINITION_R["FILE"]}"
-echo "This is NOT_R's file ${NOTES_R["FILE"]}"
+# echo "This is CLI_R's file ${CLI_R["FILE"]}"
+# echo "This is DEF_R's file ${DEFINITION_R["FILE"]}"
+# echo "This is NOT_R's file ${NOTES_R["FILE"]}"
+# 
+# cat ${CLI_R["FILE"]};
 
 #     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
 #         then
