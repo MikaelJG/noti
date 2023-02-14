@@ -12,24 +12,23 @@ CLI_A="$CLI"
 declare -A CLI_R 
 # CLI_R[need(FILE)] = CLI_R($CLI_F)
 # CLI_R[need(ARRAY)] = CLI_R($CLI_A)
-CLI_R=(["FILE"]="$NOTI_DIRECTORY/linux/$FILE" ["ARRAY"]="$CLI")
+CLI_R=(["FILE"]="$NOTI_D/linux/$FILE" ["ARRAY"]="$CLI")
 declare -A DEFINITION_R 
-DEFINITION_R=(["FILE"]="$NOTI_DIRECTORY/definition/$FILE" ["ARRAY"]="$DEFINITIONS")
+DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS")
 declare -A NOTES_R 
-NOTES_R=(["FILE"]="$NOTI_DIRECTORY/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES")
+NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES")
 READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
 
 
-echo ${#READERS[@]}
+# echo ${#READERS[@]}
 
-# for reader in ${READERS[@]};
-#      do 
-#     #     for thing in "${!reader[@]}";
-#     #         do
-#     #             echo "$thing = ${reader[$thing]}";
-#     #     done
-#     echo "hello"
-# done
+for reader in ${READERS[@]};
+     do 
+         for thing in "${!reader[@]}";
+             do
+                 echo "$thing = ${reader[$thing]}";
+         done
+done
 
 #     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
 #         then
