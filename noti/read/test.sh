@@ -11,16 +11,18 @@ DEFINITIONS_T="this is defi_t, for test"
 NOTES_T="this is notes_t, for test"
 
 declare -A CLI_R 
-CLI_R=(["FILE"]="$NOTI_D/linux/$FILE" ["ARRAY"]="$CLI_T")
+CLI_R=(["FILE"]="$NOTI_D/dev_notes/linux/$FILE" ["ARRAY"]="$CLI_T")
 declare -A DEFINITION_R 
 DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS_T")
 declare -A NOTES_R 
 NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES_T")
 READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
 
-if command echo "hello" ;
+if command cat ${CLI_R["FILE"]};
     then
         echo "it worked"
+else
+    echo "it didnt work"
 fi
 
 
