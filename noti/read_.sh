@@ -26,3 +26,4 @@ elif command cat ${CLI_R["FILE"]};
         exit
 else
     echo "Couln't find the file"
+fi
