@@ -9,14 +9,14 @@ LANGUAGE=$2
 declare -A NOTES_R 
 declare -A DEFINITION_R 
 declare -A CLI_R 
-CLI_R=(["FILE"]="$NOTI_DIRECTORY/linux/$FILE" ["ARRAY"]="$CLI")
-DEFINITION_R=(["FILE"]="$NOTI_DIRECTORY/definition/$FILE" ["ARRAY"]="$DEFINITIONS")
-NOTES_R=(["FILE"]="$NOTI_DIRECTORY/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES")
+CLI_R=(["FILE"]="$NOTI_D/linux/$FILE" ["ARRAY"]="$CLI")
+DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS")
+NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES")
 READERS=($CLI_R $DEFINITION_R $NOTES_R)
 
 for reader in ${READERS[@]}
     do 
-        echo $reader
+        echo ${reader[FILE]}
 done
 
 #     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
