@@ -14,17 +14,4 @@ DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS")
 NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES")
 READERS=($CLI_R $DEFINITION_R $NOTES_R)
 
-for reader in ${READERS[@]}
-    do 
-        echo ${reader[FILE]}
-done
-
-#     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
-#         then
-#             DIR="${NOTI_DIRECTORY}/dev_notes/languages"
-#             echo ""
-#             cat ${DIR}/$1/$2.txt
-#             echo ""
-#     else
-#         echo "File does not exist"
-#     fi
+echo ${CLI_R[@]}

@@ -6,29 +6,22 @@ NOTE=$1
 FILE="$NOTE.txt"
 LANGUAGE=$2
 
-CLI_F="$NOTI_D/linux/$FILE"
-CLI_A="$CLI"
+CLI_T="this is cli_t, for test"
+DEFINITIONS_T="this is defi_t, for test"
+NOTES_T="this is notes_t, for test"
 
 declare -A CLI_R 
-# CLI_R[need(FILE)] = CLI_R($CLI_F)
-# CLI_R[need(ARRAY)] = CLI_R($CLI_A)
-CLI_R=(["FILE"]="$NOTI_D/linux/$FILE" ["ARRAY"]="$CLI")
+CLI_R=(["FILE"]="$NOTI_D/linux/$FILE" ["ARRAY"]="$CLI_T")
 declare -A DEFINITION_R 
-DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS")
+DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS_T")
 declare -A NOTES_R 
-NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES")
-READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
+NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES_T")
+# READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
 
 
-# echo ${#READERS[@]}
-
-for reader in ${READERS[@]};
-     do 
-         for thing in "${!reader[@]}";
-             do
-                 echo "$thing = ${reader[$thing]}";
-         done
-done
+echo ${CLI_R[@]}
+echo ${DEFINITION_R[@]}
+echo ${NOTES_R[@]}
 
 #     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
 #         then
