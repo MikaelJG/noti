@@ -18,6 +18,11 @@ declare -A NOTES_R
 NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES_T")
 READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
 
+if command echo "hello" ;
+    then
+        echo "it worked"
+fi
+
 
 echo "This is CLI_R's file ${CLI_R["FILE"]}"
 echo "This is DEF_R's file ${DEFINITION_R["FILE"]}"
