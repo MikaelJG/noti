@@ -1,4 +1,4 @@
-source ~/code/noti/noti/variables.sh
+source ~/code/noti/noti/startup.sh
 source ~/code/noti/noti/find_.sh
 
 NOTE=$1
@@ -14,14 +14,3 @@ for reader in ${READERS[@]}
     do 
         echo $reader
 done
-
-    if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
-        then
-            DIR="${NOTI_DIRECTORY}/dev_notes/languages"
-            echo ""
-            cat ${DIR}/$1/$2.txt
-            echo ""
-    else
-        echo "File does not exist"
-    fi
-}
