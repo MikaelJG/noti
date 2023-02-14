@@ -16,12 +16,12 @@ declare -A DEFINITION_R
 DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE" ["ARRAY"]="$DEFINITIONS_T")
 declare -A NOTES_R 
 NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE" ["ARRAY"]="$NOTES_T")
-# READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
+READERS=(${CLI_R[@]} ${DEFINITION_R[@]} ${NOTES_R[@]})
 
 
-echo ${CLI_R[@]}
-echo ${DEFINITION_R[@]}
-echo ${NOTES_R[@]}
+echo "This is CLI_R's file ${CLI_R["FILE"]}"
+echo "This is DEF_R's file ${DEFINITION_R["FILE"]}"
+echo "This is NOT_R's file ${NOTES_R["FILE"]}"
 
 #     if [[ "${NOTES_ARRAY[*]}" =~ " $2 " ]];
 #         then
