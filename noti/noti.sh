@@ -1,6 +1,12 @@
 #!/bin/bash 
 # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
+
+# TO DO
+
+# extract all files from languages, for a long list. 
+# use new alias mv all out, in work and .bashrc
+
 if [[ "$1" == "-c" ]];
      then
      echo "
