@@ -7,7 +7,7 @@ DEFINITIONS=()
 LANGUAGES=()
 
 # Directions for all topics
-CLI_D="${NOTI_DIRECTORY}/cli_tools"
+CLI_D="${NOTI_DIRECTORY}/linux"
 NOTES_D="${NOTI_DIRECTORY}/dev_notes/languages/$LANGUAGE"
 DEFINITIONS_D="${NOTI_DIRECTORY}/dictionary"
 LANGUAGES_D="${NOTI_DIRECTORY}/dev_notes/languages"

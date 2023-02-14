@@ -7,10 +7,6 @@ LANGUAGES=( ["js"]="javascript" ["st"]="stylus" ["le"]="less" ["r"]="r" ["tm"]="
 COMMANDS=( "aa" "option" "options" "command" "man" "commands" "manual" "zz") 
 DEFINITIONS=( "aa" "def" "definition" "dictionnary" "dic" "definitions" "zz") 
 
-. ~/code/noti/noti/find_notes.sh
-. ~/code/noti/noti/find_languages.sh
-. ~/code/noti/noti/find_definitions.sh
-. ~/code/noti/noti/find_cli.sh
 # All read methods, in seperate files
 . ~/code/noti/noti/read_notes.sh
 . ~/code/noti/noti/read_definitions.sh
