@@ -13,9 +13,15 @@ NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE")
 if command cat ${DEFINITION_R["FILE"]};
     then 
         echo "found in definitions"
+        sleep 1
+        cat ${DEFINITION_R["FILE"]}
+        exit
 elif command cat ${NOTES_R["FILE"]};
     then
         echo "found in notes"
+        sleep 1
+        cat ${NOTES_R["FILE"]}
+        exit
 elif command cat ${CLI_R["FILE"]};
     then
         clear

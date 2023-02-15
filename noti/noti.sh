@@ -1,6 +1,10 @@
 #!/bin/bash 
 # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
+NOTI_D=~/code/noti
+READ_D=~/code/noti/noti
+
+
 if [[ "$1" == "-c" ]];
      then
      echo "
@@ -42,9 +46,9 @@ $TOOLS_N
 else 
     if [[ " $2 " -eq 0 ]]; 
         then
-        ./read_.sh $2 $1
+        $READ_D/read_.sh $2 $1
     else
-        ./read_.sh $1 $2
+        $READ_D/read_.sh $1 $2
     fi
 fi
 
