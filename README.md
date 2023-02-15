@@ -10,44 +10,41 @@ In your home directory, create or update your .bashrc file.
 ```bash
 $ cd # move to home
 $ vim .bashrc # edit your .bashrc file
-```
-In .bashrc, write an alias for Noti and Nit.
-```bash
-  alias noti="~/path/to/noti.sh"
-  alias nit="lua ~/path/to/nit.lua"
+$ alias noti="~/path/to/noti.sh" # write an alias to noti.sh
 
-  # example
+# for example
   alias noti="~/code/noti/noti/noti.sh"
-  alias nit="lua ~/code/noti/nit/nit.lua"
+```
+Using zsh? Update your .zshrc file
+```bash
+$ cd # move to home
+$ vim .zshrc # edit your zshrc file 
+$ alias noti="~/path/to/noti.sh" # write an alias to noti.sh
+
+# for example
+  alias noti="~/code/noti/noti/noti.sh"
 ```
 Install Noti.
 ```bash
 $ git clone git@github.com:MikaelJG/noti.git
 ```
-Install Lua for Nit.
-```bash
-$ sudo apt install lua5.3
-```
-Using zsh? Change it in variables.sh.
-```bash
-# for line of variables.sh
-#!/bin/zsh
-```
-Define Noti's root directory in variables.sh, noti's folder, not noti.sh.
+Define Noti's root directory in noti.sh and reader.sh.
 ```bash
 # line 4 of noti.sh
-NOTI_DIRECTORY=~/code/noti # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti/root
+NOTI_D=~/code/noti # define this variable based on its location on your computer, ex: ~/path/to/noti/root
 ```
-Define Noti's directory in nit.lua, noti's folder, not noti.sh
-```bash
-# line 3 of nit.lua
-local noti_dir = "~/code/noti" # DEFINE NOTI_DIRECTORY, ex: ~/path/to/noti/root
-```
-
-## Examples
+## Usage 
 
 Specify a language and a note to read.
 ```bash
+
+  noti -c : lists all Noti commands / options
+  noti -l : lists all supported Languages
+  noti -d : counts definitions in Dictionnary 
+  noti -t : lists all supported tools in Tools 
+  noti -x : counts linux notes in Linux 
+
+   -- in progress -- noti rs ls : list all notes in rust
 $ noti rs if # print a rust if statement
 $ noti sr if # language not supported
 $ noti rs iif # note doesn't exist
