@@ -34,13 +34,13 @@ elif command cat ${CLI_R["FILE"]};
         sleep 1
         cat ${CLI_R["FILE"]}
         exit
-elif command cat ${TOOL_R["FILE"]};
+elif command cat ${TOOLS_R["FILE"]};
     then
         clear
-        echo "Got it. In tools...
+        echo "Got it. In tools:
 >"
         sleep 1
-        cat ${CLI_R["FILE"]}
+        cat ${TOOLS_R["FILE"]}
         exit
 else
     echo "Couln't find the file"
