@@ -3,14 +3,14 @@ NOTE=$1
 FILE="$NOTE.txt"
 LANGUAGE_OR_TOOL=$2
 
-declare -A CLI_R 
-LINUX_R=(["FILE"]="$NOTI_D/linux/$FILE")
+declare -A LINUX_R 
+LINUX_R=(["FILE"]="$NOTES_D/linux/$FILE")
 declare -A DEFINITION_R 
-DEFINITION_R=(["FILE"]="$NOTI_D/dictionary/$FILE")
+DEFINITION_R=(["FILE"]="$NOTES_D/dictionary/$FILE")
 declare -A NOTES_R 
-NOTES_R=(["FILE"]="$NOTI_D/languages/$LANGUAGE_OR_TOOL/$FILE")
+NOTES_R=(["FILE"]="$NOTES_D/languages/$LANGUAGE_OR_TOOL/$FILE")
 declare -A TOOLS_R 
-TOOLS_R=(["FILE"]="$NOTI_D/tools/$LANGUAGE_OR_TOOL/$FILE")
+TOOLS_R=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
 if command cat ${DEFINITION_R["FILE"]};
     then 
