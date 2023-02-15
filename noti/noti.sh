@@ -1,7 +1,7 @@
 #!/bin/bash 
 # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
-NOTI_D=~/code/noti
+NOTES_D=~/code/noti/notes
 READ_D=~/code/noti/noti
 
 if [[ "$1" == "-c" ]];
@@ -12,23 +12,24 @@ if [[ "$1" == "-c" ]];
         #####################
 ---------------------------------------------
 
-  noti -l : lists all supported languages
+  noti -l : lists all supported Languages
   noti -d : counts definitions in Dictionnary 
-  noti -t : counts tools notes in Tools 
+  noti -t : lists all supported tools in Tools 
+  noti -x : counts linux notes in Linux 
 
-  noti  rs ls : list all notes in rust
+   -- in progress -- noti rs ls : list all notes in rust
 
 ---------------------------------------------
      "
 elif [[ "$1" == "-d" ]];
      then
-     NUM_D=$(ls ${NOTI_D}/notes/dictionary | wc -l)
+     NUM_D=$(ls ${NOTES_D}/dictionary | wc -l)
          echo "
-    Currently, your Noti has $NUM_D definitions
+    Currently, your Noti has $NUM_D definitions!
          "
 elif [[ "$1" == "-l" ]];
      then
-     LANGUAGES=$(ls ${NOTI_D}/notes/languages)
+     LANGUAGES=$(ls ${NOTES_D}/languages)
          echo " 
     Currently, your Noti supports:
 
@@ -36,11 +37,18 @@ $LANGUAGES
          "
 elif [[ "$1" == "-t" ]];
      then
-     TOOLS_N=$(ls ${NOTI_D}/notes/tools)
+     TOOLS_N=$(ls ${NOTES_D}/tools)
          echo " 
     Currently, your Noti supports:
 
 $TOOLS_N
+            "
+
+elif [[ "$1" == "-x" ]];
+     then
+     NUM_LINUX_N=$(ls ${NOTES_D}/linux | wc -l)
+         echo " 
+    Currently, your Noti has $NUM_LINUX_N notes on Linux! 
             "
 else 
     if [[ " $2 " -eq 0 ]]; 
