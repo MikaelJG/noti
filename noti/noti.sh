@@ -29,14 +29,22 @@ elif [[ "$1" == "-d" ]];
          echo "
     Currently, your Noti has $NUM_D definitions
          "
-
 elif [[ "$1" == "-l" ]];
      then
      LANGUAGES=$(ls ../dev_notes/languages)
-         echo "Supported languages: 
-    Currently, your Noti supports $LANGUAGES
-         "
+         echo " 
+    Currently, your Noti supports:
 
+$LANGUAGES
+         "
+elif [[ "$1" == "-t" ]];
+     then
+     TOOLS_N=$(ls ../dev_notes/tools)
+         echo " 
+    Currently, your Noti supports:
+
+$TOOLS_N
+            "
 else 
   ./read_.sh $1 $2
 fi
