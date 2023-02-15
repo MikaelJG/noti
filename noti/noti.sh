@@ -37,11 +37,11 @@ elif [[ "$1" == "-d" ]];
 
 elif [[ "$1" == "-t" ]];
      then
-         echo "Supported languages: "
-         for i in "${LANGUAGE_ARRAY[@]}";
-         do
-             echo "$i - ${LANGUAGES[$i]}";
-         done
+     LANGUAGES=$(ls ../dev_notes/languages)
+         echo "Supported languages: 
+    Currently, your Noti supports $LANGUAGES
+         "
+
 else 
   ./read_.sh $1 $2
 fi
