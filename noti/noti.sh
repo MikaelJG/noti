@@ -1,12 +1,6 @@
 #!/bin/bash 
 # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
-
-# TO DO
-
-# extract all files from languages, for a long list. 
-# use new alias mv all out, in work and .bashrc
-
 if [[ "$1" == "-c" ]];
      then
      echo "
@@ -46,6 +40,11 @@ elif [[ "$1" == "-t" ]];
 $TOOLS_N
             "
 else 
-  ./read_.sh $1 $2
+    if [[ " $2 " -eq 0 ]]; 
+        then
+        ./read_.sh $2 $1
+    else
+        ./read_.sh $1 $2
+    fi
 fi
 
