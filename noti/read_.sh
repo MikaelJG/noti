@@ -6,18 +6,20 @@ LANGUAGE=$2
 declare -A CLI_R 
 CLI_R=(["FILE"]="$NOTI_D/dev_notes/linux/$FILE")
 declare -A DEFINITION_R 
-DEFINITION_R=(["FILE"]="$NOTI_D/definition/$FILE")
+DEFINITION_R=(["FILE"]="$NOTI_D/dev_notes/dictionary/$FILE")
 declare -A NOTES_R 
 NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE")
 
 if command cat ${DEFINITION_R["FILE"]};
     then 
+        clear
         echo "found in definitions"
         sleep 1
         cat ${DEFINITION_R["FILE"]}
         exit
 elif command cat ${NOTES_R["FILE"]};
     then
+        clear
         echo "found in notes"
         sleep 1
         cat ${NOTES_R["FILE"]}

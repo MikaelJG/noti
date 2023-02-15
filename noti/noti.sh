@@ -4,7 +4,6 @@
 NOTI_D=~/code/noti
 READ_D=~/code/noti/noti
 
-
 if [[ "$1" == "-c" ]];
      then
      echo "
