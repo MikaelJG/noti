@@ -22,13 +22,13 @@ if [[ "$1" == "-c" ]];
      "
 elif [[ "$1" == "-d" ]];
      then
-     NUM_D=$(ls ../dev_notes/dictionary | wc -l)
+     NUM_D=$(ls ${NOTI_D}/notes/dictionary | wc -l)
          echo "
     Currently, your Noti has $NUM_D definitions
          "
 elif [[ "$1" == "-l" ]];
      then
-     LANGUAGES=$(ls ../dev_notes/languages)
+     LANGUAGES=$(ls ${NOTI_D}/notes/languages)
          echo " 
     Currently, your Noti supports:
 
@@ -36,7 +36,7 @@ $LANGUAGES
          "
 elif [[ "$1" == "-t" ]];
      then
-     TOOLS_N=$(ls ../dev_notes/tools)
+     TOOLS_N=$(ls ${NOTI_D}/notes/tools)
          echo " 
     Currently, your Noti supports:
 

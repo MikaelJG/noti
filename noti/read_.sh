@@ -43,5 +43,7 @@ elif command cat ${TOOLS_R["FILE"]};
         cat ${TOOLS_R["FILE"]}
         exit
 else
+    clear
     echo "Couln't find the file"
+    exit
 fi
