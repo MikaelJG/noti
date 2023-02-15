@@ -15,19 +15,14 @@ if [[ "$1" == "-c" ]];
         #####################
 ---------------------------------------------
 
-  noti -l : list all supported languages
-       -w : write note in last modified file 
-    rs ls : list all notes in rust
+  noti -l : lists all supported languages
+  noti -d : counts definitions in Dictionnary 
+  noti -t : counts tools notes in Tools 
+
+  noti  rs ls : list all notes in rust
 
 ---------------------------------------------
      "
-elif [[ "$1" == "-l" ]];
-     then
-         echo "Supported languages: "
-         for i in "${LANGUAGE_ARRAY[@]}";
-         do
-             echo "$i - ${LANGUAGES[$i]}";
-         done
 elif [[ "$1" == "-d" ]];
      then
      NUM_D=$(ls ../dev_notes/dictionary | wc -l)
@@ -35,7 +30,7 @@ elif [[ "$1" == "-d" ]];
     Currently, your Noti has $NUM_D definitions
          "
 
-elif [[ "$1" == "-t" ]];
+elif [[ "$1" == "-l" ]];
      then
      LANGUAGES=$(ls ../dev_notes/languages)
          echo "Supported languages: 
