@@ -1,33 +1,43 @@
 NOTI_D=~/code/noti
 NOTE=$1
 FILE="$NOTE.txt"
-LANGUAGE=$2
+LANGUAGE_OR_TOOL=$2
 
 declare -A CLI_R 
-CLI_R=(["FILE"]="$NOTI_D/dev_notes/linux/$FILE")
+CLI_R=(["FILE"]="$NOTI_D/notes/linux/$FILE")
 declare -A DEFINITION_R 
-DEFINITION_R=(["FILE"]="$NOTI_D/dev_notes/dictionary/$FILE")
+DEFINITION_R=(["FILE"]="$NOTI_D/notes/dictionary/$FILE")
 declare -A NOTES_R 
-NOTES_R=(["FILE"]="$NOTI_D/dev_notes/languages/$LANGUAGE/$FILE")
+NOTES_R=(["FILE"]="$NOTI_D/notes/languages/$LANGUAGE_OR_TOOL/$FILE")
+declare -A TOOLS_R 
+TOOLS_R=(["FILE"]="$NOTI_D/notes/tools/$LANGUAGE_OR_TOOL/$FILE")
 
 if command cat ${DEFINITION_R["FILE"]};
     then 
         clear
-        echo "found in definitions"
+        echo "Got it. In dictionnary..."
         sleep 1
         cat ${DEFINITION_R["FILE"]}
         exit
 elif command cat ${NOTES_R["FILE"]};
     then
         clear
-        echo "found in notes"
+        echo "Got it. In notes..."
         sleep 1
         cat ${NOTES_R["FILE"]}
         exit
 elif command cat ${CLI_R["FILE"]};
     then
         clear
-        echo "Got it. In cli:
+        echo "Got it. In cli...
+>"
+        sleep 1
+        cat ${CLI_R["FILE"]}
+        exit
+elif command cat ${TOOL_R["FILE"]};
+    then
+        clear
+        echo "Got it. In tools...
 >"
         sleep 1
         cat ${CLI_R["FILE"]}
