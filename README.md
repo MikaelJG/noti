@@ -1,7 +1,7 @@
 
 ![Logo](https://github.com/MikaelJG/noti/blob/master/assets/noti_logo2.png)
 
-Noti is a cli tool to find or copy personal notes. It is the fastest librarian for the lazy book researcher.
+Noti is a cli tool to find or copy personal notes. It is the fastest librarian for the lazy researcher.
 
 Noti was strongly influenced by the tldr and tealdeer projects.
 
@@ -48,7 +48,7 @@ Options.
 ```
 ## Demo
 
-https://user-images.githubusercontent.com/101736882/210192432-31ba8f17-b649-4c04-ac35-8f6cfb68c026.mp4
+https://user-images.githubusercontent.com/101736882/219138401-ab22f52d-21d1-44c0-ab1f-61d2506c2e06.mp4
 
 ## Thanks 
 
