@@ -50,12 +50,26 @@ elif [[ "$1" == "-x" ]];
          echo " 
     Currently, your Noti has $NUM_LINUX_N notes on Linux! 
             "
+elif [[ "$1" == "-e" ]];
+    then
+        if [[ " $3 " -eq 0 ]];
+            then
+            # if three args given, have language first.
+            ## noti -e rs if
+            $READ_D/editor.sh $3 $2
+        else
+            # if two args given, have note first. 
+            $READ_D/editor.sh $2
+            echo "Missing one argument"
+        fi
 else 
     if [[ " $2 " -eq 0 ]]; 
         then
+        # if two args are given, have language first.
         $READ_D/reader.sh $2 $1
     else
-        $READ_D/reader.sh $1 $2
+        # if one arg, have note first.
+        $READ_D/reader.sh $1
     fi
 fi
 
