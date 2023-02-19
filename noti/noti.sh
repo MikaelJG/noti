@@ -53,9 +53,9 @@ elif [[ "$1" == "-x" ]];
 else 
     if [[ " $2 " -eq 0 ]]; 
         then
-        $READ_D/read_.sh $2 $1
+        $READ_D/reader.sh $2 $1
     else
-        $READ_D/read_.sh $1 $2
+        $READ_D/reader.sh $1 $2
     fi
 fi
 
