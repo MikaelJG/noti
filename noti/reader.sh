@@ -12,6 +12,7 @@ NOTES_R=(["FILE"]="$NOTES_D/languages/$LANGUAGE_OR_TOOL/$FILE")
 declare -A TOOLS_R 
 TOOLS_R=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
+# try to cat and throw away the output
 if cat ${DEFINITION_R["FILE"]} >/dev/null 2>&1; then
         clear
         echo "Got it. In dictionnary...
@@ -33,7 +34,7 @@ elif cat ${LINUX_R["FILE"]} >/dev/null 2>&1; then
         sleep 1
         cat ${LINUX_R["FILE"]}
         exit
-elif command cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; then
+elif cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; then
         clear
         echo "Got it. In tools:
 >"

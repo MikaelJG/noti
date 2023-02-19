@@ -26,21 +26,21 @@ elif cat ${NOTES_R["FILE"]} >/dev/null 2>&1; then
         echo "Got it. In notes...
 >"
         sleep 1
-        cat ${NOTES_R["FILE"]}
+        $TEXT_E ${NOTES_R["FILE"]}
         exit
 elif cat ${LINUX_R["FILE"]} >/dev/null 2>&1; then
         clear
         echo "Got it. In linux...
 >"
         sleep 1
-        cat ${LINUX_R["FILE"]}
+        $TEXT_E ${LINUX_R["FILE"]}
         exit
-elif command cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; then
+elif cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; then
         clear
         echo "Got it. In tools:
 >"
         sleep 1
-        cat ${TOOLS_R["FILE"]}
+        $TEXT_E ${TOOLS_R["FILE"]}
         exit
 else
     clear

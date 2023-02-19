@@ -12,8 +12,9 @@ if [[ "$1" == "-c" ]];
         #####################
 ---------------------------------------------
 
-  noti -l : lists all supported Languages
   noti -d : counts definitions in Dictionnary 
+  noti -e : edit a note, anywhere 
+  noti -l : lists all supported Languages
   noti -t : lists all supported tools in Tools 
   noti -x : counts linux notes in Linux 
 
