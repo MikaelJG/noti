@@ -1,3 +1,0 @@
-rails c
-
-ouvre la console

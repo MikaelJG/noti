@@ -26,17 +26,18 @@ if [[ "$1" == "-c" ]];
 elif [[ "$1" == "-a" ]];
      then
          echo "
+# Noti assumes this architecture for notes
+
     Notes  
       |
       ------ definitions
       |
       ------ languages
-                 |
-                 ---- cs
-                 ---- py
-                 ---- rb 
-                 ---- etc 
-      |
+      |           |
+      |           ---- cs
+      |           ---- py
+      |           ---- rb 
+      |                etc 
       ------ linux
       |
       ------ tools

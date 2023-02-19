@@ -1,9 +1,0 @@
-class Home extends React.Component {
-    
-    render () {
-        return <div>
-            <lavel htmlFor="nom">Mon nom</label>
-            <input type="text" id="nom" name="nom"/>
-            </div>
-    }
-}

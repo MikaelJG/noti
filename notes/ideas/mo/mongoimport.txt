@@ -1,9 +1,0 @@
-dans config.json
-
-mongoimport
-
-see this : https://www.mongodb.com/docs/atlas/migration-self-managed/
-
-ex: mongoimport --db=gamejamsdb --collection=animaux --type=json --file config.json
-
-// my need to have mongod working in other terminal

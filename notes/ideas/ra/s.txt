@@ -1,3 +1,0 @@
-rails s
-
-# ouvre le server

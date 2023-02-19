@@ -1,2 +1,0 @@
-https://www.mongodb.com/docs/atlas/migration-self-managed/
-see mongoimport

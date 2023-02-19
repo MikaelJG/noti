@@ -1,4 +1,0 @@
-footer {
-    @extend header; // extends header styling into this section
-    width: 320px * 3.65 // can do calculations
-}

@@ -1,6 +1,0 @@
-https://www.google.com/search?q=wagon&ht=en
-
-Scheme: https
-Host: www.google.com
-Path:/search
-Query String: q=wagon&hl=en

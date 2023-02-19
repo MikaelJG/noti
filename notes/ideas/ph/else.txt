@@ -1,9 +1,0 @@
-<?php if (condition): ?>
-
-html code to run if condition is true
-
-<?php else: ?>
-
-html code to run if condition is false
-
-<?php endif ?>

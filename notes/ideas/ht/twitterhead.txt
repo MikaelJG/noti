@@ -1,8 +1,0 @@
-d>
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Lewagonparis">
-    <meta name="twitter:title" content="Le Wagon - The French innovative coding school">
-    <meta name="twitter:description" content="Le Wagon is the best .ou will be impressed.">
-    <meta name="twitter:creator" content="@Lewagonparis">
-    <meta name="twitter:image:src" content="http://twitter-card.jpg">
-</head>

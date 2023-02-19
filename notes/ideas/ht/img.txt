@@ -1,3 +1,0 @@
-<img src="logo.png" alt="Le Wagon logo">
-
-=> https://source.unsplash.com/random
