@@ -12,6 +12,7 @@ if [[ "$1" == "-c" ]];
         #####################
 ---------------------------------------------
 
+  noti -a : display Noti's architecture 
   noti -d : counts definitions in Dictionnary 
   noti -e : edit a note, anywhere 
   noti -l : lists all supported Languages
@@ -22,6 +23,24 @@ if [[ "$1" == "-c" ]];
 
 ---------------------------------------------
      "
+elif [[ "$1" == "-a" ]];
+     then
+         echo "
+    Notes  
+      |
+      ------ definitions
+      |
+      ------ languages
+                 |
+                 ---- cs
+                 ---- py
+                 ---- rb 
+                 ---- etc 
+      |
+      ------ linux
+      |
+      ------ tools
+         "
 elif [[ "$1" == "-d" ]];
      then
      NUM_D=$(ls ${NOTES_D}/dictionary | wc -l)
