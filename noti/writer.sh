@@ -16,10 +16,9 @@ declare -A TOOLS_R
 TOOLS_R=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
 exists_quit() {
-    echo $1
-    sleep 5
     if [ -e $1 ]; then
-        echo "The file already exists.
+        echo "
+        The file already exists.
         Edit it with Noti -e."
         exit
     fi
@@ -29,26 +28,30 @@ case $NOTE_D in
     -wd) 
         exists_quit ${DEFINITION_R["FILE"]} 
         
-        echo "Got it. In dictionnary...
->" 
+        echo "Got it. Noting, in dictionnary...
+>"
+        sleep 1
         $TEXT_E ${DEFINITION_R["FILE"]};;
 
     -wl) 
-        exists_quit $NOTES_R["FILE"]
+        exists_quit ${NOTES_R["FILE"]}
 
-        echo "Got it. In languages...
+        echo "Got it. Noting, in languages...
 >" 
+        sleep 1
         $TEXT_E ${NOTES_R["FILE"]};;
     -wt) 
-        exists_quit $TOOLS_R["FILE"]
+        exists_quit ${TOOLS_R["FILE"]}
 
-        echo "Got it. In tools...
+        echo "Got it. Noting, in tools...
 >" 
+        sleep 1
         $TEXT_E ${TOOLS_R["FILE"]};;
     -wx) 
-        exists_quit $LINUX_R["FILE"]
-        echo "Got it. In linux...
+        exists_quit ${LINUX_R["FILE"]}
+        echo "Got it. Noting, in linux...
 >" 
+        sleep 1
         $TEXT_E ${LINUX_R["FILE"]};;
     *) echo "Something went wrong"
        exit;;
