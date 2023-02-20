@@ -18,7 +18,7 @@ $ alias noti="~/path/to/noti.sh" # write an alias to noti.sh
 # for example
   alias noti="~/code/noti/noti/noti.sh"
 ```
-Using zsh? Update your .zshrc file
+Using zsh? Update your .zshrc file.
 ```bash
 $ cd # move to home
 $ vim .zshrc # edit your zshrc file 
