@@ -17,6 +17,10 @@ if [[ "$1" == "-c" ]];
   noti -e : edit a note, anywhere 
   noti -l : lists all supported Languages
   noti -t : lists all supported tools in Tools 
+  noti -wd: write a new definition in Dictionnary
+  noti -wl: write a new note in Languages
+  noti -wt: write a new note in Tools
+  noti -wx: write a new note in Linux
   noti -x : counts linux notes in Linux 
 
    -- in progress -- noti rs ls : list all notes in rust
