@@ -3,7 +3,7 @@
 
 Noti is a cli tool to find or copy personal notes. It is the fastest librarian for the lazy researcher.
 
-Noti was strongly influenced by the [tldr](https://github.com/tldr-pages) and [tealdeer](https://github.com/dbrgn/tealdeer) projects.
+Noti was strongly influenced by [tldr](https://github.com/tldr-pages) and [tealdeer](https://github.com/dbrgn/tealdeer).
 
 "The tldr-pages project is a collection of community-maintained help pages for command-line tools, that aims to be a simpler, more approachable complement to traditional man pages."
 
@@ -41,9 +41,11 @@ NOTI_D=~/code/noti # define this variable based on its location on your computer
 Options.
 ```bash
   noti -c : lists all Noti commands / options
-  noti -l : lists all supported Languages
   noti -d : counts definitions in Dictionnary 
+  noti -e : edit a note in any location 
+  noti -l : lists all supported Languages
   noti -t : lists all supported tools in Tools 
+  noti -w.: write a new note in chosen location
   noti -x : counts linux notes in Linux 
 ```
 ## Demo
