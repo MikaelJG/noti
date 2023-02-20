@@ -54,7 +54,7 @@ elif [[ "$1" == "-d" ]];
          "
 elif [[ "$1" == "-e" ]];
     then
-        if [[ " $3 " -eq 0 ]];
+        if [ $# -eq 3 ];
             then
             # if three args given, have language first.
             ## noti -e rs if
@@ -65,7 +65,7 @@ elif [[ "$1" == "-e" ]];
         fi
 elif [[ "$1" == "-wd" ]] || [[ "$1" == "-wl" ]] || [[ "$1" == "-wx" ]] || [[ "$1" == "-wt" ]];
     then
-        if [[ " $3 " -eq 0 ]];
+        if [ $# -eq 3 ];
             then
             # if three args given, have language second.
             ## noti -wl rs if

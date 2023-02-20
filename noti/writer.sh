@@ -24,6 +24,16 @@ exists_quit() {
     fi
 }
 
+info_needed() {
+    if [ -z "$3" ]; then
+        echo "
+        Specify a tool or language.
+        Ex: noti -wt vi remap
+        "
+        exit
+    fi
+}
+
 case $NOTE_D in
     -wd) 
         exists_quit ${DEFINITION_R["FILE"]} 
@@ -34,6 +44,7 @@ case $NOTE_D in
         $TEXT_E ${DEFINITION_R["FILE"]};;
 
     -wl) 
+        info_needed $1 $2 $3
         exists_quit ${NOTES_R["FILE"]}
 
         echo "Got it. Noting, in languages...
@@ -41,6 +52,7 @@ case $NOTE_D in
         sleep 1
         $TEXT_E ${NOTES_R["FILE"]};;
     -wt) 
+        info_needed $1 $2 $3
         exists_quit ${TOOLS_R["FILE"]}
 
         echo "Got it. Noting, in tools...
