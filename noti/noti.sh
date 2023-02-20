@@ -40,11 +40,14 @@ elif [[ "$1" == "-a" ]];
       |           |
       |           ---- cs
       |           ---- py
-      |           ---- rb 
       |                etc 
       ------ linux
       |
       ------ tools
+                |
+                ---- vi
+                ---- tm
+                     etc
          "
 elif [[ "$1" == "-d" ]];
      then
