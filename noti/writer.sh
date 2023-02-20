@@ -16,6 +16,8 @@ declare -A TOOLS_R
 TOOLS_R=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
 exists_quit() {
+    echo $1
+    sleep 5
     if [ -e $1 ]; then
         echo "The file already exists.
         Edit it with Noti -e."
@@ -25,7 +27,7 @@ exists_quit() {
 
 case $NOTE_D in
     -wd) 
-        exists_quit $DEFINITION_R["FILE"] 
+        exists_quit ${DEFINITION_R["FILE"]} 
         
         echo "Got it. In dictionnary...
 >" 
