@@ -17,10 +17,10 @@ Options:
     -l, list lang   List all supported programming languages in the Language folder. In notes/languages.
     -t, list tool   List all supported programming languages in the Language folder. In notes/languages.
     -w, write
-    ... -wa,        Write a new definition in Dictionnary
-    ... -wl,        Write a new note in Languages
-    ... -wt,        Write a new note in Tools
-    ... -wx,        Write a new note in Linux 
+        -wa,        Write a new definition in Dictionnary
+        -wl,        Write a new note in Languages
+        -wt,        Write a new note in Tools
+        -wx,        Write a new note in Linux 
     -x, count lin   Count your number of notes in Linux 
 
    -- in progress -- noti rs ls : list all notes in rust
