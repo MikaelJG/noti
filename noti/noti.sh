@@ -4,6 +4,9 @@
 NOTES_D=~/code/noti/notes
 READ_D=~/code/noti/noti
 
+# to do 
+# add a -help, like docker -help
+
 if [[ "$1" == "-c" ]];
      then
      echo "

@@ -48,6 +48,19 @@ Options.
   noti -w.: write a new note in chosen location
   noti -x : counts linux notes in Linux 
 ```
+## Recommendation
+In your home directory, create or update your .bashrc file.
+```bash
+$ cd # move to home
+$ vim .bashrc # edit your .bashrc file
+$ alias wd="~/path/to/noti.sh -wd" # write a definition with wd 
+$ alias wl="~/path/to/noti.sh -wl" # write a note for a language with wl 
+$ alias wt="~/path/to/noti.sh -wt" # write a note for a tool with wt 
+$ alias wx="~/path/to/noti.sh -wx" # write a note for linux with wx 
+
+# for example
+  alias noti="~/code/noti/noti/noti.sh -wd"
+```
 ## Demo
 
 https://user-images.githubusercontent.com/101736882/219138401-ab22f52d-21d1-44c0-ab1f-61d2506c2e06.mp4
