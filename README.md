@@ -40,13 +40,7 @@ NOTI_D=~/code/noti # define this variable based on its location on your computer
 
 Options.
 ```bash
-  noti -c : lists all Noti commands / options
-  noti -d : counts definitions in Dictionnary 
-  noti -e : edit a note in any location 
-  noti -l : lists all supported Languages
-  noti -t : lists all supported tools in Tools 
-  noti -w.: write a new note in chosen location
-  noti -x : counts linux notes in Linux 
+  noti -help # list all options for Noti 
 ```
 ## Recommendation
 In your home directory, create or update your .bashrc file.

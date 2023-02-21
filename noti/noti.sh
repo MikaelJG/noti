@@ -7,24 +7,21 @@ READ_D=~/code/noti/noti
 # to do 
 # add a -help, like docker -help
 
-if [[ "$1" == "-c" ]];
+if [[ "$1" == "-help" ]];
      then
      echo "
-        #####################
-        ### Noti Commands ###
-        #####################
----------------------------------------------
-
-  noti -a : display Noti's architecture 
-  noti -d : counts definitions in Dictionnary 
-  noti -e : edit a note, anywhere 
-  noti -l : lists all supported Languages
-  noti -t : lists all supported tools in Tools 
-  noti -wd: write a new definition in Dictionnary
-  noti -wl: write a new note in Languages
-  noti -wt: write a new note in Tools
-  noti -wx: write a new note in Linux
-  noti -x : counts linux notes in Linux 
+Options:
+    -a, noti tree   Display Noti's file system. Changing the file system may cause your noti to malfunction.
+    -d, count def   Count your number of definitions in your Noti's dictionnary. In notes/dictionnary.
+    -e, edit        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
+    -l, list lang   List all supported programming languages in the Language folder. In notes/languages.
+    -t, list tool   List all supported programming languages in the Language folder. In notes/languages.
+    -w, write
+    ... -wa,        Write a new definition in Dictionnary
+    ... -wl,        Write a new note in Languages
+    ... -wt,        Write a new note in Tools
+    ... -wx,        Write a new note in Linux 
+    -x, count lin   Count your number of notes in Linux 
 
    -- in progress -- noti rs ls : list all notes in rust
 
