@@ -1,0 +1,3 @@
+mkdir longtitleproject && cd $_
+
+The $_ variable, in bash, is the last argument given to the previous command. In this case, the name of the directory you just created.
