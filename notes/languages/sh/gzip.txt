@@ -1,0 +1,7 @@
+# Backup the database
+mysqldump -u username -p password dbname > /path/to/backup.sql
+
+# Compress the backup file
+gzip /path/to/backup.sql
+
+gzip is a compression utility used in Linux and other Unix-based systems. It is used to compress files, reducing their size and saving disk space. gzip stands for GNU zip, and it is part of the GNU project. It uses the Lempel-Ziv compression algorithm to compress data, and it can compress individual files as well as entire directories. The compressed files created by gzip typically have the .gz file extension

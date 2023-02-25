@@ -1,0 +1,9 @@
+You can find the terminal command for many installed applications on Ubuntu by using the which command. For example, to find the terminal command for the gedit text editor, you can type the following command in the terminal:
+
+bash
+
+which gedit
+
+This will output the full path to the gedit command, such as /usr/bin/gedit. You can then use this command in the terminal to launch the application.
+
+However, not all applications have a terminal command associated with them, and some may be located in different directories or have different names than their actual application name. In those cases, you may need to search online or consult the application's documentation for more information.
