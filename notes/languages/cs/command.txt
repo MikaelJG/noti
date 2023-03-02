@@ -1,0 +1,5 @@
+The Process.Start method is used to run the shell scripts.
+
+The first argument is the path to the script, and the second argument is the arguments that we want to pass to the script.
+
+

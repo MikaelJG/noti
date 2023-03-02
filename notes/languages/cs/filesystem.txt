@@ -1,0 +1,5 @@
+In C#, we use Directory and Path classes to handle directory operations,
+
+`and we use Process class to run shell commands. 
+
+The GetDirectories and GetFiles methods of Directory class return an array of strings that contain the names of all directories or files in the specified directory.
