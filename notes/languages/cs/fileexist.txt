@@ -1,0 +1,18 @@
+You can check if a file exists in C# by using the File.Exists method from the System.IO namespace. This method takes the file path as a parameter and returns a Boolean value indicating whether the file exists or not. Here's an example:
+
+csharp
+
+using System.IO;
+
+string filePath = @"C:\example\file.txt";
+
+if (File.Exists(filePath))
+{
+    Console.WriteLine("File exists!");
+}
+else
+{
+    Console.WriteLine("File does not exist.");
+}
+
+In this example, we're using the File.Exists method to check if the file located at C:\example\file.txt exists. If it does exist, we print "File exists!" to the console. If it does not exist, we print "File does not exist." instead.

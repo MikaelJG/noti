@@ -1,0 +1,22 @@
+In C#, you can read the content of a file using the File.ReadAllText method or the StreamReader class. Here is an example of how you can read a file using File.ReadAllText:
+
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string fileName = args[0];
+        string fileContent = File.ReadAllText(fileName);
+        Console.WriteLine(fileContent);
+    }
+}
+
+This code reads the content of the file specified in the command-line arguments and outputs it to the console. If you want to redirect the output to a file, you can use the > operator in the command prompt. For example, to save the output to a file named "output.txt", you can use the following command:
+
+lua
+
+program.exe file.txt > output.txt
+
+This will run the program, read the content of the "file.txt" file, and save it to the "output.txt" file.
