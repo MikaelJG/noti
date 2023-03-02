@@ -1,0 +1,93 @@
+NOTES_D = os.getenv("HOME") .. "/code/noti/notes"
+READ_D = os.getenv("HOME") .. "/code/noti/noti"
+
+-- to do
+-- add a -help, like docker -help
+
+if arg[1] == "-help" then
+    print([[
+Options:
+    -a, noti tree   Display Noti's file system. Changing the file system may cause your noti to malfunction.
+    -d, count def   Count your number of definitions in your Noti's dictionnary. In notes/dictionnary.
+    -e, edit        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
+    -l, list lang   List all supported programming languages in the Language folder. In notes/languages.
+    -t, list tool   List all supported programming languages in the Language folder. In notes/languages.
+    -w, write
+        -wa,        Write a new definition in Dictionnary
+        -wl,        Write a new note in Languages
+        -wt,        Write a new note in Tools
+        -wx,        Write a new note in Linux 
+    -x, count lin   Count your number of notes in Linux 
+
+   -- in progress -- noti rs ls : list all notes in rust
+
+---------------------------------------------
+    ]])
+elseif arg[1] == "-a" then
+    print([[
+# Noti assumes this architecture for notes
+
+    Notes  
+      |
+      ------ definitions
+      |
+      ------ languages
+      |           |
+      |           ---- cs
+      |           ---- py
+      |                etc 
+      ------ linux
+      |
+      ------ tools
+                |
+                ---- vi
+                ---- tm
+                     etc
+    ]])
+elseif arg[1] == "-d" then
+    local NUM_D = io.popen("ls " .. NOTES_D .. "/dictionary | wc -l"):read("*n")
+    print(string.format("\nCurrently, your Noti has %d definitions!", NUM_D))
+elseif arg[1] == "-e" then
+    if #arg == 3 then
+        -- if three args given, have language first.
+        -- noti -e rs if
+        os.execute(READ_D .. "/editor.sh " .. arg[3] .. " " .. arg[2])
+    else
+        -- if two args given, have note first. 
+        os.execute(READ_D .. "/editor.sh " .. arg[2])
+    end
+elseif arg[1] == "-wd" or arg[1] == "-wl" or arg[1] == "-wx" or arg[1] == "-wt" then
+    if #arg == 3 then
+        -- if three args given, have language second.
+        -- noti -wl rs if
+        os.execute(READ_D .. "/writer.sh " .. arg[1] .. " " .. arg[3] .. " " .. arg[2])
+    else
+        -- if two args given, have note second. 
+        os.execute(READ_D .. "/writer.sh " .. arg[1] .. " " .. arg[2])
+    end
+elseif arg[1] == "-l" then
+    local LANGUAGES = io.popen("ls " .. NOTES_D .. "/languages"):read("*all")
+    print(string.format("\nCurrently, your Noti supports:\n\n%s", LANGUAGES))
+elseif arg[1] == "-t" then
+    local TOOLS_N = io.popen("ls " .. NOTES_D .. "/tools"):read
+elseif arg[1] == "-t" then
+local TOOLS_N = io.popen("ls " .. NOTES_D .. "/tools"):read("*all")
+print("\nCurrently, your Noti supports:\n\n" .. TOOLS_N)
+
+elseif arg[1] == "-x" then
+local NUM_LINUX_N = io.popen("ls " .. NOTES_D .. "/linux | wc -l"):read("*number")
+print("\nCurrently, your Noti has " .. NUM_LINUX_N .. " notes on Linux!\n")
+
+elseif arg[1] == "-w" then
+if arg[2] == "-wa" then
+print("What is the name of the definition you would like to add to the dictionary?")
+local def_name = io.read()
+print("Please add your definition now:")
+local def = io.read("*all")
+local def_file = io.open(NOTES_D .. "/dictionary/" .. def_name, "w")
+def_file:write(def)
+def_file:close()
+print("Your definition has been added to the dictionary!\n")
+
+elseif arg[2] == "-wl" then
+print("What language is this note
