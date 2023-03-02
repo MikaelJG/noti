@@ -1,0 +1,3 @@
+# cs) mcs "$file" && mono "$base".exe ;;
+
+mcs "$file" && mono "$base".exe
