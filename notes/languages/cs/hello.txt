@@ -1,0 +1,14 @@
+using System;
+using System.Diagnostics;
+using System.IO;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine($"hello world");
+        }
+    }
+}
