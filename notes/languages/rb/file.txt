@@ -1,0 +1,5 @@
+dir = File.expand_path('~/code/noti/notes')
+
+system("#{dir}/editor.sh #{ARGV[2]}")
+
+
