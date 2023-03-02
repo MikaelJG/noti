@@ -1,0 +1,5 @@
+languages = Dir["#{directory_in_variable}/languages/"].map { |f| FIle.basename(f) }
+
+puts "Currently.your Noti supports\n\n#{languages.join("\n")}\n"
+
+

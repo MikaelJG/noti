@@ -1,0 +1,8 @@
+arguments are in ARGV array. 
+
+ARGV[1]
+ARGV[2]
+
+case ARGV[0] 
+when '-help'
+    ....

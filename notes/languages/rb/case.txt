@@ -8,3 +8,11 @@ when "exit"
 else
     puts "Wrong action"
 end
+
+when '-wa', '-wl', '-wx' 
+    if ARGV.length == 3
+        system('#{dir}/write.sh #{ARGV[1]}")
+    else
+        puts "some"
+    end
+end
