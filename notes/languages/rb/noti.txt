@@ -1,0 +1,78 @@
+NOTES_D = File.expand_path("~/code/noti/notes")
+READ_D = File.expand_path("~/code/noti/noti")
+
+# to do
+# add a -help, like docker -help
+
+if ARGV[0] == "-help"
+  puts <<-HELP
+Options:
+    -a, noti tree   Display Noti's file system. Changing the file system may cause your noti to malfunction.
+    -d, count def   Count your number of definitions in your Noti's dictionnary. In notes/dictionnary.
+    -e, edit        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
+    -l, list lang   List all supported programming languages in the Language folder. In notes/languages.
+    -t, list tool   List all supported programming languages in the Language folder. In notes/languages.
+    -w, write
+        -wa,        Write a new definition in Dictionnary
+        -wl,        Write a new note in Languages
+        -wt,        Write a new note in Tools
+        -wx,        Write a new note in Linux 
+    -x, count lin   Count your number of notes in Linux 
+
+   -- in progress -- noti rs ls : list all notes in rust
+
+---------------------------------------------
+  HELP
+elsif ARGV[0] == "-a"
+  puts <<-TREE
+# Noti assumes this architecture for notes
+
+    Notes  
+      |
+      ------ definitions
+      |
+      ------ languages
+      |           |
+      |           ---- cs
+      |           ---- py
+      |                etc 
+      ------ linux
+      |
+      ------ tools
+                |
+                ---- vi
+                ---- tm
+                     etc
+  TREE
+elsif ARGV[0] == "-d"
+  num_d = Dir.glob("#{NOTES_D}/dictionary/*").size
+  puts "Currently, your Noti has #{num_d} definitions!"
+elsif ARGV[0] == "-e"
+  if ARGV.length == 3
+    # if three args given, have language first.
+    ## noti -e rs if
+    system("#{READ_D}/editor.sh #{ARGV[2]} #{ARGV[1]}")
+  else
+    # if two args given, have note first. 
+    system("#{READ_D}/editor.sh #{ARGV[1]}")
+  end
+elsif ARGV[0] == "-wl" || ARGV[0] == "-wt" || ARGV[0] == "-wx"
+  if ARGV.length == 3
+    # if three args given, have language second.
+    ## noti -wl rs if
+    system("#{READ_D}/writer.sh #{ARGV[0]} #{ARGV[2]} #{ARGV[1]}")
+  else
+    # if two args given, have note second. 
+    system("#{READ_D}/writer.sh #{ARGV[0]} #{ARGV[1]}")
+  end
+elsif ARGV[0] == "-l"
+  languages = Dir.glob("#{NOTES_D}/languages/*").map { |dir| File.basename(dir) }
+  puts "Currently, your Noti supports:\n\n#{languages.join("\n")}"
+elsif ARGV[0] == "-t"
+  tools_n = Dir.glob("#{NOTES_D}/tools/*").map { |dir| File.basename(dir) }
+  puts "Currently, your Noti supports:\n\n#{tools_n.join("\n")}"
+elsif ARGV[0] == "-x"
+  num_linux_n = Dir.glob("#{NOTES_D}/linux/*").size
+else
+    puts "something went wrong"
+end
