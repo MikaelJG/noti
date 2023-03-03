@@ -2,10 +2,15 @@
 # CHANGE THIS FIRST LINE IF YOU USE ZSH
 
 NOTES_D=~/code/noti/notes
-READ_D=~/code/noti/noti
+DICTIONARY_PATH=$NOTES_D/dictionary
+LANGUAGES_PATH=$NOTES_D/languages
+LINUX_PATH=$NOTES_D/linux
+TOOLS_PATH=$NOTES_D/tools
 
-# to do 
-# add a -help, like docker -help
+READER_D=~/code/noti/noti
+READER_PATH=$READER_D/reader.sh
+EDITOR_PATH=$READER_D/editor.sh
+WRITER_PATH=$READER_D/writer.sh
 
 if [[ "$1" == "-help" ]];
      then
@@ -51,7 +56,7 @@ elif [[ "$1" == "-a" ]];
          "
 elif [[ "$1" == "-d" ]];
      then
-     NUM_D=$(ls ${NOTES_D}/dictionary | wc -l)
+     NUM_D=$(ls ${DICTIONARY_PATH} | wc -l)
          echo "
     Currently, your Noti has $NUM_D definitions!
          "
@@ -61,10 +66,10 @@ elif [[ "$1" == "-e" ]];
             then
             # if three args given, have language first.
             ## noti -e rs if
-            $READ_D/editor.sh $3 $2
+            $EDITOR_PATH $3 $2
         else
             # if two args given, have note first. 
-            $READ_D/editor.sh $2
+            $EDITOR_PATH $2
         fi
 elif [[ "$1" == "-wd" ]] || [[ "$1" == "-wl" ]] || [[ "$1" == "-wx" ]] || [[ "$1" == "-wt" ]];
     then
@@ -72,14 +77,14 @@ elif [[ "$1" == "-wd" ]] || [[ "$1" == "-wl" ]] || [[ "$1" == "-wx" ]] || [[ "$1
             then
             # if three args given, have language second.
             ## noti -wl rs if
-            $READ_D/writer.sh $1 $3 $2
+            $WRITER_PATH $1 $3 $2
         else
             # if two args given, have note second. 
-            $READ_D/writer.sh $1 $2
+            $WRITER_PATH $1 $2
         fi
 elif [[ "$1" == "-l" ]];
      then
-     LANGUAGES=$(ls ${NOTES_D}/languages)
+     LANGUAGES=$(ls ${LANGUAGES_PATH})
          echo " 
     Currently, your Noti supports:
 
@@ -103,10 +108,10 @@ else
     if [[ " $2 " -eq 0 ]]; 
         then
         # if two args are given, have language first.
-        $READ_D/reader.sh $2 $1
+        $READER_D/reader.sh $2 $1
     else
         # if one arg, have note first.
-        $READ_D/reader.sh $1
+        $READER_D/reader.sh $1
     fi
 fi
 
