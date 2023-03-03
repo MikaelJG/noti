@@ -1,0 +1,6 @@
+
+Mono
+An open-source compiler for c#, in replacement of Microsoft's CLR (The Common Language Runtime)
+
+CLR
+The virtual machine component of Microsoft .NET Framework, manages the execution of .NET programs.
