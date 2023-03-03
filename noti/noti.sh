@@ -7,10 +7,10 @@ LANGUAGES_PATH=$NOTES_D/languages
 LINUX_PATH=$NOTES_D/linux
 TOOLS_PATH=$NOTES_D/tools
 
-READER_D=~/code/noti/noti
-READER_PATH=$READER_D/reader.sh
-EDITOR_PATH=$READER_D/editor.sh
-WRITER_PATH=$READER_D/writer.sh
+UTILS_D=~/code/noti/noti
+READER_PATH=$UTILS_D/reader.sh
+EDITOR_PATH=$UTILS_D/editor.sh
+WRITER_PATH=$UTILS_D/writer.sh
 
 if [[ "$1" == "-help" ]];
      then
@@ -64,22 +64,22 @@ elif [[ "$1" == "-e" ]];
     then
         if [ $# -eq 3 ];
             then
-            # if three args given, have language first.
-            ## noti -e rs if
+            # Have language first
+            # noti -e rs if
             $EDITOR_PATH $3 $2
         else
-            # if two args given, have note first. 
+            # Have note first 
             $EDITOR_PATH $2
         fi
 elif [[ "$1" == "-wd" ]] || [[ "$1" == "-wl" ]] || [[ "$1" == "-wx" ]] || [[ "$1" == "-wt" ]];
     then
         if [ $# -eq 3 ];
             then
-            # if three args given, have language second.
+            # Have language second
             ## noti -wl rs if
             $WRITER_PATH $1 $3 $2
         else
-            # if two args given, have note second. 
+            # Have note second 
             $WRITER_PATH $1 $2
         fi
 elif [[ "$1" == "-l" ]];
@@ -92,7 +92,7 @@ $LANGUAGES
          "
 elif [[ "$1" == "-t" ]];
      then
-     TOOLS_N=$(ls ${NOTES_D}/tools)
+     TOOLS_N=$(ls ${TOOLS_PATH})
          echo " 
     Currently, your Noti supports:
 
@@ -100,18 +100,18 @@ $TOOLS_N
             "
 elif [[ "$1" == "-x" ]];
      then
-     NUM_LINUX_N=$(ls ${NOTES_D}/linux | wc -l)
+     NUM_LINUX_N=$(ls ${LINUX_PATH} | wc -l)
          echo " 
     Currently, your Noti has $NUM_LINUX_N notes on Linux! 
             "
 else 
     if [[ " $2 " -eq 0 ]]; 
         then
-        # if two args are given, have language first.
-        $READER_D/reader.sh $2 $1
+        # Have language first.
+        $READER_PATH $2 $1
     else
-        # if one arg, have note first.
-        $READER_D/reader.sh $1
+        # Have note first.
+        $READER_PATH $1
     fi
 fi
 
