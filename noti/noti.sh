@@ -1,5 +1,4 @@
 #!/bin/bash 
-# CHANGE THIS FIRST LINE IF YOU USE ZSH
 
 NOTES_D=~/code/noti/notes
 DICTIONARY_PATH=$NOTES_D/dictionary
