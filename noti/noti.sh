@@ -14,7 +14,7 @@ WRITER_PATH=$UTILS_D/writer.sh
 
 case $1 in
     -help|--help)   
-     cat <<-EOF
+        cat <<-EOF
 Options:
     -a, noti tree   Display Noti's file system. Changing the file system may cause your noti to malfunction.
     -d, count def   Count your number of definitions in your Noti's dictionnary. In notes/dictionnary.
@@ -55,36 +55,20 @@ EOF
 ;;
    -d|--d)
      NUM_D=$(ls ${DICTIONARY_PATH} | wc -l)
-         echo "
-    Currently, your Noti has $NUM_D definitions!
-         "
-         ;;
+         echo -e "\nCurrently, your Noti has $NUM_D definitions!\n";;
     -e|--e)
         [[ $# -eq 3 ]] && $EDITOR_PATH $3 $2 || $EDITOR_PATH $2;;
     -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
         [[ $# -eq 3 ]] && $WRITER_PATH $1 $3 $2 || $WRITER_PATH $1 $2;;
     -l|--l)
-     LANGUAGES=$(ls ${LANGUAGES_PATH})
-         echo "
-    Currently, your Noti supports:
-
-$LANGUAGES
-         "
-         ;;
+        LANGUAGES=$(ls ${LANGUAGES_PATH})
+        echo -e "\nCurrently, your Noti supports:\n$LANGUAGES";;
     -t|--t)
-     TOOLS_N=$(ls ${TOOLS_PATH})
-         echo "
-    Currently, your Noti supports:
-
-$TOOLS_N
-            "
-            ;;
+        TOOLS_N=$(ls ${TOOLS_PATH})
+        echo -e "\nCurrently, your Noti supports:\n$TOOLS_N";;
     -x|--x)
-     NUM_LINUX_N=$(ls ${LINUX_PATH} | wc -l)
-         echo "
-    Currently, your Noti has $NUM_LINUX_N notes on Linux!
-            "
-            ;;
+        NUM_LINUX_N=$(ls ${LINUX_PATH} | wc -l)
+        echo -e "\nCurrently, your Noti has $NUM_LINUX_N notes on Linux!\n";;
     *)
         [[ " $2 " -eq 0 ]] && $READER_PATH $2 $1 || $READER_PATH $1;;
 esac
