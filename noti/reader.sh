@@ -13,36 +13,12 @@ declare -A TOOLS_R
 TOOLS_R=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
 # try to cat and throw away the output
-if cat ${DEFINITION_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In dictionnary...
->"
-        sleep 1
-        cat ${DEFINITION_R["FILE"]}
-        exit
-elif cat ${NOTES_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In notes...
->"
-        sleep 1
-        cat ${NOTES_R["FILE"]}
-        exit
-elif cat ${LINUX_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In linux...
->"
-        sleep 1
-        cat ${LINUX_R["FILE"]}
-        exit
-elif cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In tools:
->"
-        sleep 1
-        cat ${TOOLS_R["FILE"]}
-        exit
-else
-    clear
-    echo "Couln't find the file"
-    exit
-fi
+cat ${DEFINITION_R["FILE"]} >/dev/null 2>&1 && clear && echo "Got it. In dictionary..." && sleep 1 && cat ${DEFINITION_R["FILE"]} && exit
+
+cat ${NOTES_R["FILE"]} >/dev/null 2>&1 && clear && echo "Got it. In notes..." && sleep 1 && cat ${NOTES_R["FILE"]} && exit
+
+cat ${LINUX_R["FILE"]} >/dev/null 2>&1 && clear && echo "Got it. In linux..." && sleep 1 && cat ${LINUX_R["FILE"]} && exit
+
+cat ${TOOLS_R["FILE"]} >/dev/null 2>&1 && clear && echo "Got it. In linux..." && sleep 1 && cat ${TOOLS_R["FILE"]} && exit
+
+clear && echo "Couldn't find the file"
