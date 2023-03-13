@@ -60,27 +60,9 @@ EOF
          "
          ;;
     -e|--e)
-        if [ $# -eq 3 ];
-            then
-            # Have language first
-            # noti -e rs if
-            $EDITOR_PATH $3 $2
-        else
-            # Have note first
-            $EDITOR_PATH $2
-        fi
-        ;;
+        [[ $# -eq 3 ]] && $EDITOR_PATH $3 $2 || $EDITOR_PATH $2;;
     -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
-        if [ $# -eq 3 ];
-            then
-            # Have language second
-            ## noti -wl rs if
-            $WRITER_PATH $1 $3 $2
-        else
-            # Have note second
-            $WRITER_PATH $1 $2
-        fi
-        ;;
+        [[ $# -eq 3 ]] && $WRITER_PATH $1 $3 $2 || $WRITER_PATH $1 $2;;
     -l|--l)
      LANGUAGES=$(ls ${LANGUAGES_PATH})
          echo "
@@ -104,14 +86,6 @@ $TOOLS_N
             "
             ;;
     *)
-        if [[ " $2 " -eq 0 ]];
-            then
-            # Have language first.
-            $READER_PATH $2 $1
-        else
-            # Have note first.
-            $READER_PATH $1
-        fi
-        ;;
+        [[ " $2 " -eq 0 ]] && $READER_PATH $2 $1 || $READER_PATH $1;;
 esac
 
