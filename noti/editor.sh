@@ -1,3 +1,5 @@
+# I should use the $EDITOR variable
+# if not set, set it to nano 
 TEXT_E="vim" # Specify your favorite text editor here.
 
 NOTES_D=~/code/noti/notes
@@ -14,36 +16,9 @@ NOTES_R=(["FILE"]="$NOTES_D/languages/$LANGUAGE_OR_TOOL/$FILE")
 declare -A TOOLS_R 
 TOOLS_R=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
-if cat ${DEFINITION_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In dictionnary...
->"
-        sleep 1
-        $TEXT_E ${DEFINITION_R["FILE"]}
-        exit
-elif cat ${NOTES_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In notes...
->"
-        sleep 1
-        $TEXT_E ${NOTES_R["FILE"]}
-        exit
-elif cat ${LINUX_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In linux...
->"
-        sleep 1
-        $TEXT_E ${LINUX_R["FILE"]}
-        exit
-elif cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; then
-        clear
-        echo "Got it. In tools:
->"
-        sleep 1
-        $TEXT_E ${TOOLS_R["FILE"]}
-        exit
-else
-    clear
-    echo "Couln't find the file"
-    exit
-fi
+cat ${DEFINITION_R["FILE"]} >/dev/null 2>&1 && clear && echo "Got it. In dictionnary..." && sleep 1 && $TEXT_E ${DEFINITION_R["FILE"]} && exit
+cat ${NOTES_R["FILE"]} >/dev/null 2>&1 && clear && echo "Got it. In notes..." && sleep 1 && $TEXT_E ${NOTES_R["FILE"]} && exit
+cat ${LINUX_R["FILE"]} >/dev/null 2>&1; && clear && echo "Got it. In linux..." && sleep 1 && $TEXT_E ${LINUX_R["FILE"]} && exit
+cat ${TOOLS_R["FILE"]} >/dev/null 2>&1; && clear && echo "Got it. In tools:" && sleep 1 && $TEXT_E ${TOOLS_R["FILE"]} && exit
+
+clear && echo "Couldn't find the file" && exit
