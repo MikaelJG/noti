@@ -1,7 +1,11 @@
 TEXT_E="vim" # Edit this variable with the text editor of your choice
 
+SCRIPT=${BASH_SOURCE[0]}
+DIR=$(dirname $SCRIPT)
+NOTI_DIR=$(dirname $DIR)
+
+NOTES_D=$NOTI_DIR/notes
 NOTE_D=$1
-NOTES_D=~/code/noti/notes
 NOTE=$2
 FILE="$NOTE.txt"
 LANGUAGE_OR_TOOL=$3

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO make -help by default if no arg given with shell ninja strategy
+
 # Current directory
 PWD=$(pwd)
 
@@ -8,18 +10,18 @@ SCRIPT=${BASH_SOURCE[0]}
 
 # Script full directory
 DIR=$(dirname "$SCRIPT")
-FULL_DIR=$(cd "${DIR}" && pwd)
+NOTI_DIR=$(dirname "$DIR")
+UTILS_DIR=$(cd "${DIR}" && pwd)
 
-NOTES_D=$FULL_DIR/notes
+NOTES_D=$NOTI_DIR/notes
 DICTIONARY_PATH=$NOTES_D/dictionary
 LANGUAGES_PATH=$NOTES_D/languages
 LINUX_PATH=$NOTES_D/linux
 TOOLS_PATH=$NOTES_D/tools
 
-UTILS_D=$FULL_DIR
-READER_PATH=$UTILS_D/reader.sh
-EDITOR_PATH=$UTILS_D/editor.sh
-WRITER_PATH=$UTILS_D/writer.sh
+READER_PATH=$UTILS_DIR/reader.sh
+EDITOR_PATH=$UTILS_DIR/editor.sh
+WRITER_PATH=$UTILS_DIR/writer.sh
 
 case $1 in
     -help|--help)   
