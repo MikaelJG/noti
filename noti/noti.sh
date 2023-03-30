@@ -1,13 +1,22 @@
 #!/bin/bash
 
-# Change this with the bash context DIRNAME BASH_SOURCE STRATEGY
-NOTES_D=~/code/noti/notes
+# Current directory
+PWD=$(pwd)
+
+# Script location 
+SCRIPT=${BASH_SOURCE[0]}
+
+# Script full directory
+DIR=$(dirname "$SCRIPT")
+FULL_DIR=$(cd "${DIR}" && pwd)
+
+NOTES_D=$FULL_DIR/notes
 DICTIONARY_PATH=$NOTES_D/dictionary
 LANGUAGES_PATH=$NOTES_D/languages
 LINUX_PATH=$NOTES_D/linux
 TOOLS_PATH=$NOTES_D/tools
 
-UTILS_D=~/code/noti/noti
+UTILS_D=$FULL_DIR
 READER_PATH=$UTILS_D/reader.sh
 EDITOR_PATH=$UTILS_D/editor.sh
 WRITER_PATH=$UTILS_D/writer.sh
