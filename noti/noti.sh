@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# TODO make -help by default if no arg given with shell ninja strategy
-
 # Current directory
 PWD=$(pwd)
 
@@ -23,7 +21,15 @@ READER_PATH=$UTILS_DIR/reader.sh
 EDITOR_PATH=$UTILS_DIR/editor.sh
 WRITER_PATH=$UTILS_DIR/writer.sh
 
-case $1 in
+# make -help by default if no arg given
+
+if [ -z "$1" ]; then
+    ARGS=("--help")
+else
+    ARGS=("$@")
+fi
+
+case ${ARGS[0]} in
     -help|--help)   
         cat <<-EOF
 Options:
