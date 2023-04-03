@@ -21,7 +21,7 @@ READER_PATH=$UTILS_DIR/reader.sh
 EDITOR_PATH=$UTILS_DIR/editor.sh
 WRITER_PATH=$UTILS_DIR/writer.sh
 
-# make -help by default if no arg given
+# empty ARGS is given "--help"
 
 if [ -z "$1" ]; then
     ARGS=("--help")
@@ -71,8 +71,8 @@ EOF
 EOF
 ;;
    -d|--d)
-     NUM_D=$(ls ${DICTIONARY_PATH} | wc -l)
-         echo -e "\nCurrently, your Noti has $NUM_D definitions!\n";;
+        NUM_D=$(ls ${DICTIONARY_PATH} | wc -l)
+        echo -e "\nCurrently, your Noti has $NUM_D definitions!\n";;
     -e|--e)
         [[ $# -eq 3 ]] && $EDITOR_PATH $3 $2 || $EDITOR_PATH $2;;
     -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
