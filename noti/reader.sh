@@ -7,6 +7,13 @@ NOTE=$1
 FILE="$NOTE.txt"
 LANGUAGE_OR_TOOL=$2
 
+case $3 in
+    -vo|--vo)
+        echo "in reader, in -vo";;
+    *)
+        echo "not vo";;
+esac
+
 declare -A LINUX_R 
 LINUX_R=(["FILE"]="$NOTES_D/linux/$FILE")
 declare -A DEFINITION_R 
