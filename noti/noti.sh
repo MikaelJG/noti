@@ -87,7 +87,7 @@ EOF
         NUM_LINUX_N=$(ls ${LINUX_PATH} | wc -l)
         echo -e "\nCurrently, your Noti has $NUM_LINUX_N notes on Linux!\n";;
     -vo|--vo)
-        # noti vo sh $1 >> $1.txt && vo (last_file) $1.txt
+        # noti -vo sh $1 >> $1.txt && vo (last_file) $1.txt
         # alias nvo="noti vo"
         # nvo sh $1 >> $1.txt && vo (last_file) $1.txt
         [[ " $2 " -eq 0 ]] && [[ " $3 " -eq 0 ]] && $READER_PATH $3 $2 $1 $PWD;;
