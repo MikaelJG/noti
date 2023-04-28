@@ -9,7 +9,8 @@ LANGUAGE_OR_TOOL=$2
 
 case $3 in
     -vo|--vo)
-        echo "in reader, in -vo";;
+        echo "in reader, in -vo"
+        sleep 10;;
     *)
         echo "not vo";;
 esac

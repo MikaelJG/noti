@@ -3,7 +3,7 @@
 
 Noti is a cli tool to find or copy personal notes. It is the fastest librarian for the lazy researcher.
 
-Noti was strongly influenced by [tldr](https://github.com/tldr-pages) and [tealdeer](https://github.com/dbrgn/tealdeer).
+Noti was influenced by [tldr](https://github.com/tldr-pages) and [tealdeer](https://github.com/dbrgn/tealdeer).
 
 "The tldr-pages project is a collection of community-maintained help pages for command-line tools, that aims to be a simpler, more approachable complement to traditional man pages."
 
