@@ -33,7 +33,13 @@ last_file=$(ls -Art | tail -n 1)
 
 case $3 in
     -vo|--vo)
-        try_cat ${file_2["FILE"]} && cat ${file_2["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
+        for i in {1..4}; do
+          file="{file_$i["FILE"]}"
+
+          echo $file
+        done
+
+#        try_cat ${file_2["FILE"]} && cat ${file_2["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
         cat ${file_3["FILE"]} >/dev/null 2>&1 && cat ${file_3["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
         cat ${file_1["FILE"]} >/dev/null 2>&1 && cat ${file_1["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
         cat ${file_4["FILE"]} >/dev/null 2>&1 && cat ${file_4["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit;;
