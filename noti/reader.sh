@@ -38,16 +38,10 @@ open_last_file() {
 
 case $3 in
     -vo|--vo)
-        # for i in {1..4}; do
-        #   file="{file_$i["FILE"]}"
-
-        #   echo $file
-        # done
-
         try_cat ${file_2["FILE"]} && cat ${file_2["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit
         try_cat ${file_3["FILE"]} && cat ${file_3["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit
         try_cat ${file_1["FILE"]} && cat ${file_1["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit
-        try_cat ${file_4["FILE"]} && cat ${file_4["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit ;
+        try_cat ${file_4["FILE"]} && cat ${file_4["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit ;;
 esac
 
 # try to cat and throw away the output
