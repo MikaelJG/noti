@@ -24,31 +24,36 @@ declare -A file_4
 # Tools 
 file_4=(["FILE"]="$NOTES_D/tools/$LANGUAGE_OR_TOOL/$FILE")
 
-try_cat(file) {
-    cat $file >/dev/null 2>&1
+last_file=$(ls -Art | tail -n 1)
+
+try_cat() {
+    file=$1
+    cat $file >/dev/null 2>&1 && clear
 }
 
-# last doc
-last_file=$(ls -Art | tail -n 1)
+open_last_file() {
+    # last doc
+    vim -o $last_file "$CURRENT_D/$FILE"
+}
 
 case $3 in
     -vo|--vo)
-        for i in {1..4}; do
-          file="{file_$i["FILE"]}"
+        # for i in {1..4}; do
+        #   file="{file_$i["FILE"]}"
 
-          echo $file
-        done
+        #   echo $file
+        # done
 
-#        try_cat ${file_2["FILE"]} && cat ${file_2["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
-        cat ${file_3["FILE"]} >/dev/null 2>&1 && cat ${file_3["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
-        cat ${file_1["FILE"]} >/dev/null 2>&1 && cat ${file_1["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit
-        cat ${file_4["FILE"]} >/dev/null 2>&1 && cat ${file_4["FILE"]} >> "$CURRENT_D/$FILE" && vim -o $last_file "$CURRENT_D/$FILE" && exit;;
+        try_cat ${file_2["FILE"]} && cat ${file_2["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit
+        try_cat ${file_3["FILE"]} && cat ${file_3["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit
+        try_cat ${file_1["FILE"]} && cat ${file_1["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit
+        try_cat ${file_4["FILE"]} && cat ${file_4["FILE"]} >> "$CURRENT_D/$FILE" && open_last_file && exit ;
 esac
 
 # try to cat and throw away the output
-cat ${file_2["FILE"]} >/dev/null 2>&1 && clear && cat ${file_2["FILE"]} && exit
-cat ${file_3["FILE"]} >/dev/null 2>&1 && clear && cat ${file_3["FILE"]} && exit
-cat ${file_1["FILE"]} >/dev/null 2>&1 && clear && cat ${file_1["FILE"]} && exit
-cat ${file_4["FILE"]} >/dev/null 2>&1 && clear && cat ${file_4["FILE"]} && exit
+try_cat ${file_2["FILE"]} && cat ${file_2["FILE"]} && exit
+try_cat ${file_3["FILE"]} && cat ${file_3["FILE"]} && exit
+try_cat ${file_1["FILE"]} && cat ${file_1["FILE"]} && exit
+try_cat ${file_4["FILE"]} && cat ${file_4["FILE"]} && exit
 
 clear && echo "Couldn't find the file"
