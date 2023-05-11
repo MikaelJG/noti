@@ -1,0 +1,16 @@
+# TO Verify
+
+DIR *dir;
+struct dirent *entry;
+
+    if ((dir = opendir(chapOnePath)) != NULL) {
+        while ((entry = readdir(dir)) != NULL) {
+            if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) {
+                continue;
+            }
+        std::cout << entry->d_name << '\n';
+        }
+        closedir(dir);
+    } else {
+        perror("opendir() error");
+    }
