@@ -1,25 +1,25 @@
 #!/bin/bash
 
 # Current directory
-PWD=$(pwd)
+current_dir=$(pwd)
 
 # Script location 
-SCRIPT=${BASH_SOURCE[0]}
+script=${BASH_SOURCE[0]}
 
 # Script full directory
-DIR=$(dirname "$SCRIPT")
-NOTI_DIR=$(dirname "$DIR")
-UTILS_DIR=$(cd "${DIR}" && pwd)
+script_dir=$(dirname "$script")
+noti_dir=$(dirname "$script_dir")
+utils_dir=$(cd "${script_dir}" && pwd)
 
-NOTES_D=$NOTI_DIR/notes
-DICTIONARY_PATH=$NOTES_D/dictionary
-LANGUAGES_PATH=$NOTES_D/languages
-LINUX_PATH=$NOTES_D/linux
-TOOLS_PATH=$NOTES_D/tools
+notes_dir=$noti_dir/notes
+dic_dir=$notes_dir/dictionary
+lang_dir=$notes_dir/languages
+linux_dir=$notes_dir/linux
+tools_dir=$notes_dir/tools
 
-READER_PATH=$UTILS_DIR/reader.sh
-EDITOR_PATH=$UTILS_DIR/editor.sh
-WRITER_PATH=$UTILS_DIR/writer.sh
+reader_path=$utils_dir/reader.sh
+editor_path=$utils_dir/editor.sh
+writer_path=$utils_dir/writer.sh
 
 # empty ARGS is given "--help"
 
@@ -33,65 +33,42 @@ case ${ARGS[0]} in
     -help|--help)   
         cat <<-EOF
 Options:
-    -a, noti tree   Display Noti's file system. Changing the file system may cause your noti to malfunction.
-    -d, count def   Count your number of definitions in your Noti's dictionnary. In notes/dictionnary.
+    -p, noti tree   Display Noti's path system. Changing its file system causes malfunction.
     -e, edit        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
-    -l, list lang   List all supported programming languages in the Language folder. In notes/languages.
-    -t, list tool   List all supported programming languages in the Language folder. In notes/languages.
     -w, write
         -wa,        Write a new definition in Dictionnary
         -wl,        Write a new note in Languages
         -wt,        Write a new note in Tools
         -wx,        Write a new note in Linux
-    -x, count lin   Count your number of notes in Linux
-
-   -- in progress -- noti rs find : list all notes in rust
 EOF
 ;;
-    -a|--a)
+    -p|--p)
          cat <<-EOF
-# Noti assumes this architecture for notes
+# Noti assumes these paths.
 
-    Notes
-      |
-      ------ definitions
-      |
-      ------ languages
-      |           |
-      |           ---- cs
-      |           ---- py
-      |                etc
-      ------ linux
-      |
-      ------ tools
-                |
-                ---- vi
-                ---- tm
-                     etc
+    notes/definitions
+    notes/languages/cs
+    notes/linux/
+    notes/tools/vi
 EOF
 ;;
-   -d|--d)
-        NUM_D=$(find "${DICTIONARY_PATH}" | wc -l)
-        echo -e "\nCurrently, your Noti has $NUM_D definitions!\n";;
     -e|--e)
-        [[ $# -eq 3 ]] && "$EDITOR_PATH" "$3" "$2" || $EDITOR_PATH "$2";;
-    -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
-        [[ $# -eq 3 ]] && $WRITER_PATH "$1" "$3" "$2" || $WRITER_PATH "$1" "$2";;
-    -l|--l)
-        LANGUAGES=$(find "${LANGUAGES_PATH}")
-        echo -e "\nCurrently, your Noti supports:\n$LANGUAGES";;
-    -t|--t)
-        TOOLS_N=$(find "${TOOLS_PATH}")
-        echo -e "\nCurrently, your Noti supports:\n$TOOLS_N";;
-    -x|--x)
-        NUM_LINUX_N=$(find "${LINUX_PATH}" | wc -l)
-        echo -e "\nCurrently, your Noti has $NUM_LINUX_N notes on Linux!\n";;
+        [[ $# -eq 3 ]] && "$editor_path" "$3" "$2" || $editor_path "$2";;
+    # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
+    #     [[ $# -eq 3 ]] && $writer_path "$1" "$3" "$2" || $writer_path "$1" "$2";;
     -vo|--vo)
         # noti -vo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
         # alias nvo="noti vo"
         # nvo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
-        [[ " $2 " -eq 0 ]] && [[ " $3 " -eq 0 ]] && $READER_PATH "$3" "$2" "$1" "$PWD";;
+        
+        if [[ " $2 " -eq 0 ]]; then
+
+            if [[ " $3 " -eq 0 ]]; then 
+                $reader_path "$3" "$2" "$1" "$current_dir"
+            fi
+
+        fi;; 
     *)
-        [[ " $2 " -eq 0 ]] && $READER_PATH "$2" "$1" || $READER_PATH "$1";;
+        [[ " $2 " -eq 0 ]] && $reader_path "$2" "$1" || $reader_path "$1";;
 esac
 
