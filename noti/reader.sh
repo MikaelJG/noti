@@ -1,3 +1,5 @@
+#!/bin/bash
+
 script=${BASH_SOURCE[0]}
 script_dir=$(dirname "$script")
 noti_dir=$(dirname "$script_dir")
@@ -13,7 +15,6 @@ note_name=$1
 note_file="$note_name.txt"
 language_or_tool=$2
 current_dir=$4
-
 
 # Languages 
 language_note_file="$notes_dir/languages/$language_or_tool/$note_file"

@@ -53,7 +53,11 @@ EOF
 EOF
 ;;
     -e|--e)
-        [[ $# -eq 3 ]] && "$editor_path" "$3" "$2" || $editor_path "$2";;
+        if [[ $# -eq 3 ]]; then
+            "$editor_path" "$3" "$2"
+        else
+            $editor_path "$2"
+        fi;; 
     # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
     #     [[ $# -eq 3 ]] && $writer_path "$1" "$3" "$2" || $writer_path "$1" "$2";;
     -vo|--vo)
