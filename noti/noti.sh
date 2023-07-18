@@ -155,6 +155,7 @@ EOF
                     sleep 1
 #
                     $read "$note_name";
+                    $read "$option" "$note_name" "$current_dir";
                 else
                     echo "Invalid answer"
                     echo "Research aborted."

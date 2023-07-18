@@ -6,14 +6,21 @@ if [ -z "$EDITOR" ]; then
 fi
 
 ARGS=("$@")
+echo "${ARGS[@]}"
+
 arg_length=${#ARGS[@]}
+
+# I need current directory, 
+# And current directory is alway given last in arguments
+idx=$(( arg_length - 1))
+current_dir=${ARGS[idx]}
 
 # last_file=$(ls -Art | tail -n 1)
 script_dir=${BASH_SOURCE[0]}
 
 option=${ARGS[0]}
 
-case $option in
+case "$option" in
     -vo|--vo)
         echo "-vo was not given to read.sh";;
     *)
@@ -23,7 +30,8 @@ esac
 tmp=$option
 
 case $arg_length in
-    1)
+    2)
+
         read -p "The note name is: $tmp? [y/yes, n/no]: " answer
 
         if [[ "$answer" == "no" || "$answer" == "n" ]]; then
@@ -54,9 +62,14 @@ case $arg_length in
             echo "Research aborted."
             exit;
         fi;;
-    2)
-        # noti sh if
+    3)
+        # noti sh if current_dir
         
+        echo "two argument given to read.sh"
+        echo "but -vo is not one of them";;
+
+    4)
+        # noti -vo sh if current_dir
         
         echo "two argument given to read.sh"
         echo "but -vo is not one of them";;
