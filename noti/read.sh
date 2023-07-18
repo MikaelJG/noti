@@ -1,64 +1,53 @@
 #!/bin/bash
 
-echo ""
-echo "in read.sh"
-echo "it needs to be rewritten"
-sleep 1
+# set an $EDITOR
+if [ -z "$EDITOR" ]; then
+    EDITOR="nano" 
+fi
 
-# script=${BASH_SOURCE[0]}
-# script_dir=$(dirname "$script")
-# noti_dir=$(dirname "$script_dir")
-# 
-# notes_dir=$noti_dir/notes
-# linux_dir=$noti_dir/notes/linux
-# tools_dir=$noti_dir/notes/tools
-# dic_dir=$noti_dir/notes/dictionary
-# 
+ARGS=("$@")
+arg_length=${#ARGS[@]}
+
 # last_file=$(ls -Art | tail -n 1)
-# 
-# note_name=$1
-# note_file="$note_name.txt"
-# language_or_tool=$2
-# current_dir=$4
-# 
-# # Languages 
-# language_note_file="$notes_dir/languages/$language_or_tool/$note_file"
-# dic_note_file="$notes_dir/dictionary/$note_file"
-# tools_note_file="$notes_dir/tools/$language_or_tool/$note_file"
-# linux_note_file="$notes_dir/linux/$note_file"
-# 
-# try_cat() {
-#     file=$1
-#     cat "$file" >/dev/null 2>&1 && clear
-# }
-# 
-# open_last_file() {
-#     # last doc
-#     vim -o "$last_file" "$current_dir/$note_file"
-# }
-# 
-# case $3 in
-#     -vo|--vo)
-# 
-#         if cat "$language_note_file" >/dev/null 2>&1; then
-#             echo "Note file found in language"
-#         elif cat "$tools_note_file" >/dev/null 2>&1; then
-#             echo "Note file found in language"
-#         elif cat "$linux_note_file" >/dev/null 2>&1; then
-#             echo "Note file found in language"
-#         elif cat "$dic_note_file" >/dev/null 2>&1; then
-#             echo "Note file found in language"
-# 
-#         try_cat $language_note_file 
-#         try_cat $tools_note_file && 
-#         try_cat 
-#         try_cat 
-# esac
-# 
-# # try to cat and throw away the output
-# try_cat "${file_2["note_file"]}" && cat "${file_2["note_file"]}" && exit
-# try_cat "${file_3["note_file"]}" && cat "${file_3["note_file"]}" && exit
-# try_cat "${file_1["note_file"]}" && cat "${file_1["note_file"]}" && exit
-# try_cat "${file_4["note_file"]}" && cat "${file_4["note_file"]}" && exit
-# 
-# clear && echo "Couldn't find the file"
+script_dir=${BASH_SOURCE[0]}
+
+case $arg_length in
+    1)
+        note_name=${ARGS[0]}
+        read -p "The note name is: $note_name? [y/yes, n/no]: " answer
+
+        if [[ "$answer" == "no" || "$answer" == "n" ]]; then
+
+            echo "Research aborted."
+            exit;
+
+        elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
+            read -p "
+            Available output directories in $HOME/code/noti_me/notes:
+                      - .../dictionary
+                      - .../linux
+                      - ...
+            Please indicate desired directory (e.g, linux) 
+              >" output
+            
+            if cat $script_dir/notes/output/$note_name 2>&1 /dev/null; then
+                echo "cat worked";
+
+            else
+                echo "File could not be found."
+                echo "Research aborted."
+                exit;
+            fi;
+
+        else
+            echo "Invalid answer"
+            echo "Research aborted."
+            exit;
+        fi;;
+    2)
+        echo "two argument given to read.sh";;
+
+    *)
+        echo "more than 2 args given to read.sh";;
+
+esac
