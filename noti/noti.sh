@@ -1,5 +1,9 @@
 #!/bin/bash
 
+###############
+#### PATHS ####
+###############
+
 # Current directory
 current_dir=$(pwd)
 
@@ -12,28 +16,35 @@ noti_dir=$(dirname "$script_dir")
 utils_dir=$(cd "${script_dir}" && pwd)
 
 notes_dir=$noti_dir/notes
-dic_dir=$notes_dir/dictionary
-lang_dir=$notes_dir/languages
-linux_dir=$notes_dir/linux
-tools_dir=$notes_dir/tools
+# dic_dir=$notes_dir/dictionary
+# lang_dir=$notes_dir/languages
+# linux_dir=$notes_dir/linux
+# tools_dir=$notes_dir/tools
 
-reader_path=$utils_dir/reader.sh
+read=$utils_dir/reader.sh
 editor_path=$utils_dir/editor.sh
 writer_path=$utils_dir/writer.sh
 
+###############
+#### ARGS #####
+###############
+
 # empty ARGS is given "--help"
 
-if [ -z ""$1"" ]; then
+if [ -z $1 ]; then
     ARGS=("--help")
 else
     ARGS=("$@")
 fi
 
-case ${ARGS[0]} in
+# noti sh if
+option=${ARGS[0]}
+
+case $option in
     -help|--help)   
         cat <<-EOF
 Options:
-    -p, noti tree   Display Noti's path system. Changing its file system causes malfunction.
+    -p, noti tree   Display Noti's path system. Changing this system causes malfunction.
     -e, edit        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
     -w, write
         -wa,        Write a new definition in Dictionnary
@@ -66,13 +77,26 @@ EOF
         # nvo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
         
         if [[ " $2 " -eq 0 ]]; then
+            language="$option"
+            note_name=${ARG[1]}
 
             if [[ " $3 " -eq 0 ]]; then 
-                $reader_path "$3" "$2" "$1" "$current_dir"
+                # noti -vo sh if
+                # passing the option -vo to read
+                
+               
+                $read $option $language $note_name "$current_dir"
             fi
 
         fi;; 
     *)
-        [[ " $2 " -eq 0 ]] && $reader_path "$2" "$1" || $reader_path "$1";;
+        language="$option"
+        note_name=${ARG[1]}
+
+        if [[ " $2 " -eq 0 ]]; then
+            $read $language $note_name
+        else
+            $read $note_name
+        fi
 esac
 
