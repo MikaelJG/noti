@@ -22,7 +22,7 @@ notes_dir=$noti_dir/notes
 # tools_dir=$notes_dir/tools
 
 read=$utils_dir/read.sh
-editor_path=$utils_dir/editor.sh
+edit=$utils_dir/edit.sh
 # create=$utils_dir/create.sh
 
 ###############
@@ -33,12 +33,12 @@ editor_path=$utils_dir/editor.sh
 
 if [ -z $1 ]; then
     ARGS=("--help")
-    ARGS_length=${#ARGS[@]}
+    args_length=${#ARGS[@]}
 else
     ARGS=("$@")
 
     # count the array
-    ARGS_length=${#ARGS[@]}
+    args_length=${#ARGS[@]}
 fi
 
 # noti sh if
@@ -68,26 +68,31 @@ EOF
 EOF
 ;;
     -e|--e)
-    #       noti -e      sh      if
-    #          option   lang   note_name
     
+        case $args_length in
+            1)
+                echo "Please provide one or two arguments"
+                echo "for the $option option"
+                exit;;
 
-        if [[ $ARGS.length -eq 1 ]]; then
-    #        echo "Please provide one or two arguments"
-    #        echo "for the $option option"
-    #        exit
+            2)
+                note_name=${ARGS[1]}
+
+#               noti -e      erp
+#                  option  note_name
     
-        elif [[ $ARGS[@][# -eq 2 ]]; then
-            note_name=${ARGS[1]}
-    #       noti -e      erp
-    #          option  note_name
-            $edit $note_name
+                $edit "$note_name";;
 
-        if [[ $# -eq 3 ]]; then
-            $edit $language $note_name
-        else
-            $editor_path "$2"
-        fi;; 
+            3)
+                language=${ARGS[1]}
+                note_name=${ARGS[2]}
+
+#               noti -e      sh      if
+#                  option   lang   note_name
+    
+                $edit "$language" "$note_name";;
+        esac;;
+
     # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
     #
     #       noti -wl      sh      if
