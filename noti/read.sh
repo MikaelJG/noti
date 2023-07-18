@@ -16,6 +16,7 @@ current_dir=${ARGS[idx]}
 # last_file=$(ls -Art | tail -n 1)
 script_dir=${BASH_SOURCE[0]}
 script_parent_dir=$(dirname "$script_dir")
+noti_dir=$(dirname "$script_parent_dir")
 
 option=${ARGS[0]}
 
@@ -41,12 +42,27 @@ case $arg_length in
                   - .../linux
                   - ...
         Please indicate desired directory (e.g, linux) 
-          >" output
-        
-        if cat "$script_parent_dir/notes/$output/$note_name.$ext" >/dev/null 2>&1; then
-            echo "cat worked";
+          >" tmp 
+
+        output="$noti_dir/notes/$tmp/$note_name.$ext"
+
+        read -p "The output is $output? [y/yes,n/no]: " answer
+
+        if [[ "$answer" == "no" || "$answer" == "n" ]]; then
+            echo "Research aborted."
+            exit;
+
+        elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
+            if cat "$output" >/dev/null 2>&1; then
+                echo "cat worked";
+            else
+                echo "File could not be found."
+                echo "Research aborted."
+                exit;
+             fi
+
         else
-            echo "File could not be found."
+            echo "Invalid answer"
             echo "Research aborted."
             exit;
         fi;;
@@ -58,7 +74,7 @@ case $arg_length in
 
         read -p "Without the dot, what is the extension of the file?: " ext 
 
-        output="$script_parent_dir/notes/languages/$language/$note_name.$ext"
+        output="$noti_dir/notes/languages/$language/$note_name.$ext"
 
         read -p "The output is $output? [y/yes,n/no]: " answer
 
