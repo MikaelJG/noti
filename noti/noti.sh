@@ -233,8 +233,8 @@ EOF
                     exit;
                 fi;;
             *) 
-                echo "Please provide one or two arguments"
-                echo "for the $option option"
+                echo "Invalid arguments."
+                echo "Research aborted."
                 exit;;
             esac
 

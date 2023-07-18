@@ -10,7 +10,7 @@ case $arg_length in
     1)
         note_name=${ARGS[0]}
         echo ""
-        read -p "This $note_name, is the name of the note? [y/yes, n/no]: " answer
+        read -p "The note name is: $note_name? [y/yes, n/no]: " answer
         echo ""
         echo "This is the answer: $answer";;
         # read answer

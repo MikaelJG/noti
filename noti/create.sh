@@ -7,7 +7,7 @@ case $arg_length in
         echo ""
         echo "one argument given to create.sh"
         echo ""
-        read -p "This $note_name, is the name of the note? [y/yes, n/no]: " answer
+        read -p "The note name is: $note_name? [y/yes, n/no]: " answer
         echo ""
         echo "This is the answer: $answer";; 
         
