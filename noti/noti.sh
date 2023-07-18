@@ -72,40 +72,35 @@ EOF
     # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
     #     [[ $# -eq 3 ]] && $writer_path "$1" "$3" "$2" || $writer_path "$1" "$2";;
     -vo|--vo)
-        # noti -vo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
-        # alias nvo="noti vo"
-        # nvo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
-        #
-        #
-        # noti -vo erp (is possible)
-        # noti -vo sh if (is possible as well)
-        #
+
+        if [[ $# -eq 1 ]]; then
+            echo "Please provide one or two arguments"
+            echo "for the -vo option"
         
-        if [[ $# -eq 2 ]]; then
+        elif [[ $# -eq 2 ]]; then
 
             # noti -vo      erp      
             #     option  note_name
 
             note_name=${ARGS[1]}
 
+            $read "$note_name" "$current_dir"
+
         elif [[ $# -eq 3 ]]; then
 
-            # noti -vo      sh          if (is possible as well)
+            # noti -vo      sh          if
             #     option   lang      note_name
             
             language=${ARGS[1]}
             note_name=${ARGS[2]}
 
-            if [[ " $3 " -eq 0 ]]; then 
-                # noti -vo sh if
-                # passing the option -vo to read
-               
-                $read $option $language $note_name "$current_dir"
-            fi
+            $read "$option" "$language" "$note_name" "$current_dir"
 
         fi;; 
     *)
-        # noti sh if
+        # noti sh      if      
+        #     option  note_name
+        
         language="$option"
         note_name=${ARG[1]}
 
