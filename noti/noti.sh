@@ -22,7 +22,7 @@ notes_dir=$noti_dir/notes
 # tools_dir=$notes_dir/tools
 
 read=$utils_dir/read.sh
-edit=$utils_dir/edit.sh
+update=$utils_dir/update.sh
 # create=$utils_dir/create.sh
 
 ###############
@@ -49,7 +49,7 @@ case $option in
         cat <<-EOF
 Options:
     -p, noti tree   Display Noti's path system. Changing this system causes malfunction.
-    -e, edit        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
+    -e, update        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
     -w, write
         -wa,        Write a new definition in Dictionnary
         -wl,        Write a new note in Languages
@@ -81,7 +81,7 @@ EOF
 #               noti -e      erp
 #                  option  note_name
     
-                $edit "$note_name";;
+                $update "$note_name";;
 
             3)
                 language=${ARGS[1]}
@@ -90,7 +90,7 @@ EOF
 #               noti -e      sh      if
 #                  option   lang   note_name
     
-                $edit "$language" "$note_name";;
+                $update "$language" "$note_name";;
         esac;;
 
     # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
