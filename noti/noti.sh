@@ -21,9 +21,9 @@ notes_dir=$noti_dir/notes
 # linux_dir=$notes_dir/linux
 # tools_dir=$notes_dir/tools
 
-read=$utils_dir/reader.sh
+read=$utils_dir/read.sh
 editor_path=$utils_dir/editor.sh
-writer_path=$utils_dir/writer.sh
+# writer_path=$utils_dir/writer.sh
 
 ###############
 #### ARGS #####
@@ -75,25 +75,41 @@ EOF
         # noti -vo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
         # alias nvo="noti vo"
         # nvo sh "$1" >> "$1".txt && vo (last_file) "$1".txt
+        #
+        #
+        # noti -vo erp (is possible)
+        # noti -vo sh if (is possible as well)
+        #
         
-        if [[ " $2 " -eq 0 ]]; then
-            language="$option"
-            note_name=${ARG[1]}
+        if [[ $# -eq 2 ]]; then
+
+            # noti -vo      erp      
+            #     option  note_name
+
+            note_name=${ARGS[1]}
+
+        elif [[ $# -eq 3 ]]; then
+
+            # noti -vo      sh          if (is possible as well)
+            #     option   lang      note_name
+            
+            language=${ARGS[1]}
+            note_name=${ARGS[2]}
 
             if [[ " $3 " -eq 0 ]]; then 
                 # noti -vo sh if
                 # passing the option -vo to read
-                
                
                 $read $option $language $note_name "$current_dir"
             fi
 
         fi;; 
     *)
+        # noti sh if
         language="$option"
         note_name=${ARG[1]}
 
-        if [[ " $2 " -eq 0 ]]; then
+        if [[ $note_name -eq 0 ]]; then
             $read $language $note_name
         else
             $read $note_name
