@@ -32,6 +32,9 @@ case $arg_length in
     1)
         note_name=$option
 
+        read -p "Without dot, what extension does the file have? 
+            > " ext
+
         read -p "
         Available output directories in $HOME/code/noti_me/notes:
                   - .../dictionary
@@ -40,7 +43,7 @@ case $arg_length in
         Please indicate desired directory (e.g, linux) 
           >" output
         
-        if cat "$script_parent_dir/notes/$output/$note_name" 2>&1 /dev/null; then
+        if cat "$script_parent_dir/notes/$output/$note_name.$ext" >/dev/null 2>&1; then
             echo "cat worked";
         else
             echo "File could not be found."
@@ -49,9 +52,35 @@ case $arg_length in
         fi;;
     2)
         # noti sh if
+
+        language=${ARGS[0]}
+        note_name=${ARGS[1]}
+
+        read -p "Without the dot, what is the extension of the file?: " ext 
+
+        output="$script_parent_dir/notes/languages/$language/$note_name.$ext"
+
+        read -p "The output is $output? [y/yes,n/no]: " answer
+
+        if [[ "$answer" == "no" || "$answer" == "n" ]]; then
+            echo "Research aborted."
+            exit;
+
+        elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
+            if cat "$output" >/dev/null 2>&1; then
+                echo "cat worked";
+            else
+                echo "File could not be found."
+                echo "Research aborted."
+                exit;
+             fi
+
+        else
+            echo "Invalid answer"
+            echo "Research aborted."
+            exit;
+        fi;;
         
-        echo "two argument given to read.sh"
-        echo "but -vo is not one of them";;
 
     *)
         echo "more than 2 args given to read.sh"
