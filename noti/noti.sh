@@ -106,6 +106,7 @@ EOF
                 echo "for the $option option"
                 exit;;
             2)
+                note_name=${ARGS[1]}
 #               noti -w      erp
 #                   option   note_name
                 echo "you've given something like: noti -w erp"
@@ -113,6 +114,8 @@ EOF
           
                 $create "$note_name";;
             3)
+                language=${ARGS[1]}
+                note_name=${ARGS[2]}
 #               noti -w      sh      if
 #                   option    lang   note_name
                 echo "you've given something like: noti -w sh if"
