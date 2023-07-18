@@ -75,6 +75,9 @@ EOF
             2)
                 note_name=${ARGS[1]}
 
+                echo "you've given something like: noti -e erp"
+                sleep 10
+
 #               noti -e      erp
 #                  option  note_name
     
@@ -85,6 +88,8 @@ EOF
 
 #               noti -e      sh      if
 #                  option   lang   note_name
+                echo "you've given something like: noti -e sh if"
+                sleep 10
     
                 $update "$language" "$note_name";;
         esac;;
@@ -97,13 +102,17 @@ EOF
                 echo "for the $option option"
                 exit;;
             2)
-#               noti -wl      erp
+#               noti -w      erp
 #                   option   note_name
+                echo "you've given something like: noti -w erp"
+                sleep 10
           
                 $create "$note_name";;
             3)
-#               noti -wl      sh      if
+#               noti -w      sh      if
 #                   option    lang   note_name
+                echo "you've given something like: noti -w sh if"
+                sleep 10
     
                 $create "$language" "$note_name";;
             *) 
@@ -120,13 +129,37 @@ EOF
                 echo "for the $option option";;
             2)
                 note_name=${ARGS[1]}
-#               noti -vo      erp      
-#                   option  note_name
 
-                $read "$note_name" "$current_dir";;
+                read -p "Is this your note name: $note_name? [y/yes, n/no]: " answer
+                # read Answer
+                
+                if [[ $answer == "no" || $answer == "n" ]]; then
+
+#                   noti -vo sh
+#                       lang
+                    echo "you've given something like: noti -vo sh"
+
+                    echo "Research aborted."
+                    exit;
+
+                elif [[ $answer == "y" || $answer == "yes" ]]; then
+#                   noti -vo       erp
+#                               note_name
+                    echo "you've given something like: noti -vo erp"
+                    sleep 10
+#
+                    $read "$note_name";
+                else
+                    echo "Invalid answer"
+                    echo "Research aborted."
+                    exit;
+                fi;;
+
             3)
 #               noti -vo      sh          if
 #                   option   lang      note_name
+                echo "you've given something like: noti -vo sh if"
+                sleep 10
                 
                 language=${ARGS[1]}
                 note_name=${ARGS[2]}
@@ -142,14 +175,15 @@ EOF
 
         case "$args_length" in
             1)
-                echo "Is this your note name: $tmp? [y/yes, n/no];"
+                read -p "Is this your note name: $tmp? [y/yes, n/no]: " answer
                 # read Answer
                 
                 if [[ $answer == "no" || $answer == "n" ]]; then
 
 #                   noti sh
 #                       lang
-#
+                    echo "you've given something like: noti sh"
+
                     echo "Research aborted."
                     exit;
                 elif [[ $answer == "y" || $answer == "yes" ]]; then
@@ -157,6 +191,8 @@ EOF
 
 #                   noti erp
 #                       note_name
+                    echo "you've given something like: noti erp"
+                    sleep 10
 #
                     $read "$note_name";
                 else
@@ -168,17 +204,17 @@ EOF
 #               noti sh      if      
 #                   lang  note_name
 #
-                echo "Is your language: $language? [y/yes, n/no];"
-                echo "Is this your note name: $note_name? [y/yes, n/no];"
+                echo "you've given something like: noti sh if"
+                sleep 10
 
                 language=$tmp 
                 note_name="${ARGS[1]}"
 
-                echo "Please confirm values:
+                read -p "Please confirm values:
                             language: $language
                             note name: $note_name
 
-                Is this correct? > [y/yes, n/no]"
+                Is this correct? > [y/yes, n/no]: " answer
 
                 if [[ $answer == "no" || $answer == "n" ]]; then
                     echo "Research aborted."
