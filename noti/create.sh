@@ -4,9 +4,12 @@ arg_length=${#ARGS[@]}
 case $arg_length in
     1)
         note_name=${ARGS[0]}
-        echo "one argument give to create.sh"
-        echo "This $note_name, is the name of the note. Correct?";;
-        # read [y/yes, n/no]
+        echo ""
+        echo "one argument given to create.sh"
+        echo ""
+        read -p "This $note_name, is the name of the note? [y/yes, n/no]: " answer
+        echo ""
+        echo "This is the answer: $answer";; 
         
         # Save the right output dir for the note
         
@@ -30,10 +33,17 @@ case $arg_length in
         language=${ARGS[0]}
         note_name=${ARGS[1]}
 
+        echo ""
         echo "two arguments given to create.sh"
-        echo "This $note_name, should be the name of the note."
-        echo "This $language, should be the language. Correct?";;
-        # read [y/yes, n/no]
+        echo ""
+
+        read -p "Please confirm the following:
+                Note name: $note_name
+                Language: $language
+        Is this correct? [y/yes, n/no]: " answer
+
+        echo ""
+        echo "This is the answer: $answer";; 
 esac
 
 
