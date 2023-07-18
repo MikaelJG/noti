@@ -132,17 +132,69 @@ EOF
                 note_name=${ARGS[2]}
 
                 $read "$option" "$language" "$note_name" "$current_dir";;
+            *) 
+                echo "Please provide one or two arguments"
+                echo "for the $option option"
+                exit;;
+        esac;;
     *)
-        # noti sh      if      
-        #     option  note_name
-        
-        language="$option"
-        note_name="${ARGS[1]}"
+        tmp="$option"
 
-        if [[ $note_name -eq 0 ]]; then
-            $read "$language" "$note_name"
-        else
-            $read "$note_name"
-        fi
+        case "$args_length" in
+            1)
+                echo "Is this your note name: $tmp? [y/yes, n/no];"
+                # read Answer
+                
+                if [[ $answer == "no" || $answer == "n" ]]; then
+
+#                   noti sh
+#                       lang
+#
+                    echo "Research aborted."
+                    exit;
+                elif [[ $answer == "y" || $answer == "yes" ]]; then
+                    note_name=$tmp
+
+#                   noti erp
+#                       note_name
+#
+                    $read "$note_name";
+                else
+                    echo "Invalid answer"
+                    echo "Research aborted."
+                    exit;
+                fi;;
+            2)
+#               noti sh      if      
+#                   lang  note_name
+#
+                echo "Is your language: $language? [y/yes, n/no];"
+                echo "Is this your note name: $note_name? [y/yes, n/no];"
+
+                language=$tmp 
+                note_name="${ARGS[1]}"
+
+                echo "Please confirm values:
+                            language: $language
+                            note name: $note_name
+
+                Is this correct? > [y/yes, n/no]"
+
+                if [[ $answer == "no" || $answer == "n" ]]; then
+                    echo "Research aborted."
+                    exit;
+                elif [[ $answer == "y" || $answer == "yes" ]]; then
+                    $read "$language" "$note_name";
+                else
+                    echo "Invalid answer"
+                    echo "Research aborted."
+                    exit;
+                fi;;
+            *) 
+                echo "Please provide one or two arguments"
+                echo "for the $option option"
+                exit;;
+            esac
+
 esac
 
