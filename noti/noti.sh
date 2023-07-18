@@ -12,18 +12,11 @@ script=${BASH_SOURCE[0]}
 
 # Script full directory
 script_dir=$(dirname "$script")
-noti_dir=$(dirname "$script_dir")
 utils_dir=$(cd "${script_dir}" && pwd)
-
-notes_dir=$noti_dir/notes
-# dic_dir=$notes_dir/dictionary
-# lang_dir=$notes_dir/languages
-# linux_dir=$notes_dir/linux
-# tools_dir=$notes_dir/tools
 
 read=$utils_dir/read.sh
 update=$utils_dir/update.sh
-# create=$utils_dir/create.sh
+create=$utils_dir/create.sh
 
 ###############
 #### ARGS #####
@@ -93,34 +86,32 @@ EOF
                 $update "$language" "$note_name";;
         esac;;
 
-    # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
-    #
-    #       noti -wl      sh      if
-    #          option    lang   note_name
-    #
-    #     if [[ $# -eq 1 ]]; then
-    #        echo "Please provide one or two arguments"
-    #        echo "for the $option option"
-    #        exit
-    #
-    #     elif [[ $# -eq 2 ]]; then
-    #         noti -wl      erp
-    #
-    #          option   note_name
-    #      
-    #     $create $note_name
-    #
-    #     elif [[ $# -eq 3 ]]; then
-    #
-    #       noti -wl      sh      if
-    #          option    lang   note_name
-    #
-    #         $create $language $note_name
-    #     else
-    #        echo "Please provide one or two arguments"
-    #        echo "for the $option option"
-    #        exit
-    #     fi
+     -w|--w)
+
+#        noti -w      sh      if
+#           option    lang   note_name
+#       
+        case $args_length in
+            1)
+                echo "Please provide one or two arguments"
+                echo "for the $option option"
+                exit;;
+    
+            2)
+#               noti -wl      erp
+#                   option   note_name
+          
+                $create "$note_name";;
+            3)
+    
+#               noti -wl      sh      if
+#                   option    lang   note_name
+    
+                $create "$language" "$note_name";;
+            *) 
+                echo "Please provide one or two arguments"
+                echo "for the $option option"
+                exit;;
     -vo|--vo)
 
         if [[ $# -eq 1 ]]; then
@@ -129,8 +120,8 @@ EOF
         
         elif [[ $# -eq 2 ]]; then
 
-            # noti -vo      erp      
-            #     option  note_name
+#           noti -vo      erp      
+#               option  note_name
 
             note_name=${ARGS[1]}
 
@@ -138,8 +129,8 @@ EOF
 
         elif [[ $# -eq 3 ]]; then
 
-            # noti -vo      sh          if
-            #     option   lang      note_name
+#           noti -vo      sh          if
+#               option   lang      note_name
             
             language=${ARGS[1]}
             note_name=${ARGS[2]}
@@ -152,12 +143,12 @@ EOF
         #     option  note_name
         
         language="$option"
-        note_name=${ARG[1]}
+        note_name="${ARGS[1]}"
 
         if [[ $note_name -eq 0 ]]; then
-            $read $language $note_name
+            $read "$language" "$note_name"
         else
-            $read $note_name
+            $read "$note_name"
         fi
 esac
 
