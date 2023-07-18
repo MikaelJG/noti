@@ -67,12 +67,11 @@ EOF
 ;;
     -e|--e)
     
-        case $args_length in
+        case "$args_length" in
             1)
                 echo "Please provide one or two arguments"
                 echo "for the $option option"
                 exit;;
-
             2)
                 note_name=${ARGS[1]}
 
@@ -80,7 +79,6 @@ EOF
 #                  option  note_name
     
                 $update "$note_name";;
-
             3)
                 language=${ARGS[1]}
                 note_name=${ARGS[2]}
@@ -93,22 +91,17 @@ EOF
 
      -w|--w)
 
-#        noti -w      sh      if
-#           option    lang   note_name
-#       
-        case $args_length in
+        case "$args_length" in
             1)
                 echo "Please provide one or two arguments"
                 echo "for the $option option"
                 exit;;
-    
             2)
 #               noti -wl      erp
 #                   option   note_name
           
                 $create "$note_name";;
             3)
-    
 #               noti -wl      sh      if
 #                   option    lang   note_name
     
@@ -118,32 +111,27 @@ EOF
                 echo "for the $option option"
                 exit;;
         esac;;
+
     -vo|--vo)
 
-        if [[ $# -eq 1 ]]; then
-            echo "Please provide one or two arguments"
-            echo "for the $option option"
-        
-        elif [[ $# -eq 2 ]]; then
+        case "$args_length" in
+            1)
+                echo "Please provide one or two arguments"
+                echo "for the $option option";;
+            2)
+                note_name=${ARGS[1]}
+#               noti -vo      erp      
+#                   option  note_name
 
-#           noti -vo      erp      
-#               option  note_name
+                $read "$note_name" "$current_dir";;
+            3)
+#               noti -vo      sh          if
+#                   option   lang      note_name
+                
+                language=${ARGS[1]}
+                note_name=${ARGS[2]}
 
-            note_name=${ARGS[1]}
-
-            $read "$note_name" "$current_dir"
-
-        elif [[ $# -eq 3 ]]; then
-
-#           noti -vo      sh          if
-#               option   lang      note_name
-            
-            language=${ARGS[1]}
-            note_name=${ARGS[2]}
-
-            $read "$option" "$language" "$note_name" "$current_dir"
-
-        fi;; 
+                $read "$option" "$language" "$note_name" "$current_dir";;
     *)
         # noti sh      if      
         #     option  note_name
