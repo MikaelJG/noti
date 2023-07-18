@@ -23,7 +23,7 @@ notes_dir=$noti_dir/notes
 
 read=$utils_dir/read.sh
 editor_path=$utils_dir/editor.sh
-# writer_path=$utils_dir/writer.sh
+# create=$utils_dir/create.sh
 
 ###############
 #### ARGS #####
@@ -33,8 +33,12 @@ editor_path=$utils_dir/editor.sh
 
 if [ -z $1 ]; then
     ARGS=("--help")
+    ARGS_length=${#ARGS[@]}
 else
     ARGS=("$@")
+
+    # count the array
+    ARGS_length=${#ARGS[@]}
 fi
 
 # noti sh if
@@ -64,18 +68,59 @@ EOF
 EOF
 ;;
     -e|--e)
+    #       noti -e      sh      if
+    #          option   lang   note_name
+    
+
+        if [[ $ARGS.length -eq 1 ]]; then
+    #        echo "Please provide one or two arguments"
+    #        echo "for the $option option"
+    #        exit
+    
+        elif [[ $ARGS[@][# -eq 2 ]]; then
+            note_name=${ARGS[1]}
+    #       noti -e      erp
+    #          option  note_name
+            $edit $note_name
+
         if [[ $# -eq 3 ]]; then
-            "$editor_path" "$3" "$2"
+            $edit $language $note_name
         else
             $editor_path "$2"
         fi;; 
     # -wd|--wd|-wl|--wl|-wx|--wx|-wt|--wt)
-    #     [[ $# -eq 3 ]] && $writer_path "$1" "$3" "$2" || $writer_path "$1" "$2";;
+    #
+    #       noti -wl      sh      if
+    #          option    lang   note_name
+    #
+    #     if [[ $# -eq 1 ]]; then
+    #        echo "Please provide one or two arguments"
+    #        echo "for the $option option"
+    #        exit
+    #
+    #     elif [[ $# -eq 2 ]]; then
+    #         noti -wl      erp
+    #
+    #          option   note_name
+    #      
+    #     $create $note_name
+    #
+    #     elif [[ $# -eq 3 ]]; then
+    #
+    #       noti -wl      sh      if
+    #          option    lang   note_name
+    #
+    #         $create $language $note_name
+    #     else
+    #        echo "Please provide one or two arguments"
+    #        echo "for the $option option"
+    #        exit
+    #     fi
     -vo|--vo)
 
         if [[ $# -eq 1 ]]; then
             echo "Please provide one or two arguments"
-            echo "for the -vo option"
+            echo "for the $option option"
         
         elif [[ $# -eq 2 ]]; then
 
