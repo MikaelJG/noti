@@ -12,8 +12,13 @@ script=${BASH_SOURCE[0]}
 
 # Script full directory
 script_dir=$(dirname "$script")
-utils_dir=$(cd "${script_dir}" && pwd)
 
+################
+#### CRUD  #####
+#### UTILS #####
+################
+
+utils_dir=$(cd "${script_dir}" && pwd)
 read=$utils_dir/read.sh
 update=$utils_dir/update.sh
 create=$utils_dir/create.sh
@@ -112,6 +117,7 @@ EOF
                 echo "Please provide one or two arguments"
                 echo "for the $option option"
                 exit;;
+        esac;;
     -vo|--vo)
 
         if [[ $# -eq 1 ]]; then
