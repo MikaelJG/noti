@@ -11,10 +11,20 @@ arg_length=${#ARGS[@]}
 # last_file=$(ls -Art | tail -n 1)
 script_dir=${BASH_SOURCE[0]}
 
+option=${ARGS[0]}
+
+case $option in
+    -vo|--vo)
+        echo "-vo was not given to read.sh";;
+    *)
+        echo "-vo was not given to read.sh";;
+esac
+
+tmp=$option
+
 case $arg_length in
     1)
-        note_name=${ARGS[0]}
-        read -p "The note name is: $note_name? [y/yes, n/no]: " answer
+        read -p "The note name is: $tmp? [y/yes, n/no]: " answer
 
         if [[ "$answer" == "no" || "$answer" == "n" ]]; then
 
@@ -45,9 +55,15 @@ case $arg_length in
             exit;
         fi;;
     2)
-        echo "two argument given to read.sh";;
+        # noti sh if
+        
+        
+        echo "two argument given to read.sh"
+        echo "but -vo is not one of them";;
 
     *)
-        echo "more than 2 args given to read.sh";;
+        echo "more than 2 args given to read.sh"
+        echo "Research aborted."
+        exit;;
 
 esac
