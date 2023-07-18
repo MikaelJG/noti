@@ -25,8 +25,6 @@ case $option in
         echo "-vo was given to read.sh"
         echo "to be implemented"
         exit;;
-    *)
-        echo "-vo was not given to read.sh";;
 esac
 
 case $arg_length in
@@ -97,7 +95,6 @@ case $arg_length in
             exit;
         fi;;
         
-
     *)
         echo "more than 2 args given to read.sh"
         echo "Research aborted."

@@ -75,9 +75,6 @@ EOF
             2)
                 note_name=${ARGS[1]}
 
-                echo "you've given something like: noti -e erp"
-                sleep 1
-
 #               noti -e      erp
 #                  option  note_name
     
@@ -88,8 +85,6 @@ EOF
 
 #               noti -e      sh      if
 #                  option   lang   note_name
-                echo "you've given something like: noti -e sh if"
-                sleep 1
     
                 $update "$language" "$note_name";;
             *) 
@@ -109,8 +104,6 @@ EOF
                 note_name=${ARGS[1]}
 #               noti -w      erp
 #                   option   note_name
-                echo "you've given something like: noti -w erp"
-                sleep 1
           
                 $create "$note_name";;
             3)
@@ -118,8 +111,6 @@ EOF
                 note_name=${ARGS[2]}
 #               noti -w      sh      if
 #                   option    lang   note_name
-                echo "you've given something like: noti -w sh if"
-                sleep 1
     
                 $create "$language" "$note_name";;
             *) 
@@ -143,16 +134,12 @@ EOF
 
 #                   noti -vo sh
 #                       lang
-                    echo "you've given something like: noti -vo sh"
-
                     echo "Research aborted."
                     exit;
 
                 elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
 #                   noti -vo       erp
 #                               note_name
-                    echo "you've given something like: noti -vo erp"
-                    sleep 1
 #
                     $read "$option" "$note_name" "$current_dir";
                 else
@@ -164,8 +151,6 @@ EOF
             3)
 #               noti -vo      sh          if
 #                   option   lang      note_name
-                echo "you've given something like: noti -vo sh if"
-                sleep 1
                 
                 language=${ARGS[1]}
                 note_name=${ARGS[2]}
@@ -188,8 +173,7 @@ EOF
 
 #                   noti sh
 #                       lang
-                    echo "you've given something like: noti sh"
-
+#
                     echo "Research aborted."
                     exit;
                 elif [[ $answer == "y" || $answer == "yes" ]]; then
@@ -197,8 +181,6 @@ EOF
 
 #                   noti erp
 #                       note_name
-                    echo "you've given something like: noti erp"
-                    sleep 1
 #
                     $read "$note_name";
                 else
@@ -210,9 +192,6 @@ EOF
 #               noti sh      if      
 #                   lang  note_name
 #
-                echo "you've given something like: noti sh if"
-                sleep 1
-
                 language=$tmp 
                 note_name="${ARGS[1]}"
 
