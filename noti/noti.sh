@@ -135,9 +135,8 @@ EOF
                 note_name=${ARGS[1]}
 
                 read -p "Is this your note name: $note_name? [y/yes, n/no]: " answer
-                # read Answer
                 
-                if [[ $answer == "no" || $answer == "n" ]]; then
+                if [[ "$answer" == "no" || "$answer" == "n" ]]; then
 
 #                   noti -vo sh
 #                       lang
@@ -146,7 +145,7 @@ EOF
                     echo "Research aborted."
                     exit;
 
-                elif [[ $answer == "y" || $answer == "yes" ]]; then
+                elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
 #                   noti -vo       erp
 #                               note_name
                     echo "you've given something like: noti -vo erp"
