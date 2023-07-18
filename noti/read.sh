@@ -17,12 +17,15 @@ current_dir=${ARGS[idx]}
 
 # last_file=$(ls -Art | tail -n 1)
 script_dir=${BASH_SOURCE[0]}
+script_parent_dir=$(dirname "$script_dir")
 
 option=${ARGS[0]}
 
-case "$option" in
+case $option in
     -vo|--vo)
-        echo "-vo was not given to read.sh";;
+        echo "-vo was given to read.sh"
+        echo "to be implemented"
+        exit;;
     *)
         echo "-vo was not given to read.sh";;
 esac
@@ -30,7 +33,7 @@ esac
 tmp=$option
 
 case $arg_length in
-    2)
+    1)
 
         read -p "The note name is: $tmp? [y/yes, n/no]: " answer
 
@@ -62,14 +65,8 @@ case $arg_length in
             echo "Research aborted."
             exit;
         fi;;
-    3)
-        # noti sh if current_dir
-        
-        echo "two argument given to read.sh"
-        echo "but -vo is not one of them";;
-
-    4)
-        # noti -vo sh if current_dir
+    2)
+        # noti sh if
         
         echo "two argument given to read.sh"
         echo "but -vo is not one of them";;
