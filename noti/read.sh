@@ -6,8 +6,6 @@ if [ -z "$EDITOR" ]; then
 fi
 
 ARGS=("$@")
-echo "${ARGS[@]}"
-
 arg_length=${#ARGS[@]}
 
 # I need current directory, 
@@ -30,38 +28,22 @@ case $option in
         echo "-vo was not given to read.sh";;
 esac
 
-tmp=$option
-
 case $arg_length in
     1)
+        note_name=$option
 
-        read -p "The note name is: $tmp? [y/yes, n/no]: " answer
-
-        if [[ "$answer" == "no" || "$answer" == "n" ]]; then
-
-            echo "Research aborted."
-            exit;
-
-        elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
-            read -p "
-            Available output directories in $HOME/code/noti_me/notes:
-                      - .../dictionary
-                      - .../linux
-                      - ...
-            Please indicate desired directory (e.g, linux) 
-              >" output
-            
-            if cat $script_dir/notes/output/$note_name 2>&1 /dev/null; then
-                echo "cat worked";
-
-            else
-                echo "File could not be found."
-                echo "Research aborted."
-                exit;
-            fi;
-
+        read -p "
+        Available output directories in $HOME/code/noti_me/notes:
+                  - .../dictionary
+                  - .../linux
+                  - ...
+        Please indicate desired directory (e.g, linux) 
+          >" output
+        
+        if cat "$script_parent_dir/notes/$output/$note_name" 2>&1 /dev/null; then
+            echo "cat worked";
         else
-            echo "Invalid answer"
+            echo "File could not be found."
             echo "Research aborted."
             exit;
         fi;;
