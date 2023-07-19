@@ -32,7 +32,7 @@ case $arg_length in
             else
                 echo "The file doesn't exist in dictionnary."
                 echo "Research aborted."
-
+                echo ""
                 echo "If possible, write it with -w option."
                 exit;
             fi;
@@ -49,10 +49,7 @@ case $arg_length in
         language=${ARGS[0]}
         note_name=${ARGS[1]}
 
-        read -p "Please confirm:
-              Note name: $note_name
-              Language: $language
-        Is this correct? [y/yes, n/no]: " answer
+        read -p "Without dot, what is the extension of the file? :" ext 
         read -p "Language - $language, note - $note_name? [y/yes,n/no] :" answer
 
         if [[ "$answer" == "no" || "$answer" == "n" ]]; then
@@ -62,19 +59,14 @@ case $arg_length in
         elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
             note_file="$noti_dir/notes/languages/$language/$note_name.$ext"
 
-            # cp the note in current directory
-            
             if cp "$note_file" "$current_dir" >/dev/null 2>&1; then
 
-                if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
-                    "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
-                else
-                    echo "Note successfully copied in current directory"
-                    exit;
-                fi
+                "$EDITOR" "$note_file"
             else
-                echo "The file doesn't exist in dictionnary"
+                echo "The file doesn't exist in languages/$language/"
                 echo "Research aborted"
+                echo ""
+                echo "If possible, write it with -w option."
                 exit;
             fi;
 
@@ -83,9 +75,6 @@ case $arg_length in
             echo "Research aborted."
             exit;
         fi;;
-
-        echo ""
-        echo "This is the answer: $answer";;
 esac
 
 
