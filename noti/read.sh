@@ -43,8 +43,8 @@ case $option in
                 # cp the note in current dir
                 cp "$file" "$current_dir"
 
-                if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
-                    $EDITOR -vo "$note_name" "$last_file" "$current_dir"
+                if [[ "$EDITOR" == "vim" || "$EDITOR" == "nvim" ]]; then
+                    "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
                 else
                     echo "Note successfully copied in current directory"
                     exit;
