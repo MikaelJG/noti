@@ -13,7 +13,7 @@ arg_length=${#ARGS[@]}
 idx=$(( arg_length - 1))
 current_dir=${ARGS[idx]}
 
-# last_file=$(ls -Art | tail -n 1)
+last_file=$(ls -Art | tail -n 1)
 script_dir=${BASH_SOURCE[0]}
 script_parent_dir=$(dirname "$script_dir")
 noti_dir=$(dirname "$script_parent_dir")
@@ -43,8 +43,13 @@ case $option in
                 # cp the note in current dir
                 cp "$file" "$current_dir"
 
-                # open the copied file in editor
-                $EDITOR "$current_dir" "$note_name";;
+                if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
+                    $EDITOR -vo "$note_name" "$last_file" "$current_dir"
+                else
+                    echo "Note successfully copied in current directory"
+                    exit;
+                fi;;
+
             4)
 
                 # noti -vo sh if current_dir
@@ -67,8 +72,12 @@ case $option in
                     
                     cp "$note_file" "$current_dir" 
 
-                    # open the file with the editor
-                    $EDITOR "$note_name" "$current_dir"
+                    if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
+                        $EDITOR -vo "$note_name" "$last_file" "$current_dir"
+                    else
+                        echo "Note successfully copied in current directory"
+                        exit;
+                    fi
 
                 else
                     echo "Invalid answer"
