@@ -41,12 +41,21 @@ case $option in
                 file="$noti_dir/notes/dictionary/$note_name.txt"
 
                 # cp the note in current dir
+                echo "file is $file"
+                echo "current dir is: $current_dir"
                 cp "$file" "$current_dir"
 
-                if [[ "$EDITOR" == "vim" || "$EDITOR" == "nvim" ]]; then
-                    "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
+                if cp "$note_file" "$current_dir"  ; then
+
+                    if [[ "$EDITOR" == "vim" || "$EDITOR" == "nvim" ]]; then
+                        "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
+                    else
+                        echo "Note successfully copied in current directory"
+                        exit;
+                    fi;
                 else
-                    echo "Note successfully copied in current directory"
+                    echo "The file doesn't exist is dictionnary"
+                    echo "Research aborted"
                     exit;
                 fi;;
 
@@ -70,14 +79,19 @@ case $option in
 
                     # cp the note in current directory
                     
-                    cp "$note_file" "$current_dir" 
+                    if cp "$note_file" "$current_dir"  ; then
 
-                    if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
-                        $EDITOR -vo "$note_name" "$last_file" "$current_dir"
+                        if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
+                            "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
+                        else
+                            echo "Note successfully copied in current directory"
+                            exit;
+                        fi
                     else
-                        echo "Note successfully copied in current directory"
+                        echo "The file doesn't exist is dictionnary"
+                        echo "Research aborted"
                         exit;
-                    fi
+                    fi;
 
                 else
                     echo "Invalid answer"
