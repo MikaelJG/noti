@@ -6,8 +6,9 @@ fi
 ARGS=("$@")
 arg_length=${#ARGS[@]}
 
-echo "update.sh is not yet implemented"
-echo "Update aborded"
+script_dir=${BASH_SOURCE[0]}
+script_parent_dir=$(dirname "$script_dir")
+noti_dir=$(dirname "$script_parent_dir")
 
 case $arg_length in
     1)
@@ -51,6 +52,9 @@ case $arg_length in
 
         read -p "Without dot, what is the extension of the file? :" ext 
         read -p "Language - $language, note - $note_name? [y/yes,n/no] :" answer
+            note_file="$noti_dir/notes/languages/$language/$note_name.$ext"
+            echo $note_file
+            sleep 20
 
         if [[ "$answer" == "no" || "$answer" == "n" ]]; then
             echo "Research aborted."
