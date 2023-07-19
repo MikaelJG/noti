@@ -41,11 +41,7 @@ case $option in
                 file="$noti_dir/notes/dictionary/$note_name.txt"
 
                 # cp the note in current dir
-                echo "file is $file"
-                echo "current dir is: $current_dir"
-                cp "$file" "$current_dir"
-
-                if cp "$note_file" "$current_dir"  ; then
+                if cp "$note_file" "$current_dir" >/dev/null 2>&1; then
 
                     if [[ "$EDITOR" == "vim" || "$EDITOR" == "nvim" ]]; then
                         "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
@@ -54,7 +50,7 @@ case $option in
                         exit;
                     fi;
                 else
-                    echo "The file doesn't exist is dictionnary"
+                    echo "The file doesn't exist in dictionnary"
                     echo "Research aborted"
                     exit;
                 fi;;
@@ -79,7 +75,7 @@ case $option in
 
                     # cp the note in current directory
                     
-                    if cp "$note_file" "$current_dir"  ; then
+                    if cp "$note_file" "$current_dir" >/dev/null 2>&1; then
 
                         if [[ $EDITOR == "vim" || $EDITOR == "nvim" ]]; then
                             "$EDITOR" -vo "$current_dir/$note_name.txt" "$last_file"
@@ -88,7 +84,7 @@ case $option in
                             exit;
                         fi
                     else
-                        echo "The file doesn't exist is dictionnary"
+                        echo "The file doesn't exist in dictionnary"
                         echo "Research aborted"
                         exit;
                     fi;
