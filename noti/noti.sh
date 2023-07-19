@@ -45,16 +45,22 @@ option=${ARGS[0]}
 case $option in
     -help|--help)   
         cat <<-EOF
+
 Options:
+
     -p, noti tree       Display Noti's path system. 
                         Changing this system causes malfunction.
+
     -u, update          Edit a note in your Noti. When editing a language's note,
                         specify the language. (e.g, noti -u js if)
+
     -w, write           Write a new note you do not have. When writing a language's note,
                         specify the language. (e.g, noti -w js else)
+
     -vo, copy/open      Copy a note in the directory you are currently in.
                         Then, if your \$EDITOR is vim or nvim,
                         open the last file your edited with this note!
+
 EOF
 ;;
     -p|--p)
