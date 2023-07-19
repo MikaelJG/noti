@@ -9,7 +9,7 @@ ARGS=("$@")
 arg_length=${#ARGS[@]}
 
 # I need current directory, 
-# And current directory is alway given last in arguments
+# And current directory is always given last in arguments
 idx=$(( arg_length - 1))
 current_dir=${ARGS[idx]}
 
@@ -44,32 +44,37 @@ case $option in
                 cp "$file" "$current_dir"
 
                 # open the copied file in editor
-                $EDITOR "$current_dir" "$note_name"
-
-
-
-
-                
-
-
-                # noti -vo erp sh if current_dir
-                #
-                # noti -vo erp current_dir
-                
-                echo "-vo was given to read.sh"
-                echo "to be implemented"
-
+                $EDITOR "$current_dir" "$note_name";;
+            4)
 
                 # noti -vo sh if current_dir
                 
-                #
+                language=${ARGS[1]}
+                note_name=${ARGS[2]}
+
+                read -p "Without dot, what is the extension of the note file? :" ext
                 
-                exit;;
-            3)
+                read -p "Language - $language, note - $note_name? [y/yes,n/no] :" answer
 
-            4)
+                if [[ "$answer" == "no" || "$answer" == "n" ]]; then
+                    echo "Research aborted."
+                    exit;
 
-            5)
+                elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
+                    note_file="$noti_dir/notes/languages/$language/$note_name.$ext"
+
+                    # cp the note in current directory
+                    
+                    cp "$note_file" "$current_dir" 
+
+                    # open the file with the editor
+                    $EDITOR "$note_name" "$current_dir"
+
+                else
+                    echo "Invalid answer"
+                    echo "Research aborted."
+                    exit;
+                fi;;
         esac
 esac
 
