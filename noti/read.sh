@@ -22,9 +22,55 @@ option=${ARGS[0]}
 
 case $option in
     -vo|--vo)
-        echo "-vo was given to read.sh"
-        echo "to be implemented"
-        exit;;
+        
+        # We know its a note_name here,
+        # The question is asked in Noti.sh
+
+        case $arg_length in
+            2)
+                # noti -vo current_dir
+                
+                echo "Please provide more than 2 arguments"
+                echo "for the -vo option."
+                exit;;
+
+            3) 
+                # noti -vo erp current_dir
+                
+                note_name=${ARGS[1]}
+                file="$noti_dir/notes/dictionary/$note_name.txt"
+
+                # cp the note in current dir
+                cp "$file" "$current_dir"
+
+                # open the copied file in editor
+                $EDITOR "$current_dir" "$note_name"
+
+
+
+
+                
+
+
+                # noti -vo erp sh if current_dir
+                #
+                # noti -vo erp current_dir
+                
+                echo "-vo was given to read.sh"
+                echo "to be implemented"
+
+
+                # noti -vo sh if current_dir
+                
+                #
+                
+                exit;;
+            3)
+
+            4)
+
+            5)
+        esac
 esac
 
 case $arg_length in
