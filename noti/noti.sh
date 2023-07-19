@@ -46,26 +46,28 @@ case $option in
     -help|--help)   
         cat <<-EOF
 Options:
-    -p, noti tree   Display Noti's path system. Changing this system causes malfunction.
-    -e, update        Edit a note in your Noti. When editing a tool or language's notes, specify the language or tool.
-    -w, write
-        -wa,        Write a new definition in Dictionnary
-        -wl,        Write a new note in Languages
-        -wt,        Write a new note in Tools
-        -wx,        Write a new note in Linux
+    -p, noti tree       Display Noti's path system. 
+                        Changing this system causes malfunction.
+    -u, update          Edit a note in your Noti. When editing a language's note,
+                        specify the language. (e.g, noti -u js if)
+    -w, write           Write a new note you do not have. When writing a language's note,
+                        specify the language. (e.g, noti -w js else)
+    -vo, copy/open      Copy a note in the directory you are currently in.
+                        Then, if your \$EDITOR is vim or nvim,
+                        open the last file your edited with this note!
 EOF
 ;;
     -p|--p)
          cat <<-EOF
-# Noti assumes these paths.
+Noti looks in these paths.
 
     notes/definitions
     notes/languages/cs
-    notes/linux/
-    notes/tools/vi
+
+Verify their existence in ./notes
 EOF
 ;;
-    -e|--e)
+    -u|--u)
     
         case "$args_length" in
             1)
