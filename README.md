@@ -40,24 +40,23 @@ NOTI_D=~/code/noti # define this variable based on its location on your computer
 
 Options.
 ```bash
-  noti -help # list all options for Noti 
+$ noti       # list all options for Noti 
+$ noti -help # list all options for Noti 
 ```
 ## Recommendation
 In your home directory, create or update your .bashrc file.
 ```bash
 $ cd # move to home
 $ vim .bashrc # edit your .bashrc file
-$ alias wd="~/path/to/noti.sh -wd" # write a definition with wd 
-$ alias wl="~/path/to/noti.sh -wl" # write a note for a language with wl 
-$ alias wt="~/path/to/noti.sh -wt" # write a note for a tool with wt 
-$ alias wx="~/path/to/noti.sh -wx" # write a note for linux with wx 
+$ alias w="~/path/to/noti.sh -w" # write a definition with wd 
+$ alias u="~/path/to/noti.sh -u" # write a definition with wd 
 
 # for example
   alias noti="~/code/noti/noti/noti.sh -wd"
 ```
 ## Demo
 
-https://user-images.githubusercontent.com/101736882/219138401-ab22f52d-21d1-44c0-ab1f-61d2506c2e06.mp4
+To be updated soon.
 
 ## Thanks 
 
