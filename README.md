@@ -33,33 +33,58 @@ $ mv *.txt ~/code/noti/notes/dictionary
 
 ## Aliases for Noti
 
-In your home directory, create or update your .bashrc file.
+In your home directory, update your .bashrc or .bash_aliases file. If if doesn't exist, create it.
+
 ```bash
-$ cd # move to home
-$ vim .bashrc # edit your .bashrc file
+$ cd                             # move to home
+$ vim .bashrc                    # edit your .bashrc file
 $ alias noti="~/path/to/noti.sh" # write an alias to noti.sh
 
 # for example
   alias noti="~/code/noti/noti/noti.sh"
 ```
+
 Using zsh? Update your .zshrc file.
+
 ```bash
-$ cd # move to home
-$ vim .zshrc # edit your zshrc file 
+$ cd                             # move to home
+$ vim .zshrc                     # edit your zshrc file 
 $ alias noti="~/path/to/noti.sh" # write an alias to noti.sh
 
 # for example
   alias noti="~/code/noti/noti/noti.sh"
 ```
-```
-## Usage 
+
+# Usage  
+
+## Help
 
 Options.
+
 ```bash
-$ noti       # list all options for Noti 
-$ noti -help # list all options for Noti 
+$ noti          # list all options for Noti 
+
+# OR
+
+$ noti -help    # list all options for Noti 
 ```
+## Read
+
+```bash
+$ noti azure    # find my note on Azure in notes/dictionary
+
+$ noti js if    # find my note on Javascript if statement,
+                # in notes/languages/js
+```
+
+## Create
+
+## Update
+
+
+
 ## Recommendation
+
 In your home directory, create or update your .bashrc file.
 ```bash
 $ cd # move to home
