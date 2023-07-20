@@ -70,31 +70,51 @@ $ noti -help    # list all options for Noti
 ```
 ## Read
 
+Read a tech definition in dictionary by using by providing one argument. Read a programming
+note by providing two arguments (language, then note name).
+
 ```bash
 $ noti azure    # find my note on Azure in notes/dictionary
 
 $ noti js if    # find my note on Javascript if statement,
                 # in notes/languages/js
 ```
-
 ## Create
+
+Create a new tech definition in dictionary or a programming note with the -w option.
+
+```bash
+$ noti -w azure    # write a new note named azure in notes/dictionary
+
+$ noti -w js if    # write a new note named if in notes/languages/js
+```
 
 ## Update
 
+Update an existing tech definition in dictionary or a programming noti with the -u option.
 
-
-## Recommendation
-
-In your home directory, create or update your .bashrc file.
 ```bash
-$ cd # move to home
-$ vim .bashrc # edit your .bashrc file
-$ alias w="~/path/to/noti.sh -w" # write a definition with wd 
-$ alias u="~/path/to/noti.sh -u" # write a definition with wd 
+$ noti -u azure    # update my note on azure in notes/dictionary
+
+$ noti -u js if    # update my note named if in notes/languages/js
+```
+
+## Alias Combo Recommendation
+
+In your home directory, update your .bashrc or .bash_aliases file.
+
+```bash
+$ cd                                # move to home
+$ vim .bashrc                       # edit your .bashrc file
+
+  alias w="~/path/to/noti.sh -w"    # write a new note
+  alias u="~/path/to/noti.sh -u"    # update a note
+
 
 # for example
-  alias noti="~/code/noti/noti/noti.sh -wd"
+  alias w="~/code/noti/noti/noti.sh -w"
 ```
+
 ## Demo
 
 To be updated soon.
