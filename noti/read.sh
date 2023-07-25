@@ -122,7 +122,7 @@ case $arg_length in
 
         elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
             if cat "$output" >/dev/null 2>&1; then
-                echo "cat worked";
+                cat "$output"
             else
                 echo "File could not be found."
                 echo "Research aborted."
@@ -152,7 +152,7 @@ case $arg_length in
 
         elif [[ "$answer" == "y" || "$answer" == "yes" ]]; then
             if cat "$output" >/dev/null 2>&1; then
-                echo "cat worked";
+                cat "$output"
             else
                 echo "File could not be found."
                 echo "Research aborted."
