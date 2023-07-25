@@ -9,8 +9,14 @@ if (note_name = memorable) {
 ( breadth-first-search : { bfs, bf, breadth-first, breath }) 
 
 
-keywords_array = [ else, elsif, else if, iterator, iteration, iterate ]
+{
+    else: "path/to/if.cpp";
+    elsif: "path/to/if.cpp";
+    else if: "path/to/if.cpp";
+}
 
+
+keywords_array = [ else, elsif, else if, iterator, iteration, iterate ]
 
 
 if ( requested_note_name in keywords_array) {
@@ -19,6 +25,4 @@ if ( requested_note_name in keywords_array) {
 
     open examples/note_name.cpp
     
-
-
 }
