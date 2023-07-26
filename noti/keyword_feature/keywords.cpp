@@ -3,6 +3,25 @@
 #include <unordered_map>
 #include <vector>
 
+void append_hash(std::unordered_map<std::string, std::string> map,
+                 std::array<std::string, 5> ar,
+                 std::string path) {
+
+    std::unordered_map keywords_map = map;
+    std::array keywords_array = ar;
+
+    for (size_t i = 0; i < keywords_array.size(); i++) {
+
+        std::string key = keywords_array[i];
+        keywords_map[key] = "path/to/if.cpp";
+
+    }
+
+        
+    }
+
+}
+
 int main() {
 
     // all of these should open if.cpp
@@ -10,6 +29,8 @@ int main() {
     //
     // all of these should open iterate.cpp
     //                          iterate, iterator, iterating, iterators
+    std::array<std::string, 5> if_array{"if", "else", "elsif", "else if", "elseif"};
+    std::array<std::string, 5> iterate_array{"iterate", "iterator", "iterating", "iterators"};
     
     // {
     //      else: if.cpp,
@@ -32,19 +53,11 @@ int main() {
     //
     //
 
-    std::array<std::string, 4> if_array{"if", "else", "elsif", "else if"};
-    std::array<std::string, 4> iterate_array{"iterate", "iterator", "iterating", "iterators"};
 
 
     std::unordered_map<std::string, std::string> keywords;
 
 
-    for (size_t i = 0; i < if_array.size(); i++) {
-
-        std::string keyword = if_array[i];
-        keywords[keyword] = "path/to/if.cpp";
-
-    }
 
     for (size_t i = 0; i < iterate_array.size(); i++) {
 
