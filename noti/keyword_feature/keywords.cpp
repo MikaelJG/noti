@@ -4,13 +4,12 @@
 #include <vector>
 
 void append_keywords_hash(
-                   std::unordered_map<std::string, std::string>& map,
-                   std::array<std::string, 5>& ar,
+                   std::unordered_map<std::string, std::string>& keywords_map,
+                   std::array<std::string, 5>& keyword_a,
                    std::string& path) {
 
-    for (const auto& k : ar) {
-        std::cout << "this is key" << k << '\n';
-        map[k] = path;
+    for (const auto& k : keyword_a) {
+        keywords_map[k] = path;
     }
 }
 
@@ -23,11 +22,19 @@ int main() {
 
     append_keywords_hash(keywords_map, if_array, if_path);
 
-    for (const auto& k : keywords_map) {
-        std::cout << "Key: " << k.first << ", Path: " << k.second << '\n';
-    }
+    std::array<std::string, 5> iterate_array{"iteration", "iterate", "iterator", "iterating", "iterators"};
+    std::string iterate_path = "./path/to/iterate.cpp";
 
-    // std::array<std::string, 5> iterate_array{"iterate", "iterator", "iterating", "iterators"};
+    append_keywords_hash(keywords_map, iterate_array, iterate_path);
+
+    std::array<std::string, 5> switch_array{"case", "switch statement", "case statement", "switchstatement", "casestatement"};
+    std::string switch_path = "./path/to/switch.cpp";
+
+    append_keywords_hash(keywords_map, switch_array, switch_path);
+
+    for ( const auto& k : keywords_map ) {
+        std::cout << "Key: " << k.first << " " << "Value: " << k.second << '\n';
+    }
     
     // {
     //      else: if.cpp,
