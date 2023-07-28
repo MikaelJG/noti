@@ -3,34 +3,31 @@
 #include <unordered_map>
 #include <vector>
 
-void append_hash(std::unordered_map<std::string, std::string> map,
-                 std::array<std::string, 5> ar,
-                 std::string path) {
+void append_keywords_hash(
+                   std::unordered_map<std::string, std::string>& map,
+                   std::array<std::string, 5>& ar,
+                   std::string& path) {
 
-    std::unordered_map keywords_map = map;
-    std::array keywords_array = ar;
-
-    for (size_t i = 0; i < keywords_array.size(); i++) {
-
-        std::string key = keywords_array[i];
-        keywords_map[key] = "path/to/if.cpp";
-
+    for (const auto& k : ar) {
+        std::cout << "this is key" << k << '\n';
+        map[k] = path;
     }
-
-        
-    }
-
 }
 
 int main() {
 
-    // all of these should open if.cpp
-    //                          if, else, elsif, else if
-    //
-    // all of these should open iterate.cpp
-    //                          iterate, iterator, iterating, iterators
+    std::unordered_map<std::string, std::string> keywords_map;
+    
     std::array<std::string, 5> if_array{"if", "else", "elsif", "else if", "elseif"};
-    std::array<std::string, 5> iterate_array{"iterate", "iterator", "iterating", "iterators"};
+    std::string if_path = "./path/to/if.cpp";
+
+    append_keywords_hash(keywords_map, if_array, if_path);
+
+    for (const auto& k : keywords_map) {
+        std::cout << "Key: " << k.first << ", Path: " << k.second << '\n';
+    }
+
+    // std::array<std::string, 5> iterate_array{"iterate", "iterator", "iterating", "iterators"};
     
     // {
     //      else: if.cpp,
@@ -43,32 +40,16 @@ int main() {
     //      iterators: iterate.cpp,
     //      iterating: iterate.cpp,
     // }
-    //
-    //
-    // csv could be
-    //
-    // if, else, elseif, else if, elsif, path/to/if.cpp
-    //
-    // Up to row.length - 1 , unordered_map[row[value]] = row.length.value // last element in row.
-    //
-    //
 
+    // std::unordered_map<std::string, std::string> keywords;
 
+    // for (size_t i = 0; i < iterate_array.size(); i++) {
 
-    std::unordered_map<std::string, std::string> keywords;
+    //     std::string keyword = iterate_array[i];
+    //     keywords[keyword] = "path/to/iterate.cpp";
 
-
-
-    for (size_t i = 0; i < iterate_array.size(); i++) {
-
-        std::string keyword = iterate_array[i];
-        keywords[keyword] = "path/to/iterate.cpp";
-
-    }
+    // }
     
-    for (const auto& k : keywords) {
-        std::cout << "Key: " << k.first << ", Path: " << k.second << '\n';
-    }
 }
 
 // #include <iostream>
