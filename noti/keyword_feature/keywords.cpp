@@ -13,25 +13,25 @@ int main() {
     std::unordered_map<std::string, std::string> keywords_map{ 
         // section name, path
         
-        // conditionals
+        // conditional
         {"if", home + "/code/cpp/examples/if.cpp"}, // ./path/to/if.cpp
         {"else", home + "/code/cpp/examples/if.cpp"},
         {"elsif", home + "/code/cpp/examples/if.cpp"},
         {"else if", home + "/code/cpp/examples/if.cpp"},
 
         // loop
-        {"iteration", "path/to/iterate.cpp"},
-        {"iterate",  "path/to/iterate.cpp"},
-        {"iterator",  "path/to/iterate.cpp"},
-        {"iterating", "path/to/iterate.cpp"},
-        {"iterators", "path/to/iterate.cpp"},
+        {"iteration", home + "code/cpp/examples/iterate.cpp"},
+        {"iterate", home + "code/cpp/examples/iterate.cpp"},
+        {"iterator", home + "code/cpp/examples/iterate.cpp"},
+        {"iterators", home + "code/cpp/examples/iterate.cpp"},
+        {"iterating", home + "code/cpp/examples/iterate.cpp"},
 
         // switch
-        {"case", "path/to/switch.cpp"},
-        {"switch statement", "path/to/switch.cpp"},
-        {"case statement", "path/to/switch.cpp"},
-        {"switchstatement", "path/to/switch.cpp"},
-        {"casestatement", "path/to/switch.cpp"},
+        {"case", home + "path/to/switch.cpp"},
+        {"switch statement", home + "path/to/switch.cpp"},
+        {"case statement", home + "path/to/switch.cpp"},
+        {"switchstatement", home + "path/to/switch.cpp"},
+        {"casestatement", home + "path/to/switch.cpp"},
 
         // variables
         // touples
