@@ -67,7 +67,45 @@ int main() {
         // static
         // dynamic
         // determinism
-        //
+        // span
+        // struct
+        // template
+        // variadic template
+        // lambda
+        // capture
+        // generic lambda
+        // concept
+        // memory allocation
+        // factory
+        // fmt
+        // string view
+        // argument
+        // ternary operator
+        // scope
+        // chaining
+        // sstream
+        // compiler
+        // clang
+        // gnu
+        // library
+        // linker
+        // build
+        // warning
+        // standard
+        // PCH (precompiled headers)
+        // filesystem
+        // paths
+        // files
+        // directory
+        // maps
+        // multimaps
+        // set
+        // multiset
+        // list
+        // forward list
+        // hash maps
+        // unordered map
+        // unordered multimap
     };
 
 //     std::string keyword = "else";
