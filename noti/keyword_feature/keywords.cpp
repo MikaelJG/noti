@@ -2,18 +2,22 @@
 #include <array>
 #include <unordered_map>
 #include <vector>
+#include <filesystem>
 
 int main() {
+
+    // ~ is not valid for fs::directory iterator(path)) 
+    const char* tmp = std::getenv("HOME");
+    const auto home = std::string(tmp);
 
     std::unordered_map<std::string, std::string> keywords_map{ 
         // section name, path
         
         // conditionals
-        {"if", "if.cpp"}, // ./path/to/if.cpp
-        {"else", "if.cpp"},
-        {"elsif", "if.cpp"},
-        {"else if", "if.cpp"},
-        {"elseif", "if.cpp"},
+        {"if", home + "/code/cpp/examples/if.cpp"}, // ./path/to/if.cpp
+        {"else", home + "/code/cpp/examples/if.cpp"},
+        {"elsif", home + "/code/cpp/examples/if.cpp"},
+        {"else if", home + "/code/cpp/examples/if.cpp"},
 
         // loop
         {"iteration", "path/to/iterate.cpp"},
