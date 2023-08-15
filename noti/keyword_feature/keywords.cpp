@@ -106,6 +106,14 @@ int main() {
         // hash maps
         // unordered map
         // unordered multimap
+        // queue
+        // priority queue (heap)
+        // stack
+        // trie
+        // algorithm
+        // accumulate
+        // puts
+        //
     };
 
 //     std::string keyword = "else";
